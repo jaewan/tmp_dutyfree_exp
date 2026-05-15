@@ -1,0 +1,15 @@
+# Phase 19.1 Diagnosis Step 2: Victim L3 Miss Rate
+date: 2026-05-14T14:37:04+09:00
+command: perf stat -e MEM_LOAD_RETIRED + cpu-cycles -- numactl node0 pointer_chase 32MB 10s
+
+victim: cpu=0 node=0 wss=32 MB trials=1 run_sec=10.0 pf_disable=0
+victim: TSC frequency estimate: 1899983088 Hz (1.90 GHz)
+246910354,,cpu/event=0xd1,umask=0x10/u,10010203357,100.00,,
+246881962,,cpu/event=0xd1,umask=0x04/u,10010203357,100.00,,
+301017,,cpu/event=0xd1,umask=0x02/u,10010203357,100.00,,
+19017788438,,cpu-cycles,10010203357,100.00,,
+
+## victim stdout
+[
+  {"trial": 0, "cycles_per_load": 77.019, "total_loads": 246690656, "ticks": 18999832174, "elapsed_sec": 10.0000, "tsc_hz": 1899983088}
+]

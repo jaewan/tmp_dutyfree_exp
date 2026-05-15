@@ -1,0 +1,25 @@
+[17:35:09.452] env check: PASS
+[17:35:09.452] === Phase 14: L2-Fit Residency Validation ===
+[17:35:09.452] WSS=384 KB, n=30
+[17:35:09.452] 
+--- [Q] 0 cores | L2-fit validation ---
+[17:35:47.481]   [Q@0c] cycles=18.3 L2_hit_rate=0.000 (l2_hit=0, l3_miss=0)
+[17:35:49.483] 
+--- [A] 2 cores | L2-fit validation ---
+[17:35:49.483]   aggressor [A] cpu=1: numactl --physcpubind=1 --membind=0 /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/aggressor/stream_wb --cpu 1 --node 0 --region-gb 1 --duration-sec 50
+[17:35:49.484]   aggressor [A] cpu=2: numactl --physcpubind=2 --membind=0 /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/aggressor/stream_wb --cpu 2 --node 0 --region-gb 1 --duration-sec 50
+[17:35:49.485]   Warmup 5.0s ...
+[17:36:32.649]   [A@2c] cycles=18.8 L2_hit_rate=0.000 (l2_hit=0, l3_miss=0)
+[17:36:34.651] 
+--- [B] 3 cores | L2-fit validation ---
+[17:36:34.651]   aggressor [B] cpu=1: numactl --physcpubind=1 --membind=0 /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/aggressor/stream_wb_nopf --cpu 1 --node 0 --region-gb 1 --duration-sec 50
+[17:36:34.652]   aggressor [B] cpu=2: numactl --physcpubind=2 --membind=0 /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/aggressor/stream_wb_nopf --cpu 2 --node 0 --region-gb 1 --duration-sec 50
+[17:36:34.652]   aggressor [B] cpu=3: numactl --physcpubind=3 --membind=0 /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/aggressor/stream_wb_nopf --cpu 3 --node 0 --region-gb 1 --duration-sec 50
+[17:36:34.653]   Warmup 5.0s ...
+[17:37:17.874]   [B@3c] cycles=18.2 L2_hit_rate=0.000 (l2_hit=0, l3_miss=0)
+[17:37:19.877] Wrote: /home/domin/CoherenceTest/APNET/directory-tax-spr/results/processed/14_l2fit_validation.md
+
+Phase 14 complete: /home/domin/CoherenceTest/APNET/directory-tax-spr/results/processed/14_l2fit_validation.md
+  Q: L2_hit_rate=0.000 → INVALID
+  A: L2_hit_rate=0.000 → INVALID
+  B: L2_hit_rate=0.000 → INVALID

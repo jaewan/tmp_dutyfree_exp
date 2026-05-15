@@ -1,0 +1,82 @@
+[10:21:11.499] env check: PASS
+[10:21:11.499] === Phase 2-BW: Bandwidth-Matched A vs B Matrix ===
+[10:21:11.499] Conditions: A, B at core counts [2, 3, 4]
+[10:21:11.499] n_trials=20, WSS=32 MB
+[10:21:11.499] 
+--- Condition Q (quiescent) ---
+[10:21:11.499]   victim: numactl --physcpubind=0 --membind=0 /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/victim/pointer_chase --cpu 0 --node 0 --wss 33554432 --trials 20 --run-sec 1.00
+[10:21:32.849]   Q: mean=81.4 cyc/load
+[10:21:35.853] 
+--- [A] 2 cores ---
+[10:21:35.853]   aggressor [A] cpu=1: numactl --physcpubind=1 --membind=0 /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/aggressor/stream_wb --cpu 1 --node 0 --region-gb 1 --duration-sec 40
+[10:21:35.853]   aggressor [A] cpu=2: numactl --physcpubind=2 --membind=0 /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/aggressor/stream_wb --cpu 2 --node 0 --region-gb 1 --duration-sec 40
+[10:21:35.854]   Warmup 5.0s ...
+[10:21:40.859]   Measuring DRAM BW (3s PMU window) ...
+[10:21:43.875]   DRAM BW: 16.0 GB/s (rd=15.9, wr=0.1)
+[10:21:44.876]   victim: numactl --physcpubind=0 --membind=0 /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/victim/pointer_chase --cpu 0 --node 0 --wss 33554432 --trials 20 --run-sec 1.00
+[10:22:06.450]   [A@2c] mean=255.0 cyc/load, imc_bw=16.0 GB/s, agg_reported_bw=2.1 GB/s
+[10:22:09.454] 
+--- [B] 2 cores ---
+[10:22:09.454]   aggressor [B] cpu=1: numactl --physcpubind=1 --membind=0 /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/aggressor/stream_wb_nopf --cpu 1 --node 0 --region-gb 1 --duration-sec 40
+[10:22:09.455]   aggressor [B] cpu=2: numactl --physcpubind=2 --membind=0 /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/aggressor/stream_wb_nopf --cpu 2 --node 0 --region-gb 1 --duration-sec 40
+[10:22:09.455]   Warmup 5.0s ...
+[10:22:14.463]   Measuring DRAM BW (3s PMU window) ...
+[10:22:17.479]   DRAM BW: 14.3 GB/s (rd=14.3, wr=0.1)
+[10:22:18.480]   victim: numactl --physcpubind=0 --membind=0 /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/victim/pointer_chase --cpu 0 --node 0 --wss 33554432 --trials 20 --run-sec 1.00
+[10:22:40.047]   [B@2c] mean=181.4 cyc/load, imc_bw=14.3 GB/s, agg_reported_bw=2.1 GB/s
+[10:22:43.051] 
+--- [A] 3 cores ---
+[10:22:43.051]   aggressor [A] cpu=1: numactl --physcpubind=1 --membind=0 /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/aggressor/stream_wb --cpu 1 --node 0 --region-gb 1 --duration-sec 40
+[10:22:43.051]   aggressor [A] cpu=2: numactl --physcpubind=2 --membind=0 /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/aggressor/stream_wb --cpu 2 --node 0 --region-gb 1 --duration-sec 40
+[10:22:43.052]   aggressor [A] cpu=3: numactl --physcpubind=3 --membind=0 /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/aggressor/stream_wb --cpu 3 --node 0 --region-gb 1 --duration-sec 40
+[10:22:43.052]   Warmup 5.0s ...
+[10:22:48.057]   Measuring DRAM BW (3s PMU window) ...
+[10:22:51.073]   DRAM BW: 23.7 GB/s (rd=23.7, wr=0.1)
+[10:22:52.074]   victim: numactl --physcpubind=0 --membind=0 /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/victim/pointer_chase --cpu 0 --node 0 --wss 33554432 --trials 20 --run-sec 1.00
+[10:23:13.651]   [A@3c] mean=280.3 cyc/load, imc_bw=23.7 GB/s, agg_reported_bw=3.2 GB/s
+[10:23:16.654] 
+--- [B] 3 cores ---
+[10:23:16.655]   aggressor [B] cpu=1: numactl --physcpubind=1 --membind=0 /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/aggressor/stream_wb_nopf --cpu 1 --node 0 --region-gb 1 --duration-sec 40
+[10:23:16.655]   aggressor [B] cpu=2: numactl --physcpubind=2 --membind=0 /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/aggressor/stream_wb_nopf --cpu 2 --node 0 --region-gb 1 --duration-sec 40
+[10:23:16.656]   aggressor [B] cpu=3: numactl --physcpubind=3 --membind=0 /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/aggressor/stream_wb_nopf --cpu 3 --node 0 --region-gb 1 --duration-sec 40
+[10:23:16.656]   Warmup 5.0s ...
+[10:23:21.664]   Measuring DRAM BW (3s PMU window) ...
+[10:23:24.679]   DRAM BW: 21.3 GB/s (rd=21.2, wr=0.1)
+[10:23:25.680]   victim: numactl --physcpubind=0 --membind=0 /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/victim/pointer_chase --cpu 0 --node 0 --wss 33554432 --trials 20 --run-sec 1.00
+[10:23:47.272]   [B@3c] mean=237.3 cyc/load, imc_bw=21.3 GB/s, agg_reported_bw=3.1 GB/s
+[10:23:50.275] 
+--- [A] 4 cores ---
+[10:23:50.275]   aggressor [A] cpu=1: numactl --physcpubind=1 --membind=0 /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/aggressor/stream_wb --cpu 1 --node 0 --region-gb 1 --duration-sec 40
+[10:23:50.276]   aggressor [A] cpu=2: numactl --physcpubind=2 --membind=0 /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/aggressor/stream_wb --cpu 2 --node 0 --region-gb 1 --duration-sec 40
+[10:23:50.277]   aggressor [A] cpu=3: numactl --physcpubind=3 --membind=0 /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/aggressor/stream_wb --cpu 3 --node 0 --region-gb 1 --duration-sec 40
+[10:23:50.277]   aggressor [A] cpu=4: numactl --physcpubind=4 --membind=0 /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/aggressor/stream_wb --cpu 4 --node 0 --region-gb 1 --duration-sec 40
+[10:23:50.278]   Warmup 5.0s ...
+[10:23:55.283]   Measuring DRAM BW (3s PMU window) ...
+[10:23:58.297]   DRAM BW: 31.3 GB/s (rd=31.2, wr=0.1)
+[10:23:59.298]   victim: numactl --physcpubind=0 --membind=0 /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/victim/pointer_chase --cpu 0 --node 0 --wss 33554432 --trials 20 --run-sec 1.00
+[10:24:20.913]   [A@4c] mean=294.9 cyc/load, imc_bw=31.3 GB/s, agg_reported_bw=4.2 GB/s
+[10:24:23.917] 
+--- [B] 4 cores ---
+[10:24:23.917]   aggressor [B] cpu=1: numactl --physcpubind=1 --membind=0 /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/aggressor/stream_wb_nopf --cpu 1 --node 0 --region-gb 1 --duration-sec 40
+[10:24:23.918]   aggressor [B] cpu=2: numactl --physcpubind=2 --membind=0 /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/aggressor/stream_wb_nopf --cpu 2 --node 0 --region-gb 1 --duration-sec 40
+[10:24:23.918]   aggressor [B] cpu=3: numactl --physcpubind=3 --membind=0 /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/aggressor/stream_wb_nopf --cpu 3 --node 0 --region-gb 1 --duration-sec 40
+[10:24:23.918]   aggressor [B] cpu=4: numactl --physcpubind=4 --membind=0 /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/aggressor/stream_wb_nopf --cpu 4 --node 0 --region-gb 1 --duration-sec 40
+[10:24:23.919]   Warmup 5.0s ...
+[10:24:28.928]   Measuring DRAM BW (3s PMU window) ...
+[10:24:31.942]   DRAM BW: 27.5 GB/s (rd=27.4, wr=0.1)
+[10:24:32.944]   victim: numactl --physcpubind=0 --membind=0 /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/victim/pointer_chase --cpu 0 --node 0 --wss 33554432 --trials 20 --run-sec 1.00
+[10:24:54.811]   [B@4c] mean=251.3 cyc/load, imc_bw=27.5 GB/s, agg_reported_bw=4.2 GB/s
+[10:24:57.815] Wrote: /home/domin/CoherenceTest/APNET/directory-tax-spr/results/processed/02_bw_matched_matrix.csv
+[10:24:57.817] Wrote: /home/domin/CoherenceTest/APNET/directory-tax-spr/results/processed/02_bw_matched_report.md
+
+Phase 2-BW complete.
+  CSV:    /home/domin/CoherenceTest/APNET/directory-tax-spr/results/processed/02_bw_matched_matrix.csv
+  Report: /home/domin/CoherenceTest/APNET/directory-tax-spr/results/processed/02_bw_matched_report.md
+
+Q baseline: 81.4 cycles/load
+  [A@2c] mean=255.0 imc_bw=16.0 GB/s tax=+213.1%
+  [B@2c] mean=181.4 imc_bw=14.3 GB/s tax=+122.8%
+  [A@3c] mean=280.3 imc_bw=23.7 GB/s tax=+244.2%
+  [B@3c] mean=237.3 imc_bw=21.3 GB/s tax=+191.4%
+  [A@4c] mean=294.9 imc_bw=31.3 GB/s tax=+262.2%
+  [B@4c] mean=251.3 imc_bw=27.5 GB/s tax=+208.6%

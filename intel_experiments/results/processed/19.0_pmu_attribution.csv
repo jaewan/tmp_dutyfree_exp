@@ -1,0 +1,2 @@
+case,wss_bytes,wss_mb,llc_capacity_mb,latency_ns,cycles_per_load,tsc_hz,l1_hit,l2_hit,l3_hit,l3_miss,longest_lat_cache_miss,l3_miss_fraction,numa_huge_n2,numa_huge_n0,numa_maps_sample
+CXL_512MB_pmu,536870912,512,60,205.24,389.962,1899984357,213163258,3138780,20726493,5560062,52010730,0.211517,1,0,75d9dd400000 bind:2 file=/anon_hugepage\040(deleted) huge anon=256 dirty=256 N2=256 kernelpagesize_kB=2048

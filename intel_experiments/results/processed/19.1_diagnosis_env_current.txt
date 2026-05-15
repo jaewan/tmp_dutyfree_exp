@@ -1,0 +1,67 @@
+=== directory-tax-spr env/validate.sh ===
+Date: 2026-05-14T14:37:55+09:00
+User: domin
+
+=== CPU Identity ===
+  [FAIL] Expected 8462Y+, found: INTEL(R) XEON(R) PLATINUM 8592+
+  [WARN] Stepping: 2 (expected 8 for SPR D0)
+
+=== NUMA Topology ===
+  [PASS] NUMA nodes: 3
+  [WARN] Node 0 CPU list unexpected: 0-63,128-191 (expected to start with 0-31)
+
+=== perf_event_paranoid ===
+  [PASS] perf_event_paranoid = -1
+
+=== Uncore PMU Devices ===
+  [PASS] CHA tiles visible: 64
+  [PASS] PMU event unc_cha_core_snp.evict_one present
+  [PASS] PMU event unc_cha_rxc_req_q1_retry.sf_victim present
+  [PASS] Uncore perf read: functional
+
+=== CPU Frequency and Turbo ===
+  [PASS] Turbo: disabled (no_turbo=1)
+  [PASS] Governor: performance
+  [FAIL] Frequency not locked: min=1900 MHz, max=1900 MHz
+
+=== MSR 0x1A4 Access ===
+  [PASS] rdmsr found: /usr/sbin/rdmsr
+  [PASS] /dev/cpu/0/msr readable+writable by domin
+  [PASS] stream_wb_nopf has cap_sys_rawio (condition B MSR access OK)
+
+=== NUMA Balancing ===
+  [PASS] numa_balancing: disabled
+
+=== ASLR ===
+  [PASS] randomize_va_space = 1 (acceptable)
+
+=== Hugepages ===
+  [PASS] 2MB hugepages on node 0: 24576 (≥4096 = 8 GB minimum for 8 aggressor cores)
+  [PASS] 2MB hugepages free on node 0: 24576
+  [PASS] 2MB hugepages system total: 49152
+
+=== Required Tools ===
+  [PASS] gcc: /usr/bin/gcc
+  [PASS] python3: /usr/bin/python3
+  [PASS] numactl: /usr/bin/numactl
+  [PASS] perf: /usr/bin/perf
+  [PASS] rdmsr: /usr/sbin/rdmsr
+  [FAIL] python3 numpy: NOT INSTALLED (run: pip3 install numpy)
+  [FAIL] python3 scipy: NOT INSTALLED (run: pip3 install scipy)
+  [FAIL] python3 statsmodels: NOT INSTALLED (run: pip3 install statsmodels)
+  [FAIL] python3 matplotlib: NOT INSTALLED (run: pip3 install matplotlib)
+  [FAIL] python3 pandas: NOT INSTALLED (run: pip3 install pandas)
+
+=== Bench Binaries (run after make) ===
+  [PASS] bench/victim/pointer_chase: compiled
+  [PASS] bench/aggressor/stream_wb: compiled
+  [PASS] bench/aggressor/stream_wb_nopf: compiled
+  [PASS] bench/aggressor/stream_wc: compiled
+  [PASS] bench/aggressor/stream_nt: compiled
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Validation summary: 7 failures, 2 warnings
+RESULT: FAIL — 7 check(s) must be resolved before Phase 1
+
+Most likely fix: sudo env/setup.sh
+Then re-run: env/validate.sh

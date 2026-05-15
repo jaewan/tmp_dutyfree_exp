@@ -1,0 +1,6 @@
+# Phase 19.1 Diagnosis Step 3: MSR 0x1A4 State
+date: 2026-05-14T14:37:43+09:00
+CPU 0 MSR 0x1A4: rdmsr: open: Operation not permitted
+CPU 1 MSR 0x1A4: rdmsr: open: Operation not permitted
+CPU 2 MSR 0x1A4: rdmsr: open: Operation not permitted
+CPU 3 MSR 0x1A4: rdmsr: open: Operation not permitted

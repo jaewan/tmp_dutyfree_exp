@@ -1,0 +1,57 @@
+[
+  {
+    "condition": "B",
+    "n_cores": 3,
+    "trial": 0,
+    "read_gbps": 20.25,
+    "write_gbps": 0.21,
+    "total_gbps": 20.46,
+    "fallback": false,
+    "cas_rd": 1581805347,
+    "cas_wr": 16700536
+  },
+  {
+    "condition": "B",
+    "n_cores": 3,
+    "trial": 1,
+    "read_gbps": 20.4,
+    "write_gbps": 0.05,
+    "total_gbps": 20.45,
+    "fallback": false,
+    "cas_rd": 1594084747,
+    "cas_wr": 3844154
+  },
+  {
+    "condition": "B",
+    "n_cores": 3,
+    "trial": 2,
+    "read_gbps": 20.41,
+    "write_gbps": 0.05,
+    "total_gbps": 20.46,
+    "fallback": false,
+    "cas_rd": 1594544152,
+    "cas_wr": 4106717
+  },
+  {
+    "condition": "B",
+    "n_cores": 3,
+    "trial": 3,
+    "read_gbps": 20.37,
+    "write_gbps": 0.05,
+    "total_gbps": 20.42,
+    "fallback": false,
+    "cas_rd": 1591174920,
+    "cas_wr": 3794800
+  },
+  {
+    "condition": "B",
+    "n_cores": 3,
+    "trial": 4,
+    "read_gbps": 20.33,
+    "write_gbps": 0.05,
+    "total_gbps": 20.38,
+    "fallback": false,
+    "cas_rd": 1588639019,
+    "cas_wr": 3937871
+  }
+]

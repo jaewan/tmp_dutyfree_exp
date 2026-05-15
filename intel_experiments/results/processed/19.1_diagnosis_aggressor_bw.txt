@@ -1,0 +1,39 @@
+# Phase 19.1 Diagnosis Step 1: Aggressor Bandwidth
+date: 2026-05-14T14:36:21+09:00
+aggressor_pid: 94929
+command: numactl --membind=0 --cpunodebind=0 -- ./bench/aggressor/stream_wb --cpu 1 --node 0 --region-gb 1 --duration-sec 35 --no-verify
+
+## perf stat 20s
+33290.17,MiB,uncore_imc_0/cas_count_read/,40006969914,100.00,,
+33285.93,MiB,uncore_imc_1/cas_count_read/,40006946368,100.00,,
+33285.00,MiB,uncore_imc_2/cas_count_read/,40006944946,100.00,,
+33284.31,MiB,uncore_imc_3/cas_count_read/,40006943425,100.00,,
+33288.82,MiB,uncore_imc_4/cas_count_read/,40006941950,100.00,,
+33288.78,MiB,uncore_imc_5/cas_count_read/,40006940064,100.00,,
+33292.33,MiB,uncore_imc_6/cas_count_read/,40006938218,100.00,,
+33289.95,MiB,uncore_imc_7/cas_count_read/,40006936625,100.00,,
+
+## aggressor stdout
+{"cpu": 1, "condition": "A_wb_pf", "region_gb": 1, "iterations": 464, "total_bytes": 498216206336, "elapsed_sec": 35.001, "avg_bw_gbps": 14.234}
+
+## aggressor stderr tail
+stream_wb [cpu1]: iter=196 bw=1.02 GB/s
+stream_wb [cpu1]: iter=210 bw=1.02 GB/s
+stream_wb [cpu1]: iter=224 bw=1.02 GB/s
+stream_wb [cpu1]: iter=238 bw=1.02 GB/s
+stream_wb [cpu1]: iter=252 bw=1.02 GB/s
+stream_wb [cpu1]: iter=266 bw=1.02 GB/s
+stream_wb [cpu1]: iter=280 bw=1.02 GB/s
+stream_wb [cpu1]: iter=294 bw=1.02 GB/s
+stream_wb [cpu1]: iter=308 bw=1.02 GB/s
+stream_wb [cpu1]: iter=322 bw=1.02 GB/s
+stream_wb [cpu1]: iter=336 bw=1.02 GB/s
+stream_wb [cpu1]: iter=350 bw=1.02 GB/s
+stream_wb [cpu1]: iter=364 bw=1.02 GB/s
+stream_wb [cpu1]: iter=378 bw=1.02 GB/s
+stream_wb [cpu1]: iter=392 bw=1.02 GB/s
+stream_wb [cpu1]: iter=406 bw=1.02 GB/s
+stream_wb [cpu1]: iter=420 bw=1.02 GB/s
+stream_wb [cpu1]: iter=434 bw=1.02 GB/s
+stream_wb [cpu1]: iter=448 bw=1.02 GB/s
+stream_wb [cpu1]: iter=462 bw=1.02 GB/s

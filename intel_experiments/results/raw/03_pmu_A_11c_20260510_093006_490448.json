@@ -1,0 +1,116 @@
+{
+  "condition": "A",
+  "n_cores": 11,
+  "rows": [
+    {
+      "condition": "A",
+      "n_aggr_cores": 11,
+      "trial": 0,
+      "agg_bw_gbps": 11.29,
+      "sf_evict_total": 524062,
+      "sf_evict_rate": 104812.0,
+      "sf_victim_retry": 0,
+      "tor_drd_pref": 8568554149,
+      "pmu_raw": "{\"unc_cha_core_snp.evict_one\": 312774, \"unc_cha_core_snp.evict_gtone\": 211288, \"unc_cha_rxc_req_q1_retry.sf_victim\": 0, \"unc_cha_tor_inserts.ia_drd_pref\": 8568554149, \"unc_cha_tor_inserts.ia_drd\": 3892247146}"
+    },
+    {
+      "condition": "A",
+      "n_aggr_cores": 11,
+      "trial": 1,
+      "agg_bw_gbps": 11.22,
+      "sf_evict_total": 615354,
+      "sf_evict_rate": 123071.0,
+      "sf_victim_retry": 0,
+      "tor_drd_pref": 8460295330,
+      "pmu_raw": "{\"unc_cha_core_snp.evict_one\": 386931, \"unc_cha_core_snp.evict_gtone\": 228423, \"unc_cha_rxc_req_q1_retry.sf_victim\": 0, \"unc_cha_tor_inserts.ia_drd_pref\": 8460295330, \"unc_cha_tor_inserts.ia_drd\": 3929447983}"
+    },
+    {
+      "condition": "A",
+      "n_aggr_cores": 11,
+      "trial": 2,
+      "agg_bw_gbps": 11.33,
+      "sf_evict_total": 732759,
+      "sf_evict_rate": 146552.0,
+      "sf_victim_retry": 0,
+      "tor_drd_pref": 8386485027,
+      "pmu_raw": "{\"unc_cha_core_snp.evict_one\": 482761, \"unc_cha_core_snp.evict_gtone\": 249998, \"unc_cha_rxc_req_q1_retry.sf_victim\": 0, \"unc_cha_tor_inserts.ia_drd_pref\": 8386485027, \"unc_cha_tor_inserts.ia_drd\": 4131163102}"
+    },
+    {
+      "condition": "A",
+      "n_aggr_cores": 11,
+      "trial": 3,
+      "agg_bw_gbps": 11.28,
+      "sf_evict_total": 1240249,
+      "sf_evict_rate": 248050.0,
+      "sf_victim_retry": 0,
+      "tor_drd_pref": 8308177729,
+      "pmu_raw": "{\"unc_cha_core_snp.evict_one\": 817475, \"unc_cha_core_snp.evict_gtone\": 422774, \"unc_cha_rxc_req_q1_retry.sf_victim\": 0, \"unc_cha_tor_inserts.ia_drd_pref\": 8308177729, \"unc_cha_tor_inserts.ia_drd\": 4148351419}"
+    },
+    {
+      "condition": "A",
+      "n_aggr_cores": 11,
+      "trial": 4,
+      "agg_bw_gbps": 11.4,
+      "sf_evict_total": 413936,
+      "sf_evict_rate": 82787.0,
+      "sf_victim_retry": 0,
+      "tor_drd_pref": 8187550592,
+      "pmu_raw": "{\"unc_cha_core_snp.evict_one\": 216155, \"unc_cha_core_snp.evict_gtone\": 197781, \"unc_cha_rxc_req_q1_retry.sf_victim\": 0, \"unc_cha_tor_inserts.ia_drd_pref\": 8187550592, \"unc_cha_tor_inserts.ia_drd\": 4373041244}"
+    },
+    {
+      "condition": "A",
+      "n_aggr_cores": 11,
+      "trial": 5,
+      "agg_bw_gbps": 11.3,
+      "sf_evict_total": 376814,
+      "sf_evict_rate": 75363.0,
+      "sf_victim_retry": 0,
+      "tor_drd_pref": 7961315417,
+      "pmu_raw": "{\"unc_cha_core_snp.evict_one\": 183238, \"unc_cha_core_snp.evict_gtone\": 193576, \"unc_cha_rxc_req_q1_retry.sf_victim\": 0, \"unc_cha_tor_inserts.ia_drd_pref\": 7961315417, \"unc_cha_tor_inserts.ia_drd\": 4471945957}"
+    },
+    {
+      "condition": "A",
+      "n_aggr_cores": 11,
+      "trial": 6,
+      "agg_bw_gbps": 11.29,
+      "sf_evict_total": 345226,
+      "sf_evict_rate": 69045.0,
+      "sf_victim_retry": 0,
+      "tor_drd_pref": 8534214216,
+      "pmu_raw": "{\"unc_cha_core_snp.evict_one\": 163482, \"unc_cha_core_snp.evict_gtone\": 181744, \"unc_cha_rxc_req_q1_retry.sf_victim\": 0, \"unc_cha_tor_inserts.ia_drd_pref\": 8534214216, \"unc_cha_tor_inserts.ia_drd\": 3898902185}"
+    },
+    {
+      "condition": "A",
+      "n_aggr_cores": 11,
+      "trial": 7,
+      "agg_bw_gbps": 11.25,
+      "sf_evict_total": 360863,
+      "sf_evict_rate": 72173.0,
+      "sf_victim_retry": 0,
+      "tor_drd_pref": 8183857973,
+      "pmu_raw": "{\"unc_cha_core_snp.evict_one\": 178121, \"unc_cha_core_snp.evict_gtone\": 182742, \"unc_cha_rxc_req_q1_retry.sf_victim\": 0, \"unc_cha_tor_inserts.ia_drd_pref\": 8183857973, \"unc_cha_tor_inserts.ia_drd\": 4202445840}"
+    },
+    {
+      "condition": "A",
+      "n_aggr_cores": 11,
+      "trial": 8,
+      "agg_bw_gbps": 11.27,
+      "sf_evict_total": 360977,
+      "sf_evict_rate": 72195.0,
+      "sf_victim_retry": 0,
+      "tor_drd_pref": 8066012295,
+      "pmu_raw": "{\"unc_cha_core_snp.evict_one\": 176586, \"unc_cha_core_snp.evict_gtone\": 184391, \"unc_cha_rxc_req_q1_retry.sf_victim\": 0, \"unc_cha_tor_inserts.ia_drd_pref\": 8066012295, \"unc_cha_tor_inserts.ia_drd\": 4330954018}"
+    },
+    {
+      "condition": "A",
+      "n_aggr_cores": 11,
+      "trial": 9,
+      "agg_bw_gbps": 11.24,
+      "sf_evict_total": 392175,
+      "sf_evict_rate": 78435.0,
+      "sf_victim_retry": 0,
+      "tor_drd_pref": 8414995715,
+      "pmu_raw": "{\"unc_cha_core_snp.evict_one\": 193290, \"unc_cha_core_snp.evict_gtone\": 198885, \"unc_cha_rxc_req_q1_retry.sf_victim\": 0, \"unc_cha_tor_inserts.ia_drd_pref\": 8414995715, \"unc_cha_tor_inserts.ia_drd\": 3956454670}"
+    }
+  ]
+}

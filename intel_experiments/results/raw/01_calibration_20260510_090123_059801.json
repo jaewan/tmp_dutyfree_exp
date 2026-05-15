@@ -1,0 +1,83 @@
+{
+  "phase": 1,
+  "results": {
+    "A": {
+      "condition": "A",
+      "name": "WB+prefetch",
+      "n": 10,
+      "mean_gbps": 16.297,
+      "std_gbps": 0.142,
+      "min_gbps": 16.122,
+      "max_gbps": 16.479,
+      "samples": [
+        16.154,
+        16.122,
+        16.133,
+        16.378,
+        16.193,
+        16.479,
+        16.463,
+        16.256,
+        16.437,
+        16.356
+      ]
+    },
+    "B": {
+      "condition": "B",
+      "name": "WB-nopf",
+      "n": 10,
+      "mean_gbps": 14.338,
+      "std_gbps": 0.255,
+      "min_gbps": 14.079,
+      "max_gbps": 14.789,
+      "samples": [
+        14.789,
+        14.198,
+        14.135,
+        14.202,
+        14.358,
+        14.326,
+        14.37,
+        14.782,
+        14.146,
+        14.079
+      ]
+    },
+    "C": {
+      "condition": "C",
+      "name": "WC (MOVNTDQA)",
+      "n": 10,
+      "mean_gbps": 12.679,
+      "std_gbps": 0.13,
+      "min_gbps": 12.514,
+      "max_gbps": 12.887,
+      "samples": [
+        12.543,
+        12.631,
+        12.694,
+        12.887,
+        12.711,
+        12.514,
+        12.756,
+        12.578,
+        12.873,
+        12.607
+      ]
+    }
+  },
+  "core_counts": {
+    "A": {
+      "n_cores": 2,
+      "predicted_agg_gbps": 32.6
+    },
+    "B": {
+      "n_cores": 3,
+      "predicted_agg_gbps": 43.0
+    },
+    "C": {
+      "n_cores": 3,
+      "predicted_agg_gbps": 38.0
+    }
+  },
+  "passed": false
+}

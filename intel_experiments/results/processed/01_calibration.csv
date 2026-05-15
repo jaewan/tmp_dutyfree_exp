@@ -1,0 +1,31 @@
+condition,condition_name,trial,bw_gbps
+A,WB+prefetch,0,16.154
+A,WB+prefetch,1,16.122
+A,WB+prefetch,2,16.133
+A,WB+prefetch,3,16.378
+A,WB+prefetch,4,16.193
+A,WB+prefetch,5,16.479
+A,WB+prefetch,6,16.463
+A,WB+prefetch,7,16.256
+A,WB+prefetch,8,16.437
+A,WB+prefetch,9,16.356
+B,WB-nopf,0,14.789
+B,WB-nopf,1,14.198
+B,WB-nopf,2,14.135
+B,WB-nopf,3,14.202
+B,WB-nopf,4,14.358
+B,WB-nopf,5,14.326
+B,WB-nopf,6,14.37
+B,WB-nopf,7,14.782
+B,WB-nopf,8,14.146
+B,WB-nopf,9,14.079
+C,WC (MOVNTDQA),0,12.543
+C,WC (MOVNTDQA),1,12.631
+C,WC (MOVNTDQA),2,12.694
+C,WC (MOVNTDQA),3,12.887
+C,WC (MOVNTDQA),4,12.711
+C,WC (MOVNTDQA),5,12.514
+C,WC (MOVNTDQA),6,12.756
+C,WC (MOVNTDQA),7,12.578
+C,WC (MOVNTDQA),8,12.873
+C,WC (MOVNTDQA),9,12.607

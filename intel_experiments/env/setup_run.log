@@ -1,0 +1,326 @@
+=== directory-tax-spr setup.sh ===
+Date: 2026-05-10T08:40:27+09:00
+Running as: uid=0(root) gid=0(root) groups=0(root)
+Target frequency: 3000 MHz
+
+=== Step 1: msr-tools ===
+  msr-tools already present: /usr/sbin/rdmsr
+=== Step 2: msr kernel module ===
+  msr module loaded
+=== Step 3: MSR device permissions ===
+  MSR device permissions set for user: domin
+=== Step 4: Baseline MSR 0x1A4 (prefetcher state) ===
+=== directory-tax-spr setup.sh ===
+Date: 2026-05-10T08:50:15+09:00
+Running as: uid=0(root) gid=0(root) groups=0(root)
+Target frequency: 3000 MHz
+Experiment user: domin
+Project root: /home/domin/CoherenceTest/APNET/directory-tax-spr
+
+=== Step 1: msr-tools ===
+  msr-tools already present: /usr/sbin/rdmsr
+=== Step 2: msr kernel module ===
+  msr module loaded
+=== Step 3: MSR device permissions ===
+  /dev/cpu/*/msr: owner=domin, mode=0660
+=== Step 4: Baseline MSR 0x1A4 (prefetcher state, as root) ===
+  Full dump: /home/domin/CoherenceTest/APNET/directory-tax-spr/env/baseline_msr_1a4.txt
+# Baseline MSR 0x1A4 per core — captured 2026-05-10T08:50:15+09:00
+cpu0  : 20
+cpu1  : 20
+cpu2  : 20
+  CPU0 baseline MSR 0x1A4 = 20
+  WARNING: CPU0 MSR 0x1A4 = 20 (expected 0 — some prefetchers BIOS-disabled)
+=== Step 5: perf_event_paranoid ===
+  perf_event_paranoid = -1
+=== Step 6: Disable turbo ===
+  intel_pstate/no_turbo = 1
+=== Step 7: CPU frequency lock to 3000 MHz ===
+Setting cpu: 127
+  governor set: OK
+Setting cpu: 127
+  frequency range set: OK
+  cpu0 governor=performance, cur_freq=2793904 kHz
+=== Step 7b: HWP energy-performance preference ===
+  HWP energy_performance_preference set to 'performance' on 128 policies
+  cpu0 freq after HWP set: 2800000 kHz
+=== Step 8: NUMA balancing ===
+  numa_balancing = 0
+=== Step 9: ASLR ===
+  randomize_va_space = 1
+=== Step 10: RDPMC ===
+  rdpmc = 2
+=== Step 11: Transparent Hugepages ===
+  THP = always [madvise] never
+=== Step 12: 2MB hugepages on NUMA node 0 ===
+  Node 0 2MB hugepages before: 0
+  Node 0 2MB hugepages after: 10240
+  2M hugepages system total: 12288
+=== Step 13: setcap CAP_SYS_RAWIO for MSR-accessing binaries ===
+  /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/aggressor/stream_wb_nopf: /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/aggressor/stream_wb_nopf cap_sys_rawio=ep
+  setcap: OK — condition B MSR access will work for user domin
+=== Step 14: Post-setup snapshot ===
+  Written: /home/domin/CoherenceTest/APNET/directory-tax-spr/env/env_report_post_setup.md
+
+=== setup.sh complete ===
+Next: run env/validate.sh to confirm all conditions are met
+=== directory-tax-spr setup.sh ===
+Date: 2026-05-13T01:46:16+09:00
+Running as: uid=0(root) gid=0(root) groups=0(root)
+Target frequency: 3000 MHz
+Experiment user: domin
+Project root: /home/domin/CoherenceTest/APNET/directory-tax-spr
+
+=== Step 1: msr-tools ===
+  msr-tools already present: /usr/sbin/rdmsr
+=== Step 2: msr kernel module ===
+  msr module loaded
+=== Step 3: MSR device permissions ===
+  /dev/cpu/*/msr: owner=domin, mode=0660
+=== Step 4: Baseline MSR 0x1A4 (prefetcher state, as root) ===
+  Full dump: /home/domin/CoherenceTest/APNET/directory-tax-spr/env/baseline_msr_1a4.txt
+# Baseline MSR 0x1A4 per core — captured 2026-05-13T01:46:17+09:00
+cpu0  : 20
+cpu1  : 20
+cpu2  : 20
+  CPU0 baseline MSR 0x1A4 = 20
+  WARNING: CPU0 MSR 0x1A4 = 20 (expected 0 — some prefetchers BIOS-disabled)
+=== Step 5: perf_event_paranoid ===
+  perf_event_paranoid = -1
+=== Step 6: Disable turbo ===
+  intel_pstate/no_turbo = 1
+=== Step 7: CPU frequency lock to 3000 MHz ===
+Setting cpu: 127
+  governor set: OK
+Setting cpu: 127
+  frequency range set: OK
+  cpu0 governor=performance, cur_freq=2801915 kHz
+=== Step 7b: HWP energy-performance preference ===
+  HWP energy_performance_preference set to 'performance' on 128 policies
+  cpu0 freq after HWP set: 2780254 kHz
+=== Step 8: NUMA balancing ===
+  numa_balancing = 0
+=== Step 9: ASLR ===
+  randomize_va_space = 1
+=== Step 10: RDPMC ===
+  rdpmc = 2
+=== Step 11: Transparent Hugepages ===
+  THP = always [madvise] never
+=== Step 12: 2MB hugepages on NUMA node 0 ===
+  Node 0 2MB hugepages before: 1024
+  Node 0 2MB hugepages after: 10240
+  2M hugepages system total: 11264
+=== Step 13: setcap CAP_SYS_RAWIO for MSR-accessing binaries ===
+  /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/aggressor/stream_wb_nopf: /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/aggressor/stream_wb_nopf cap_sys_rawio=ep
+  setcap: OK — condition B MSR access will work for user domin
+=== Step 14: Post-setup snapshot ===
+  Written: /home/domin/CoherenceTest/APNET/directory-tax-spr/env/env_report_post_setup.md
+
+=== setup.sh complete ===
+Next: run env/validate.sh to confirm all conditions are met
+=== directory-tax-spr setup.sh ===
+Date: 2026-05-14T05:03:07+09:00
+Running as: uid=0(root) gid=0(root) groups=0(root)
+Target frequency: 3000 MHz
+Experiment user: domin
+Project root: /home/domin/CoherenceTest/APNET/directory-tax-spr
+
+=== Step 1: msr-tools ===
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+The following NEW packages will be installed:
+  msr-tools
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 10.0 kB of archives.
+After this operation, 49.2 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu resolute/main amd64 msr-tools amd64 1.3+git20220805.7d78c80-1build1 [10.0 kB]
+Fetched 10.0 kB in 0s (27.4 kB/s)
+Selecting previously unselected package msr-tools.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 192396 files and directories currently installed.)
+Preparing to unpack .../msr-tools_1.3+git20220805.7d78c80-1build1_amd64.deb ...
+Unpacking msr-tools (1.3+git20220805.7d78c80-1build1) ...
+Setting up msr-tools (1.3+git20220805.7d78c80-1build1) ...
+Processing triggers for man-db (2.13.1-1build1) ...
+  msr-tools installed
+=== Step 2: msr kernel module ===
+  msr module loaded
+=== Step 3: MSR device permissions ===
+  /dev/cpu/*/msr: owner=domin, mode=0660
+=== Step 4: Baseline MSR 0x1A4 (prefetcher state, as root) ===
+  Full dump: /home/domin/CoherenceTest/APNET/directory-tax-spr/env/baseline_msr_1a4.txt
+# Baseline MSR 0x1A4 per core — captured 2026-05-14T05:03:12+09:00
+cpu0  : 0
+cpu1  : 0
+cpu2  : 0
+  CPU0 baseline MSR 0x1A4 = 0
+=== Step 5: perf_event_paranoid ===
+  perf_event_paranoid = -1
+=== Step 6: Disable turbo ===
+  intel_pstate/no_turbo = 1
+=== Step 7: CPU frequency lock to 3000 MHz ===
+Setting cpu: 255
+  governor set: OK
+Setting cpu: 255
+  frequency range set: OK
+  cpu0 governor=performance, cur_freq=1900017 kHz
+  WARNING: cpu0 freq 1900017 kHz far below target 3000000 kHz
+  HWP may be active. Consider: echo 0 > /sys/devices/system/cpu/cpufreq/policy0/energy_performance_preference
+=== Step 7b: HWP energy-performance preference ===
+  HWP energy_performance_preference set to 'performance' on 256 policies
+  cpu0 freq after HWP set: 1900020 kHz
+=== Step 8: NUMA balancing ===
+  numa_balancing = 0
+=== Step 9: ASLR ===
+  randomize_va_space = 1
+=== Step 10: RDPMC ===
+  rdpmc = 2
+=== Step 11: Transparent Hugepages ===
+  THP = always [madvise] never
+=== Step 12: 2MB hugepages on NUMA node 0 ===
+  Node 0 2MB hugepages before: 0
+  Node 0 2MB hugepages after: 24576
+  2M hugepages system total: 24576
+=== Step 12b: Phase 19 CXL hugepages on NUMA node 2 ===
+  Node 2 present: cpulist='', size=124913 MB
+  Node 2 2MB hugepages before: 0
+  Node 2 2MB hugepages after: 24576 (free=24576)
+  2M hugepages system total after Phase 19 reservation: 49152
+  Override targets with: sudo env NODE0_HP_TARGET=16384 NODE2_HP_TARGET=16384 ./env/setup.sh
+=== Step 13: setcap CAP_SYS_RAWIO for MSR-accessing binaries ===
+  /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/aggressor/stream_wb_nopf: /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/aggressor/stream_wb_nopf cap_sys_rawio=ep
+  setcap: OK — condition B MSR access will work for user domin
+=== Step 14: Post-setup snapshot ===
+  Written: /home/domin/CoherenceTest/APNET/directory-tax-spr/env/env_report_post_setup.md
+
+=== setup.sh complete ===
+Next: run env/validate.sh to confirm all conditions are met
+=== directory-tax-spr setup.sh ===
+Date: 2026-05-14T08:50:29+09:00
+Running as: uid=0(root) gid=0(root) groups=0(root)
+Target frequency: 3000 MHz
+Experiment user: domin
+Project root: /home/domin/CoherenceTest/APNET/directory-tax-spr
+
+=== Step 1: msr-tools ===
+  msr-tools already present: /usr/sbin/rdmsr
+=== Step 2: msr kernel module ===
+  msr module loaded
+=== Step 3: MSR device permissions ===
+  /dev/cpu/*/msr: owner=domin, mode=0660
+=== Step 4: Baseline MSR 0x1A4 (prefetcher state, as root) ===
+  Full dump: /home/domin/CoherenceTest/APNET/directory-tax-spr/env/baseline_msr_1a4.txt
+# Baseline MSR 0x1A4 per core — captured 2026-05-14T08:50:31+09:00
+cpu0  : 0
+cpu1  : 0
+cpu2  : 0
+  CPU0 baseline MSR 0x1A4 = 0
+=== Step 5: perf_event_paranoid ===
+  perf_event_paranoid = -1
+=== Step 6: Disable turbo ===
+  intel_pstate/no_turbo = 1
+=== Step 7: CPU frequency lock to 3000 MHz ===
+Setting cpu: 255
+  governor set: OK
+   or because the userspace governor isn't loaded?
+  frequency range set: OK
+  cpu0 governor=performance, cur_freq=1900019 kHz
+  WARNING: cpu0 freq 1900019 kHz far below target 3000000 kHz
+  HWP may be active. Consider: echo 0 > /sys/devices/system/cpu/cpufreq/policy0/energy_performance_preference
+=== Step 7b: HWP energy-performance preference ===
+  HWP energy_performance_preference set to 'performance' on 256 policies
+  cpu0 freq after HWP set: 1900029 kHz
+=== Step 8: NUMA balancing ===
+  numa_balancing = 0
+=== Step 9: ASLR ===
+  randomize_va_space = 1
+=== Step 10: RDPMC ===
+  rdpmc = 2
+=== Step 11: Transparent Hugepages ===
+  THP = always [madvise] never
+=== Step 12: 2MB hugepages on NUMA node 0 ===
+  Node 0 2MB hugepages before: 24576
+  Node 0 already has 24576 hugepages
+  2M hugepages system total: 49152
+=== Step 12b: Phase 19 CXL hugepages on NUMA node 2 ===
+  Node 2 present: cpulist='', size=124913 MB
+  Node 2 2MB hugepages before: 24576
+  Node 2 already has 24576 hugepages (free=24576)
+  2M hugepages system total after Phase 19 reservation: 49152
+  Override targets with: sudo env NODE0_HP_TARGET=16384 NODE2_HP_TARGET=16384 ./env/setup.sh
+=== Step 13: setcap CAP_SYS_RAWIO for MSR-accessing binaries ===
+  /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/aggressor/stream_wb_nopf: /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/aggressor/stream_wb_nopf cap_sys_rawio=ep
+  setcap: OK — MSR access will work for user domin
+  /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/victim/pointer_chase: /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/victim/pointer_chase cap_sys_rawio=ep
+  setcap: OK — MSR access will work for user domin
+=== Step 14: Post-setup snapshot ===
+  Written: /home/domin/CoherenceTest/APNET/directory-tax-spr/env/env_report_post_setup.md
+
+=== setup.sh complete ===
+Next: run env/validate.sh to confirm all conditions are met
+=== directory-tax-spr setup.sh ===
+Date: 2026-05-15T02:14:29+09:00
+Running as: uid=0(root) gid=0(root) groups=0(root)
+Target frequency: 3000 MHz
+Experiment user: domin
+Project root: /home/domin/CoherenceTest/APNET/directory-tax-spr
+
+=== Step 1: msr-tools ===
+  msr-tools already present: /usr/sbin/rdmsr
+=== Step 2: msr kernel module ===
+  msr module loaded
+=== Step 3: MSR device permissions ===
+  /dev/cpu/*/msr: owner=domin, mode=0660
+=== Step 4: Baseline MSR 0x1A4 (prefetcher state, as root) ===
+  Full dump: /home/domin/CoherenceTest/APNET/directory-tax-spr/env/baseline_msr_1a4.txt
+# Baseline MSR 0x1A4 per core — captured 2026-05-15T02:14:30+09:00
+cpu0  : 0
+cpu1  : 0
+cpu2  : 0
+  CPU0 baseline MSR 0x1A4 = 0
+=== Step 5: perf_event_paranoid ===
+  perf_event_paranoid = -1
+=== Step 6: Disable turbo ===
+  intel_pstate/no_turbo = 1
+=== Step 7: CPU frequency lock to 3000 MHz ===
+Setting cpu: 255
+  governor set: OK
+   or because the userspace governor isn't loaded?
+  frequency range set: OK
+  cpu0 governor=performance, cur_freq=1900053 kHz
+  WARNING: cpu0 freq 1900053 kHz far below target 3000000 kHz
+  HWP may be active. Consider: echo 0 > /sys/devices/system/cpu/cpufreq/policy0/energy_performance_preference
+=== Step 7b: HWP energy-performance preference ===
+  HWP energy_performance_preference set to 'performance' on 256 policies
+  cpu0 freq after HWP set: 1900000 kHz
+=== Step 8: NUMA balancing ===
+  numa_balancing = 0
+=== Step 9: ASLR ===
+  randomize_va_space = 1
+=== Step 10: RDPMC ===
+  rdpmc = 2
+=== Step 11: Transparent Hugepages ===
+  THP = always [madvise] never
+=== Step 12: 2MB hugepages on NUMA node 0 ===
+  Node 0 2MB hugepages before: 24576
+  Node 0 already has 24576 hugepages
+  2M hugepages system total: 49152
+=== Step 12b: Phase 19 CXL hugepages on NUMA node 2 ===
+  Node 2 present: cpulist='', size=124913 MB
+  Node 2 2MB hugepages before: 24576
+  Node 2 already has 24576 hugepages (free=24576)
+  2M hugepages system total after Phase 19 reservation: 49152
+  Override targets with: sudo env NODE0_HP_TARGET=16384 NODE2_HP_TARGET=16384 ./env/setup.sh
+=== Step 13: setcap CAP_SYS_RAWIO for MSR-accessing binaries ===
+  /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/aggressor/stream_wb_nopf: /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/aggressor/stream_wb_nopf cap_sys_rawio=ep
+  setcap: OK — MSR access will work for user domin
+  /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/victim/pointer_chase: /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/victim/pointer_chase cap_sys_rawio=ep
+  setcap: OK — MSR access will work for user domin
+  /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/aggressor/forced_turnover: /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/aggressor/forced_turnover cap_sys_rawio=ep
+  setcap: OK — MSR access will work for user domin
+=== Step 14: Post-setup snapshot ===
+  Written: /home/domin/CoherenceTest/APNET/directory-tax-spr/env/env_report_post_setup.md
+
+=== setup.sh complete ===
+Next: run env/validate.sh to confirm all conditions are met
