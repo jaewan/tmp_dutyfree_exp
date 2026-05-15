@@ -1,0 +1,12 @@
+[aggressor] mode=wb_load threads=6 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 1536 MB CXL memory at 0x72e8abc00000
+[aggressor] GO
+thread  0  core 136  3.84 GB/s  (15.028 s)
+thread  1  core 137  3.92 GB/s  (15.014 s)
+thread  2  core 138  4.17 GB/s  (15.016 s)
+thread  3  core 139  4.11 GB/s  (15.013 s)
+thread  4  core 140  3.97 GB/s  (15.003 s)
+thread  5  core 141  3.98 GB/s  (15.026 s)
+---
+aggregate: 23.97 GB/s  (6 threads, mode=wb_load)
+RESULT mode=wb_load threads=6 bw_gbps=23.971 throttle=0

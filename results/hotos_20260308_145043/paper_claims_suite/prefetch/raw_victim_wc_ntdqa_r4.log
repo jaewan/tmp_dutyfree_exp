@@ -1,0 +1,19 @@
+[victim] core=128 node=1 ws=64 KB duration=15 warmup=5 chase=0
+[victim] warming up for 5 s …
+[victim] measuring for 15 s …
+[victim] interim: IPC=0.997  L2miss_rate=0.00%  iters=354831
+[victim] interim: IPC=0.997  L2miss_rate=0.00%  iters=709464
+[victim] interim: IPC=0.997  L2miss_rate=0.00%  iters=1063114
+[victim] interim: IPC=0.997  L2miss_rate=0.00%  iters=1417616
+[victim] interim: IPC=0.997  L2miss_rate=0.00%  iters=1772224
+[victim] interim: IPC=0.997  L2miss_rate=0.00%  iters=2126787
+[victim] interim: IPC=0.997  L2miss_rate=0.00%  iters=2481258
+[victim] interim: IPC=0.997  L2miss_rate=0.00%  iters=2835751
+[victim] interim: IPC=0.997  L2miss_rate=0.00%  iters=3190357
+[victim] interim: IPC=0.997  L2miss_rate=0.00%  iters=3545124
+[victim] interim: IPC=0.997  L2miss_rate=0.00%  iters=3899535
+[victim] interim: IPC=0.997  L2miss_rate=0.00%  iters=4253925
+[victim] interim: IPC=0.997  L2miss_rate=0.00%  iters=4607488
+[victim] interim: IPC=0.997  L2miss_rate=0.00%  iters=4962055
+[victim] DONE: IPC=0.9967  L2_miss=0.00%
+VICTIM core=128 ipc=0.9967 l2_miss_rate=0.00 cycles=33385226021 insns=33276418140 l2_hit=16525899218 l2_miss=583562 iters=5316555 sec=15.00

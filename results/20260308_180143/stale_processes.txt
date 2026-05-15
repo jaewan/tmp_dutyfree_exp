@@ -1,0 +1,3 @@
+ 214029  172966 bash results/20260308_180143/scripts/run_additional_experiments.sh
+ 214031  214029 tee -a /home/domin/CoherenceTest/APNET/results/20260308_180143/run_additional_experiments.log
+ 214034  214029 rg bin/(victim|aggressor|intra_app_corun)|run_additional_experiments -S

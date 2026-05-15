@@ -1,0 +1,14 @@
+# started on Thu Mar  5 18:11:37 2026
+
+
+ Performance counter stats for process id '99672':
+
+    28,790,016,763      cycles                                                                  (42.85%)
+    12,392,350,120      instructions                     #    0.43  insn per cycle              (42.88%)
+     5,758,123,435      r7064                                                                   (42.87%)
+       333,992,211      r0864                                                                   (57.14%)
+       785,928,140      l2_pf_miss_l2_hit_l3.all                                                (71.44%)
+         1,561,051      l2_pf_miss_l2_l3.all                                                    (85.71%)
+
+      13.001920676 seconds time elapsed
+

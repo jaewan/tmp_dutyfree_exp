@@ -1,0 +1,6 @@
+mode,threads,mean_bw_gbps,sd_bw_gbps,n
+wb_load,2,20.777,0.009,3
+wb_load,3,20.512,0.016,3
+wc_ntdqa,7,17.899,0.005,3
+wc_ntdqa,9,20.957,0.003,3
+wc_ntdqa,11,24.821,0.015,3

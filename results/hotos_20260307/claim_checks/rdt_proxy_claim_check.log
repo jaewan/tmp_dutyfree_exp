@@ -1,0 +1,6 @@
+PHASE: RDT_PROXY_4PCT_CHECK
+CMD: mkdir /sys/fs/resctrl/exp_proxy_test
+mkdir: cannot create directory ‘/sys/fs/resctrl/exp_proxy_test’: Permission denied
+STDOUT: failed (see stderr in log)
+FINDING: resctrl write blocked; cannot run single-way RDT proxy experiment
+GATE_STATUS: fail_blocked_permission

@@ -1,0 +1,14 @@
+phase,metric,mode,unit,context,mean,sd,n
+pmu_pair,bw_gbps,wb_load,GB/s,chase,24.866400,0.026397,5
+pmu_pair,bw_gbps,wc_ntdqa,GB/s,chase,24.819400,0.015978,5
+pmu_pair,cpi,wb_load,cycles_per_iter,chase,4653368.808417,8733.882729,5
+pmu_pair,cpi,wc_ntdqa,cycles_per_iter,chase,3591398.491970,14691.896203,5
+pmu_pair,pmu_count,wb_load,count,amd_df/event=0x07,137737.400000,22351.246325,5
+pmu_pair,pmu_count,wb_load,count,amd_l3/event=0x04,6322161348.200000,44611345.446622,5
+pmu_pair,pmu_count,wc_ntdqa,count,amd_df/event=0x07,191188.800000,65506.703113,5
+pmu_pair,pmu_count,wc_ntdqa,count,amd_l3/event=0x04,1197979215.600000,78650499.204201,5
+precheck,pmu_df_available,na,bool,system,1.000000,0.000000,1
+precheck,pmu_l3_available,na,bool,system,1.000000,0.000000,1
+prefetch_bw,bw_gbps,wb_load,GB/s,1thread,15.764200,0.007155,5
+prefetch_bw,bw_gbps,wb_prefetchnta,GB/s,1thread,15.681600,0.005367,5
+prefetch_bw,bw_gbps,wc_ntdqa,GB/s,1thread,4.174200,0.000837,5

@@ -1,0 +1,13 @@
+=== FALLBACK_AMD_L3 START 2026-03-06T10:10:50+09:00 ===
+CMD: perf stat -a -e amd_l3/event=0x04,umask=0xff/ -- sleep 1
+event syntax error: 'amd_l3/event=0x04,umask=0xff/'
+                     \___ Bad event or PMU
+
+Unable to find PMU or event on a PMU of 'amd_l3'
+Run 'perf list' for a list of valid events
+
+ Usage: perf stat [<options>] [<command>]
+
+    -e, --event <event>   event selector. use 'perf list' to list available events
+RC=129
+=== FALLBACK_AMD_L3 END 2026-03-06T10:10:50+09:00 ===

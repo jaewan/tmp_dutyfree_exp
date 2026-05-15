@@ -1,0 +1,175 @@
+PHASE: PMU_MECHANISM
+CMD: perf list (amd_df/amd_l3)
+CMD: try loading amd uncore modules
+modprobe: FATAL: Module amd_l3_pmu not found in directory /lib/modules/6.17.0-14-generic
+2054:  amd_df/local_processor_read_data_beats_cs0/
+2055:  amd_df/local_processor_read_data_beats_cs1/
+2056:  amd_df/local_processor_read_data_beats_cs10/
+2057:  amd_df/local_processor_read_data_beats_cs11/
+2058:  amd_df/local_processor_read_data_beats_cs2/
+2059:  amd_df/local_processor_read_data_beats_cs3/
+2060:  amd_df/local_processor_read_data_beats_cs4/
+2061:  amd_df/local_processor_read_data_beats_cs5/
+2062:  amd_df/local_processor_read_data_beats_cs6/
+2063:  amd_df/local_processor_read_data_beats_cs7/
+2064:  amd_df/local_processor_read_data_beats_cs8/
+2065:  amd_df/local_processor_read_data_beats_cs9/
+2066:  amd_df/local_processor_write_data_beats_cs0/
+2067:  amd_df/local_processor_write_data_beats_cs1/
+2068:  amd_df/local_processor_write_data_beats_cs10/
+2069:  amd_df/local_processor_write_data_beats_cs11/
+2070:  amd_df/local_processor_write_data_beats_cs2/
+2071:  amd_df/local_processor_write_data_beats_cs3/
+2072:  amd_df/local_processor_write_data_beats_cs4/
+2073:  amd_df/local_processor_write_data_beats_cs5/
+2074:  amd_df/local_processor_write_data_beats_cs6/
+2075:  amd_df/local_processor_write_data_beats_cs7/
+2076:  amd_df/local_processor_write_data_beats_cs8/
+2077:  amd_df/local_processor_write_data_beats_cs9/
+2078:  amd_df/local_socket_inf0_inbound_data_beats_ccm0/
+2079:  amd_df/local_socket_inf0_inbound_data_beats_ccm1/
+2080:  amd_df/local_socket_inf0_inbound_data_beats_ccm2/
+2081:  amd_df/local_socket_inf0_inbound_data_beats_ccm3/
+2082:  amd_df/local_socket_inf0_inbound_data_beats_ccm4/
+2083:  amd_df/local_socket_inf0_inbound_data_beats_ccm5/
+2084:  amd_df/local_socket_inf0_inbound_data_beats_ccm6/
+2085:  amd_df/local_socket_inf0_inbound_data_beats_ccm7/
+2086:  amd_df/local_socket_inf0_outbound_data_beats_ccm0/
+2087:  amd_df/local_socket_inf0_outbound_data_beats_ccm1/
+2088:  amd_df/local_socket_inf0_outbound_data_beats_ccm2/
+2089:  amd_df/local_socket_inf0_outbound_data_beats_ccm3/
+2090:  amd_df/local_socket_inf0_outbound_data_beats_ccm4/
+2091:  amd_df/local_socket_inf0_outbound_data_beats_ccm5/
+2092:  amd_df/local_socket_inf0_outbound_data_beats_ccm6/
+2093:  amd_df/local_socket_inf0_outbound_data_beats_ccm7/
+2094:  amd_df/local_socket_inf1_inbound_data_beats_ccm0/
+2095:  amd_df/local_socket_inf1_inbound_data_beats_ccm1/
+2096:  amd_df/local_socket_inf1_inbound_data_beats_ccm2/
+2097:  amd_df/local_socket_inf1_inbound_data_beats_ccm3/
+2098:  amd_df/local_socket_inf1_inbound_data_beats_ccm4/
+2099:  amd_df/local_socket_inf1_inbound_data_beats_ccm5/
+2100:  amd_df/local_socket_inf1_inbound_data_beats_ccm6/
+2101:  amd_df/local_socket_inf1_inbound_data_beats_ccm7/
+2102:  amd_df/local_socket_inf1_outbound_data_beats_ccm0/
+2103:  amd_df/local_socket_inf1_outbound_data_beats_ccm1/
+2104:  amd_df/local_socket_inf1_outbound_data_beats_ccm2/
+2105:  amd_df/local_socket_inf1_outbound_data_beats_ccm3/
+2106:  amd_df/local_socket_inf1_outbound_data_beats_ccm4/
+2107:  amd_df/local_socket_inf1_outbound_data_beats_ccm5/
+2108:  amd_df/local_socket_inf1_outbound_data_beats_ccm6/
+2109:  amd_df/local_socket_inf1_outbound_data_beats_ccm7/
+2110:  amd_df/local_socket_outbound_data_beats_link0/
+2111:  amd_df/local_socket_outbound_data_beats_link1/
+2112:  amd_df/local_socket_outbound_data_beats_link2/
+2113:  amd_df/local_socket_outbound_data_beats_link3/
+2114:  amd_df/local_socket_outbound_data_beats_link4/
+2115:  amd_df/local_socket_outbound_data_beats_link5/
+2116:  amd_df/local_socket_outbound_data_beats_link6/
+2117:  amd_df/local_socket_outbound_data_beats_link7/
+2118:  amd_df/local_socket_upstream_read_beats_iom0/
+2119:  amd_df/local_socket_upstream_read_beats_iom1/
+2120:  amd_df/local_socket_upstream_read_beats_iom2/
+2121:  amd_df/local_socket_upstream_read_beats_iom3/
+2122:  amd_df/local_socket_upstream_write_beats_iom0/
+2123:  amd_df/local_socket_upstream_write_beats_iom1/
+2124:  amd_df/local_socket_upstream_write_beats_iom2/
+2125:  amd_df/local_socket_upstream_write_beats_iom3/
+2126:  amd_df/remote_processor_read_data_beats_cs0/
+2127:  amd_df/remote_processor_read_data_beats_cs1/
+2128:  amd_df/remote_processor_read_data_beats_cs10/
+2129:  amd_df/remote_processor_read_data_beats_cs11/
+2130:  amd_df/remote_processor_read_data_beats_cs2/
+2131:  amd_df/remote_processor_read_data_beats_cs3/
+2132:  amd_df/remote_processor_read_data_beats_cs4/
+2133:  amd_df/remote_processor_read_data_beats_cs5/
+2134:  amd_df/remote_processor_read_data_beats_cs6/
+2135:  amd_df/remote_processor_read_data_beats_cs7/
+2136:  amd_df/remote_processor_read_data_beats_cs8/
+2137:  amd_df/remote_processor_read_data_beats_cs9/
+2138:  amd_df/remote_processor_write_data_beats_cs0/
+2139:  amd_df/remote_processor_write_data_beats_cs1/
+2140:  amd_df/remote_processor_write_data_beats_cs10/
+2141:  amd_df/remote_processor_write_data_beats_cs11/
+2142:  amd_df/remote_processor_write_data_beats_cs2/
+2143:  amd_df/remote_processor_write_data_beats_cs3/
+2144:  amd_df/remote_processor_write_data_beats_cs4/
+2145:  amd_df/remote_processor_write_data_beats_cs5/
+2146:  amd_df/remote_processor_write_data_beats_cs6/
+2147:  amd_df/remote_processor_write_data_beats_cs7/
+2148:  amd_df/remote_processor_write_data_beats_cs8/
+2149:  amd_df/remote_processor_write_data_beats_cs9/
+2150:  amd_df/remote_socket_inf0_inbound_data_beats_ccm0/
+2151:  amd_df/remote_socket_inf0_inbound_data_beats_ccm1/
+2152:  amd_df/remote_socket_inf0_inbound_data_beats_ccm2/
+2153:  amd_df/remote_socket_inf0_inbound_data_beats_ccm3/
+2154:  amd_df/remote_socket_inf0_inbound_data_beats_ccm4/
+2155:  amd_df/remote_socket_inf0_inbound_data_beats_ccm5/
+2156:  amd_df/remote_socket_inf0_inbound_data_beats_ccm6/
+2157:  amd_df/remote_socket_inf0_inbound_data_beats_ccm7/
+2158:  amd_df/remote_socket_inf0_outbound_data_beats_ccm0/
+2159:  amd_df/remote_socket_inf0_outbound_data_beats_ccm1/
+2160:  amd_df/remote_socket_inf0_outbound_data_beats_ccm2/
+2161:  amd_df/remote_socket_inf0_outbound_data_beats_ccm3/
+2162:  amd_df/remote_socket_inf0_outbound_data_beats_ccm4/
+2163:  amd_df/remote_socket_inf0_outbound_data_beats_ccm5/
+2164:  amd_df/remote_socket_inf0_outbound_data_beats_ccm6/
+2165:  amd_df/remote_socket_inf0_outbound_data_beats_ccm7/
+2166:  amd_df/remote_socket_inf1_inbound_data_beats_ccm0/
+2167:  amd_df/remote_socket_inf1_inbound_data_beats_ccm1/
+2168:  amd_df/remote_socket_inf1_inbound_data_beats_ccm2/
+2169:  amd_df/remote_socket_inf1_inbound_data_beats_ccm3/
+2170:  amd_df/remote_socket_inf1_inbound_data_beats_ccm4/
+2171:  amd_df/remote_socket_inf1_inbound_data_beats_ccm5/
+2172:  amd_df/remote_socket_inf1_inbound_data_beats_ccm6/
+2173:  amd_df/remote_socket_inf1_inbound_data_beats_ccm7/
+2174:  amd_df/remote_socket_inf1_outbound_data_beats_ccm0/
+2175:  amd_df/remote_socket_inf1_outbound_data_beats_ccm1/
+2176:  amd_df/remote_socket_inf1_outbound_data_beats_ccm2/
+2177:  amd_df/remote_socket_inf1_outbound_data_beats_ccm3/
+2178:  amd_df/remote_socket_inf1_outbound_data_beats_ccm4/
+2179:  amd_df/remote_socket_inf1_outbound_data_beats_ccm5/
+2180:  amd_df/remote_socket_inf1_outbound_data_beats_ccm6/
+2181:  amd_df/remote_socket_inf1_outbound_data_beats_ccm7/
+2182:  amd_df/remote_socket_upstream_read_beats_iom0/
+2183:  amd_df/remote_socket_upstream_read_beats_iom1/
+2184:  amd_df/remote_socket_upstream_read_beats_iom2/
+2185:  amd_df/remote_socket_upstream_read_beats_iom3/
+2186:  amd_df/remote_socket_upstream_write_beats_iom0/
+2187:  amd_df/remote_socket_upstream_write_beats_iom1/
+2188:  amd_df/remote_socket_upstream_write_beats_iom2/
+2189:  amd_df/remote_socket_upstream_write_beats_iom3/
+2591:       [L3 cache requests for all coherent accesses. Unit: amd_l3]
+2593:       [L3 cache hits. Unit: amd_l3]
+2595:       [L3 cache misses. Unit: amd_l3]
+2597:       [Average sampled latency from all data sources. Unit: amd_l3]
+2600:        NUMA node. Unit: amd_l3]
+2603:        NUMA node. Unit: amd_l3]
+2606:        (CXL) in a different NUMA node. Unit: amd_l3]
+2609:        (CXL) in the same NUMA node. Unit: amd_l3]
+2612:        when the address was in a different NUMA node. Unit: amd_l3]
+2615:        when the address was in the same NUMA node. Unit: amd_l3]
+2617:       [L3 cache fill requests sourced from all data sources. Unit: amd_l3]
+2620:        Unit: amd_l3]
+2623:        amd_l3]
+2626:        different NUMA node. Unit: amd_l3]
+2629:        NUMA node. Unit: amd_l3]
+2632:        address was in a different NUMA node. Unit: amd_l3]
+2635:        address was in the same NUMA node. Unit: amd_l3]
+3236:  amd_df/event=0..0x3fff,umask=0..0xfff/modifier     [Raw event descriptor]
+3238:  amd_l3/enallslices,event=0..255,sliceid=0..7,.../modifier[Raw event descriptor]
+CMD: test DF events
+
+ Performance counter stats for 'system wide':
+
+            14,709      amd_df/event=0x07,umask=0x38/                                         
+
+       1.002731057 seconds time elapsed
+
+
+ Performance counter stats for 'system wide':
+
+         7,426,450      amd_l3/event=0x04,umask=0xff/                                         
+
+       1.006074005 seconds time elapsed
+
+GATE_STATUS: completed

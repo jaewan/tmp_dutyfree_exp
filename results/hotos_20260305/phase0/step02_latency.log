@@ -1,0 +1,40 @@
+=== DRAM RUN 1 ===
+[latency_chase] mode=dram core=128 region=256MB (4194304 nodes)
+[latency_chase] TSC freq: 2.252 GHz
+LATENCY mode=dram   core=128 region=256MB steps=16777216 cycles_per_hop=520.5 ns_per_hop=231.1
+=== DRAM RUN 2 ===
+[latency_chase] mode=dram core=128 region=256MB (4194304 nodes)
+[latency_chase] TSC freq: 2.252 GHz
+LATENCY mode=dram   core=128 region=256MB steps=16777216 cycles_per_hop=521.6 ns_per_hop=231.6
+=== DRAM RUN 3 ===
+[latency_chase] mode=dram core=128 region=256MB (4194304 nodes)
+[latency_chase] TSC freq: 2.252 GHz
+LATENCY mode=dram   core=128 region=256MB steps=16777216 cycles_per_hop=521.5 ns_per_hop=231.6
+=== DRAM RUN 4 ===
+[latency_chase] mode=dram core=128 region=256MB (4194304 nodes)
+[latency_chase] TSC freq: 2.252 GHz
+LATENCY mode=dram   core=128 region=256MB steps=16777216 cycles_per_hop=520.2 ns_per_hop=231.0
+=== DRAM RUN 5 ===
+[latency_chase] mode=dram core=128 region=256MB (4194304 nodes)
+[latency_chase] TSC freq: 2.252 GHz
+LATENCY mode=dram   core=128 region=256MB steps=16777216 cycles_per_hop=520.6 ns_per_hop=231.2
+=== WB RUN 1 ===
+[latency_chase] mode=wb core=128 region=256MB (4194304 nodes)
+[latency_chase] TSC freq: 2.252 GHz
+LATENCY mode=wb     core=128 region=256MB steps=16777216 cycles_per_hop=633.8 ns_per_hop=281.4
+=== WB RUN 2 ===
+[latency_chase] mode=wb core=128 region=256MB (4194304 nodes)
+[latency_chase] TSC freq: 2.252 GHz
+LATENCY mode=wb     core=128 region=256MB steps=16777216 cycles_per_hop=634.3 ns_per_hop=281.6
+=== WB RUN 3 ===
+[latency_chase] mode=wb core=128 region=256MB (4194304 nodes)
+[latency_chase] TSC freq: 2.252 GHz
+LATENCY mode=wb     core=128 region=256MB steps=16777216 cycles_per_hop=633.5 ns_per_hop=281.3
+=== WB RUN 4 ===
+[latency_chase] mode=wb core=128 region=256MB (4194304 nodes)
+[latency_chase] TSC freq: 2.252 GHz
+LATENCY mode=wb     core=128 region=256MB steps=16777216 cycles_per_hop=634.5 ns_per_hop=281.8
+=== WB RUN 5 ===
+[latency_chase] mode=wb core=128 region=256MB (4194304 nodes)
+[latency_chase] TSC freq: 2.252 GHz
+LATENCY mode=wb     core=128 region=256MB steps=16777216 cycles_per_hop=635.3 ns_per_hop=282.1

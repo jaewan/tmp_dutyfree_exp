@@ -1,0 +1,14 @@
+# started on Thu Mar  5 18:16:55 2026
+
+
+ Performance counter stats for process id '100674':
+
+    28,899,627,386      cycles                                                                  (42.87%)
+    27,613,386,017      instructions                     #    0.96  insn per cycle              (42.86%)
+    13,140,806,750      r7064                                                                   (42.85%)
+       459,618,870      r0864                                                                   (57.14%)
+       887,237,117      l2_pf_miss_l2_hit_l3.all                                                (71.41%)
+           717,006      l2_pf_miss_l2_l3.all                                                    (85.70%)
+
+      13.001916323 seconds time elapsed
+

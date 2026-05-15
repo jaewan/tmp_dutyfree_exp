@@ -1,0 +1,25 @@
+=== MIDBAND_N10 START 2026-03-08T09:13:49+09:00 ===
+config warmup=5 measure=15 nruns=10 seed=20260308 victim_core=128 victim_node=1
+config wb_threads=2 wb_cores=136,137 wc_threads=9 wc_cores=136,137,138,139,140,141,142,143,224
+=== RUN_START run=1 ===
+=== RUN_END run=1 ===
+=== RUN_START run=2 ===
+=== RUN_END run=2 ===
+=== RUN_START run=3 ===
+=== RUN_END run=3 ===
+=== RUN_START run=4 ===
+=== RUN_END run=4 ===
+=== RUN_START run=5 ===
+=== RUN_END run=5 ===
+=== RUN_START run=6 ===
+=== RUN_END run=6 ===
+=== RUN_START run=7 ===
+=== RUN_END run=7 ===
+=== RUN_START run=8 ===
+=== RUN_END run=8 ===
+=== RUN_START run=9 ===
+=== RUN_END run=9 ===
+=== RUN_START run=10 ===
+=== RUN_END run=10 ===
+summary=/home/domin/CoherenceTest/APNET/results/20260308_090953/midband_n10/midband_summary.csv
+=== MIDBAND_N10 DONE 2026-03-08T09:24:17+09:00 ===

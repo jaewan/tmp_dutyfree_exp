@@ -1,0 +1,29 @@
+=== PHASE3 DF PMU START 2026-03-06T10:09:51+09:00 ===
+CMD: perf list | rg amd_df
+=== CASE wb8 mode=wb_load threads=8 START 2026-03-06T10:09:51+09:00 ===
+CASE_RC tag=wb8 perf_rc=129 victim_rc=0 aggressor_rc=0
+PERF_ERR_HEAD tag=wb8
+event syntax error: 'amd_df/event=0x07,umask=0x38/'
+                     \___ Bad event or PMU
+
+Unable to find PMU or event on a PMU of 'amd_df'
+Run 'perf list' for a list of valid events
+
+ Usage: perf stat [<options>] [<command>]
+
+    -e, --event <event>   event selector. use 'perf list' to list available events
+=== CASE wb8 END 2026-03-06T10:10:16+09:00 ===
+=== CASE wc11 mode=wc_ntdqa threads=11 START 2026-03-06T10:10:16+09:00 ===
+CASE_RC tag=wc11 perf_rc=129 victim_rc=0 aggressor_rc=0
+PERF_ERR_HEAD tag=wc11
+event syntax error: 'amd_df/event=0x07,umask=0x38/'
+                     \___ Bad event or PMU
+
+Unable to find PMU or event on a PMU of 'amd_df'
+Run 'perf list' for a list of valid events
+
+ Usage: perf stat [<options>] [<command>]
+
+    -e, --event <event>   event selector. use 'perf list' to list available events
+=== CASE wc11 END 2026-03-06T10:10:41+09:00 ===
+=== PHASE3 DF PMU END 2026-03-06T10:10:41+09:00 ===

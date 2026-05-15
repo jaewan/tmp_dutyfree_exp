@@ -1,0 +1,7 @@
+Diagnostic means
+wb t=2: 20.777
+wb t=3: 20.512
+wc t=7: 17.899
+wc t=9: 20.957
+wc t=11: 24.821
+best_mid_pair: wb t=2 20.777 vs wc t=9 20.957 avg=20.867 delta=-0.179

@@ -1,0 +1,18 @@
+[aggressor] mode=wc_ntdqa threads=12 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 3072 MB CXL memory at 0x747a71000000
+[aggressor] GO
+thread  0  core 137  1.21 GB/s  (15.071 s)
+thread  1  core 138  1.21 GB/s  (15.085 s)
+thread  2  core 139  1.21 GB/s  (15.046 s)
+thread  3  core 140  1.21 GB/s  (15.064 s)
+thread  4  core 141  1.21 GB/s  (15.056 s)
+thread  5  core 142  2.55 GB/s  (15.056 s)
+thread  6  core 143  2.55 GB/s  (15.049 s)
+thread  7  core 393  1.36 GB/s  (15.042 s)
+thread  8  core 394  1.35 GB/s  (15.068 s)
+thread  9  core 395  1.35 GB/s  (15.085 s)
+thread 10  core 396  1.35 GB/s  (15.099 s)
+thread 11  core 397  1.35 GB/s  (15.102 s)
+---
+aggregate: 17.88 GB/s  (12 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=12 bw_gbps=17.882 throttle=0

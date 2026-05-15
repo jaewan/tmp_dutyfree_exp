@@ -1,0 +1,32 @@
+CMD: ./bin/aggressor -m wb_load  -t 1 -c 136 -s 256 -d 15
+[aggressor] mode=wb_load threads=1 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 256 MB CXL memory at 0x76a448c00000
+[aggressor] GO
+thread  0  core 136  15.76 GB/s  (15.005 s)
+---
+aggregate: 15.76 GB/s  (1 threads, mode=wb_load)
+RESULT mode=wb_load threads=1 bw_gbps=15.761 throttle=0
+CMD: ./bin/aggressor -m wc_ntdqa -t 1 -c 136 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=1 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 256 MB CXL memory at 0x7a72d6a00000
+[aggressor] GO
+thread  0  core 136  4.17 GB/s  (15.048 s)
+---
+aggregate: 4.17 GB/s  (1 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=1 bw_gbps=4.174 throttle=0
+CMD: ./bin/aggressor -m uc_load  -t 1 -c 136 -s 256 -d 15
+[aggressor] mode=uc_load threads=1 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 256 MB CXL memory at 0x73e3a4a00000
+[aggressor] GO
+thread  0  core 136  0.03 GB/s  (21.264 s)
+---
+aggregate: 0.03 GB/s  (1 threads, mode=uc_load)
+RESULT mode=uc_load threads=1 bw_gbps=0.025 throttle=0
+CMD: dmesg | grep cxl_memtype | tail -10
+dmesg: read kernel buffer failed: Operation not permitted
+CMD: cat /sys/kernel/debug/x86/pat_memtype_list 2>/dev/null | grep -E "wc|uc" | head -20
+CMD: lsmod | grep cxl_memtype
+cxl_memtype            16384  0
+CMD: cat /sys/devices/system/node/node2/memory*/state | sort | uniq -c
+     13 offline
+    115 online

@@ -1,0 +1,27 @@
+Phase0 scaling analysis
+=======================
+WB means by threads:
+  wb_load t=1: 15.747 GB/s
+  wb_load t=2: 20.772 GB/s
+  wb_load t=3: 20.512 GB/s
+  wb_load t=4: 23.443 GB/s
+  wb_load t=6: 24.012 GB/s
+  wb_load t=8: 24.823 GB/s
+  wb_load t=10: 24.154 GB/s
+  wb_load t=12: 25.528 GB/s
+  wb_load t=16: 26.007 GB/s
+WC means by threads:
+  wc_ntdqa t=1: 4.175 GB/s
+  wc_ntdqa t=2: 8.227 GB/s
+  wc_ntdqa t=3: 12.042 GB/s
+  wc_ntdqa t=4: 15.375 GB/s
+  wc_ntdqa t=6: 17.885 GB/s
+  wc_ntdqa t=8: 17.841 GB/s
+  wc_ntdqa t=10: 23.904 GB/s
+  wc_ntdqa t=12: 24.922 GB/s
+  wc_ntdqa t=16: 24.983 GB/s
+
+Matched pairs:
+  low_16: wb t=1 (15.747) vs wc t=4 (15.375), avg=15.561, delta=+0.372
+  mid_21: wb t=4 (23.443) vs wc t=10 (23.904), avg=23.673, delta=-0.461
+  high_25: wb t=8 (24.823) vs wc t=12 (24.922), avg=24.873, delta=-0.099

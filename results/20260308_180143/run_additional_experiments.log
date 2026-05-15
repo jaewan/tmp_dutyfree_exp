@@ -1,0 +1,40 @@
+=== ADDITIONAL EXPERIMENTS START 2026-03-08T18:05:32+09:00 ===
+config seed=20260308 victim_core=128 victim_node=1 victim_ws_kb=4096
+config expA warmup=5 measure=15 runs=10 wb_threads=2 wc_threads=9
+config expB warmup=5 measure=15 runs=5 col_threads=8
+config cores_all=136,137,138,139,140,141,142,143,224,225,226,227,228,229,230,231 agg_mb_per_thread=256
+=== EXP_A RUN 1 START ===
+=== EXP_A RUN 1 END ===
+=== EXP_A RUN 2 START ===
+=== EXP_A RUN 2 END ===
+=== EXP_A RUN 3 START ===
+=== EXP_A RUN 3 END ===
+=== EXP_A RUN 4 START ===
+=== EXP_A RUN 4 END ===
+=== EXP_A RUN 5 START ===
+=== EXP_A RUN 5 END ===
+=== EXP_A RUN 6 START ===
+=== EXP_A RUN 6 END ===
+=== EXP_A RUN 7 START ===
+=== EXP_A RUN 7 END ===
+=== EXP_A RUN 8 START ===
+=== EXP_A RUN 8 END ===
+=== EXP_A RUN 9 START ===
+=== EXP_A RUN 9 END ===
+=== EXP_A RUN 10 START ===
+=== EXP_A RUN 10 END ===
+=== EXP_B RUN 1 START ===
+=== EXP_B RUN 1 END ===
+=== EXP_B RUN 2 START ===
+=== EXP_B RUN 2 END ===
+=== EXP_B RUN 3 START ===
+=== EXP_B RUN 3 END ===
+=== EXP_B RUN 4 START ===
+=== EXP_B RUN 4 END ===
+=== EXP_B RUN 5 START ===
+=== EXP_B RUN 5 END ===
+=== ADDITIONAL EXPERIMENTS DONE 2026-03-08T18:19:31+09:00 ===
+runs_csv=/home/domin/CoherenceTest/APNET/results/20260308_180143/all_runs.csv
+summary_a=/home/domin/CoherenceTest/APNET/results/20260308_180143/experimentA_summary.csv
+summary_b=/home/domin/CoherenceTest/APNET/results/20260308_180143/experimentB_summary.csv
+paired=/home/domin/CoherenceTest/APNET/results/20260308_180143/paired_stats.csv

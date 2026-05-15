@@ -1,0 +1,30 @@
+PHASE: CAT_CLAIM_CHECK
+CMD: OUTDIR=results/hotos_20260307/claim_checks/exp3_cat scripts/exp3_cat.sh
+L3 CBM mask: ffff
+Aggressor L3 mask: 0xff  (8 ways)
+Victim    L3 mask: 0xff00  (8 ways)
+
+=== Scenario: no_cat (CAT=no) ===
+  [baseline] ...
+  --- no_cat Results ---
+VICTIM core=0 ipc=0.9323 l2_miss_rate=5.22 cycles=44613913349 insns=41593736560 l2_hit=19337740798 l2_miss=1064164428 iters=1684567 sec=20.00
+VICTIM core=0 ipc=0.9332 l2_miss_rate=5.36 cycles=19738277339 insns=18419033345 l2_hit=8553774074 l2_miss=483991320 iters=1180009 sec=14.13
+RESULT mode=wb_load threads=16 bw_gbps=25.924 throttle=0
+
+=== Scenario: with_cat (CAT=yes) ===
+mkdir: cannot create directory ‘/sys/fs/resctrl/exp_agg’: Permission denied
+FINDING: first attempt failed due resctrl permissions
+CMD: sudo-equivalent run with elevated permissions
+L3 CBM mask: ffff
+Aggressor L3 mask: 0xff  (8 ways)
+Victim    L3 mask: 0xff00  (8 ways)
+
+=== Scenario: no_cat (CAT=no) ===
+  [baseline] ...
+  --- no_cat Results ---
+VICTIM core=0 ipc=0.9299 l2_miss_rate=5.50 cycles=44601904012 insns=41477417416 l2_hit=19217863706 l2_miss=1118522420 iters=1679856 sec=20.00
+VICTIM core=0 ipc=0.9389 l2_miss_rate=4.61 cycles=19684739355 insns=18482782716 l2_hit=8671978387 l2_miss=419211949 iters=1185583 sec=14.11
+RESULT mode=wb_load threads=16 bw_gbps=25.911 throttle=0
+
+=== Scenario: with_cat (CAT=yes) ===
+mkdir: cannot create directory ‘/sys/fs/resctrl/exp_agg’: Permission denied

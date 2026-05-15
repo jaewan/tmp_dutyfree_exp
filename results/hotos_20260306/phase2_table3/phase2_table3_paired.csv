@@ -1,0 +1,9 @@
+profile,placement,n,wb_minus_wc_delta_ipc_mean_pct,wb_minus_wc_delta_ipc_sd_pct,wb_minus_wc_delta_cpi_mean_pct,wb_minus_wc_delta_cpi_sd_pct,wb_minus_wc_bw_mean_gbps,wb_minus_wc_bw_sd_gbps
+chase,A_same_ccd,5,-90.560,0.618,890.350,5.268,6.700,0.011
+chase,B_diff_ccd_same_socket,5,-22.425,0.627,28.772,0.587,7.071,0.021
+chase,C_diff_socket,5,-0.599,1.963,0.615,1.947,6.990,0.042
+chase,D_both_sockets,5,0.499,1.537,-0.476,1.501,0.585,0.013
+l2hot,A_same_ccd,5,-0.325,0.050,0.325,0.048,6.696,0.034
+l2hot,B_diff_ccd_same_socket,5,0.054,0.036,-0.055,0.036,7.026,0.035
+l2hot,C_diff_socket,5,0.111,0.215,-0.111,0.215,7.015,0.029
+l2hot,D_both_sockets,5,-0.024,0.034,0.022,0.035,0.580,0.011

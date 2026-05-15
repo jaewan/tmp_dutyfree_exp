@@ -1,0 +1,4 @@
+experiment,test,statistic,pvalue,note
+A,Welch t-test,48.296593,2.693411e-12,WB vs WC victim CPI
+A,Paired t-test,47.048327,4.433676e-12,Paired run-level delta comparison: (WB-baseline)% vs (WC-baseline)%
+B,Paired t-test,49.866745,9.677067e-07,Paired run-level CPI: columnar_wb vs baseline

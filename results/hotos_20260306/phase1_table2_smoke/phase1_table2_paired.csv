@@ -1,0 +1,7 @@
+profile,band,n,wb_minus_wc_delta_ipc_mean_pct,wb_minus_wc_delta_ipc_sd_pct,wb_minus_wc_delta_cpi_mean_pct,wb_minus_wc_delta_cpi_sd_pct,wb_minus_wc_bw_mean_gbps,wb_minus_wc_bw_sd_gbps
+chase,low,1,1.758,0.000,-1.839,0.000,0.490,0.000
+chase,mid,1,-18.462,0.000,23.978,0.000,-0.037,0.000
+chase,high,1,-11.429,0.000,13.860,0.000,0.189,0.000
+l2hot,low,1,0.030,0.000,-0.025,0.000,0.488,0.000
+l2hot,mid,1,-0.090,0.000,0.090,0.000,0.082,0.000
+l2hot,high,1,0.402,0.000,-0.404,0.000,-0.009,0.000

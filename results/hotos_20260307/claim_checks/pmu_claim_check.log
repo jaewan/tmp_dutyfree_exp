@@ -1,0 +1,32 @@
+PHASE: PMU_CLAIM_CHECK
+CMD: perf list | rg amd_df|amd_l3
+CMD: perf stat -a -e amd_df/event=0x07,umask=0x38/ sleep 1
+event syntax error: 'amd_df/event=0x07,umask=0x38/'
+                     \___ Bad event or PMU
+
+Unable to find PMU or event on a PMU of 'amd_df'
+Run 'perf list' for a list of valid events
+
+ Usage: perf stat [<options>] [<command>]
+
+    -e, --event <event>   event selector. use 'perf list' to list available events
+CMD: perf stat -a -e amd_l3/event=0x04,umask=0xff/ sleep 1
+event syntax error: 'amd_l3/event=0x04,umask=0xff/'
+                     \___ Bad event or PMU
+
+Unable to find PMU or event on a PMU of 'amd_l3'
+Run 'perf list' for a list of valid events
+
+ Usage: perf stat [<options>] [<command>]
+
+    -e, --event <event>   event selector. use 'perf list' to list available events
+CMD: perf stat -a -e cycles,instructions sleep 1
+
+ Performance counter stats for 'system wide':
+
+         393990732      cycles                                                                
+         176365965      instructions                     #    0.45  insn per cycle            
+
+       1.039680413 seconds time elapsed
+
+GATE_STATUS: completed

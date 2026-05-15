@@ -1,0 +1,16 @@
+category,metric,mode,mean,sd,n,unit,event_definition,caveat
+pmu_pair,bw_gbps,wb_load,24.866400,0.026397,5,GB/s,,
+pmu_pair,bw_gbps,wc_ntdqa,24.819400,0.015978,5,GB/s,,
+pmu_pair,cpi,wb_load,4653368.808417,8733.882729,5,cycles_per_iter,,
+pmu_pair,cpi,wc_ntdqa,3591398.491970,14691.896203,5,cycles_per_iter,,
+pmu_pair,pmu_count,wb_load,137737.400000,22351.246325,5,count,"amd_df/event=0x07,umask=0x38/",Direction was opposite expected WB>WC trend in this host; treat as non-diagnostic for directory pressure.
+pmu_pair,pmu_count,wb_load,6322161348.200000,44611345.446622,5,count,"amd_l3/event=0x04,umask=0xff/",Raw uncore proxy; AMD public docs do not provide complete Zen4c per-event semantics for direct Probe Filter attribution.
+pmu_pair,pmu_count,wc_ntdqa,191188.800000,65506.703113,5,count,"amd_df/event=0x07,umask=0x38/",Direction was opposite expected WB>WC trend in this host; treat as non-diagnostic for directory pressure.
+pmu_pair,pmu_count,wc_ntdqa,1197979215.600000,78650499.204201,5,count,"amd_l3/event=0x04,umask=0xff/",Raw uncore proxy; AMD public docs do not provide complete Zen4c per-event semantics for direct Probe Filter attribution.
+precheck,pmu_df_available,na,1.000000,0.000000,1,bool,,
+precheck,pmu_l3_available,na,1.000000,0.000000,1,bool,,
+prefetch_bw,bw_gbps,wb_load,15.764200,0.007155,5,GB/s,,
+prefetch_bw,bw_gbps,wb_prefetchnta,15.681600,0.005367,5,GB/s,,
+prefetch_bw,bw_gbps,wc_ntdqa,4.174200,0.000837,5,GB/s,,
+derived,l3_wb_over_wc_ratio,wb_load_vs_wc_ntdqa,5.277355,,5,x,"ratio(mean amd_l3 WB, mean amd_l3 WC)",Correlational signal only
+derived,df_wb_over_wc_ratio,wb_load_vs_wc_ntdqa,0.720426,,5,x,"ratio(mean amd_df WB, mean amd_df WC)",Opposite direction here; included for transparency

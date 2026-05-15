@@ -1,0 +1,14 @@
+# started on Thu Mar  5 18:07:24 2026
+
+
+ Performance counter stats for process id '99026':
+
+    28,905,041,703      cycles                                                                  (42.86%)
+    26,708,268,145      instructions                     #    0.92  insn per cycle              (42.86%)
+    11,918,011,264      r7064                                                                   (42.86%)
+     1,005,390,660      r0864                                                                   (57.14%)
+     1,893,809,693      l2_pf_miss_l2_hit_l3.all                                                (71.44%)
+           700,154      l2_pf_miss_l2_l3.all                                                    (85.72%)
+
+      13.001864357 seconds time elapsed
+

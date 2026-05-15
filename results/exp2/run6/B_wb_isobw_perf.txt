@@ -1,0 +1,14 @@
+# started on Thu Mar  5 18:11:59 2026
+
+
+ Performance counter stats for process id '99731':
+
+    28,905,612,711      cycles                                                                  (42.87%)
+    26,963,891,471      instructions                     #    0.93  insn per cycle              (42.87%)
+    12,328,875,601      r7064                                                                   (42.86%)
+       804,333,441      r0864                                                                   (57.14%)
+     1,404,496,491      l2_pf_miss_l2_hit_l3.all                                                (71.42%)
+           702,861      l2_pf_miss_l2_l3.all                                                    (85.71%)
+
+      13.002041838 seconds time elapsed
+

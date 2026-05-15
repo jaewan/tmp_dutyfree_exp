@@ -1,0 +1,924 @@
+=== MODE=wb_load THREADS=1 RUN=1 SIZE_MB=256 ===
+thread  0  core 136  15.76 GB/s  (20.012 s)
+---
+aggregate: 15.76 GB/s  (1 threads, mode=wb_load)
+RESULT mode=wb_load threads=1 bw_gbps=15.761 throttle=0
+=== MODE=wb_load THREADS=1 RUN=2 SIZE_MB=256 ===
+thread  0  core 136  15.76 GB/s  (20.012 s)
+---
+aggregate: 15.76 GB/s  (1 threads, mode=wb_load)
+RESULT mode=wb_load threads=1 bw_gbps=15.761 throttle=0
+=== MODE=wb_load THREADS=1 RUN=3 SIZE_MB=256 ===
+thread  0  core 136  15.76 GB/s  (20.009 s)
+---
+aggregate: 15.76 GB/s  (1 threads, mode=wb_load)
+RESULT mode=wb_load threads=1 bw_gbps=15.764 throttle=0
+=== MODE=wb_load THREADS=2 RUN=1 SIZE_MB=256 ===
+thread  0  core 136  10.36 GB/s  (20.010 s)
+thread  1  core 137  10.42 GB/s  (20.022 s)
+---
+aggregate: 20.77 GB/s  (2 threads, mode=wb_load)
+RESULT mode=wb_load threads=2 bw_gbps=20.768 throttle=0
+=== MODE=wb_load THREADS=2 RUN=2 SIZE_MB=256 ===
+thread  0  core 136  10.37 GB/s  (20.013 s)
+thread  1  core 137  10.42 GB/s  (20.013 s)
+---
+aggregate: 20.79 GB/s  (2 threads, mode=wb_load)
+RESULT mode=wb_load threads=2 bw_gbps=20.790 throttle=0
+=== MODE=wb_load THREADS=2 RUN=3 SIZE_MB=256 ===
+thread  0  core 136  10.37 GB/s  (20.014 s)
+thread  1  core 137  10.41 GB/s  (20.003 s)
+---
+aggregate: 20.78 GB/s  (2 threads, mode=wb_load)
+RESULT mode=wb_load threads=2 bw_gbps=20.776 throttle=0
+=== MODE=wb_load THREADS=4 RUN=1 SIZE_MB=256 ===
+thread  0  core 136  5.59 GB/s  (20.028 s)
+thread  1  core 137  5.68 GB/s  (20.027 s)
+thread  2  core 138  6.17 GB/s  (20.019 s)
+thread  3  core 139  6.13 GB/s  (20.015 s)
+---
+aggregate: 23.56 GB/s  (4 threads, mode=wb_load)
+RESULT mode=wb_load threads=4 bw_gbps=23.562 throttle=0
+=== MODE=wb_load THREADS=4 RUN=2 SIZE_MB=256 ===
+thread  0  core 136  5.58 GB/s  (20.027 s)
+thread  1  core 137  5.65 GB/s  (20.003 s)
+thread  2  core 138  6.15 GB/s  (20.005 s)
+thread  3  core 139  6.13 GB/s  (20.024 s)
+---
+aggregate: 23.48 GB/s  (4 threads, mode=wb_load)
+RESULT mode=wb_load threads=4 bw_gbps=23.483 throttle=0
+=== MODE=wb_load THREADS=4 RUN=3 SIZE_MB=256 ===
+thread  0  core 136  5.59 GB/s  (20.023 s)
+thread  1  core 137  5.69 GB/s  (20.017 s)
+thread  2  core 138  6.18 GB/s  (20.024 s)
+thread  3  core 139  6.14 GB/s  (20.024 s)
+---
+aggregate: 23.59 GB/s  (4 threads, mode=wb_load)
+RESULT mode=wb_load threads=4 bw_gbps=23.594 throttle=0
+=== MODE=wb_load THREADS=6 RUN=1 SIZE_MB=256 ===
+thread  0  core 136  3.85 GB/s  (20.018 s)
+thread  1  core 137  3.90 GB/s  (20.007 s)
+thread  2  core 138  4.14 GB/s  (20.034 s)
+thread  3  core 139  4.10 GB/s  (20.017 s)
+thread  4  core 140  3.99 GB/s  (20.037 s)
+thread  5  core 141  3.99 GB/s  (20.037 s)
+---
+aggregate: 23.97 GB/s  (6 threads, mode=wb_load)
+RESULT mode=wb_load threads=6 bw_gbps=23.967 throttle=0
+=== MODE=wb_load THREADS=6 RUN=2 SIZE_MB=256 ===
+thread  0  core 136  3.86 GB/s  (20.043 s)
+thread  1  core 137  3.91 GB/s  (20.041 s)
+thread  2  core 138  4.15 GB/s  (20.041 s)
+thread  3  core 139  4.11 GB/s  (20.040 s)
+thread  4  core 140  4.00 GB/s  (20.018 s)
+thread  5  core 141  3.98 GB/s  (20.022 s)
+---
+aggregate: 24.00 GB/s  (6 threads, mode=wb_load)
+RESULT mode=wb_load threads=6 bw_gbps=24.001 throttle=0
+=== MODE=wb_load THREADS=6 RUN=3 SIZE_MB=256 ===
+thread  0  core 136  3.86 GB/s  (20.019 s)
+thread  1  core 137  3.90 GB/s  (20.023 s)
+thread  2  core 138  4.14 GB/s  (20.029 s)
+thread  3  core 139  4.12 GB/s  (20.016 s)
+thread  4  core 140  4.01 GB/s  (20.035 s)
+thread  5  core 141  3.97 GB/s  (20.013 s)
+---
+aggregate: 23.98 GB/s  (6 threads, mode=wb_load)
+RESULT mode=wb_load threads=6 bw_gbps=23.982 throttle=0
+=== MODE=wb_load THREADS=8 RUN=1 SIZE_MB=256 ===
+thread  0  core 136  3.08 GB/s  (20.036 s)
+thread  1  core 137  3.10 GB/s  (20.007 s)
+thread  2  core 138  3.16 GB/s  (20.033 s)
+thread  3  core 139  3.18 GB/s  (20.034 s)
+thread  4  core 140  3.08 GB/s  (20.041 s)
+thread  5  core 141  3.08 GB/s  (20.030 s)
+thread  6  core 142  3.09 GB/s  (20.040 s)
+thread  7  core 143  3.08 GB/s  (20.031 s)
+---
+aggregate: 24.85 GB/s  (8 threads, mode=wb_load)
+RESULT mode=wb_load threads=8 bw_gbps=24.847 throttle=0
+=== MODE=wb_load THREADS=8 RUN=2 SIZE_MB=256 ===
+thread  0  core 136  3.08 GB/s  (20.060 s)
+thread  1  core 137  3.10 GB/s  (20.021 s)
+thread  2  core 138  3.16 GB/s  (20.059 s)
+thread  3  core 139  3.17 GB/s  (20.059 s)
+thread  4  core 140  3.08 GB/s  (20.046 s)
+thread  5  core 141  3.08 GB/s  (20.042 s)
+thread  6  core 142  3.09 GB/s  (20.002 s)
+thread  7  core 143  3.06 GB/s  (20.059 s)
+---
+aggregate: 24.80 GB/s  (8 threads, mode=wb_load)
+RESULT mode=wb_load threads=8 bw_gbps=24.796 throttle=0
+=== MODE=wb_load THREADS=8 RUN=3 SIZE_MB=256 ===
+thread  0  core 136  3.08 GB/s  (20.025 s)
+thread  1  core 137  3.11 GB/s  (20.036 s)
+thread  2  core 138  3.17 GB/s  (20.047 s)
+thread  3  core 139  3.17 GB/s  (20.043 s)
+thread  4  core 140  3.08 GB/s  (20.041 s)
+thread  5  core 141  3.08 GB/s  (20.018 s)
+thread  6  core 142  3.09 GB/s  (20.036 s)
+thread  7  core 143  3.09 GB/s  (20.008 s)
+---
+aggregate: 24.87 GB/s  (8 threads, mode=wb_load)
+RESULT mode=wb_load threads=8 bw_gbps=24.866 throttle=0
+=== MODE=wb_load THREADS=12 RUN=1 SIZE_MB=256 ===
+thread  0  core 136  1.58 GB/s  (20.060 s)
+thread  1  core 137  1.58 GB/s  (20.063 s)
+thread  2  core 138  1.62 GB/s  (20.061 s)
+thread  3  core 139  1.64 GB/s  (20.015 s)
+thread  4  core 140  1.58 GB/s  (20.019 s)
+thread  5  core 141  1.58 GB/s  (20.013 s)
+thread  6  core 142  1.59 GB/s  (20.057 s)
+thread  7  core 143  1.58 GB/s  (20.005 s)
+thread  8  core 224  3.10 GB/s  (20.059 s)
+thread  9  core 225  3.01 GB/s  (20.035 s)
+thread 10  core 226  3.39 GB/s  (20.044 s)
+thread 11  core 227  3.29 GB/s  (20.048 s)
+---
+aggregate: 25.53 GB/s  (12 threads, mode=wb_load)
+RESULT mode=wb_load threads=12 bw_gbps=25.528 throttle=0
+=== MODE=wb_load THREADS=12 RUN=2 SIZE_MB=256 ===
+thread  0  core 136  1.62 GB/s  (20.069 s)
+thread  1  core 137  1.54 GB/s  (20.004 s)
+thread  2  core 138  1.62 GB/s  (20.071 s)
+thread  3  core 139  1.64 GB/s  (20.073 s)
+thread  4  core 140  1.58 GB/s  (20.034 s)
+thread  5  core 141  1.58 GB/s  (20.034 s)
+thread  6  core 142  1.59 GB/s  (20.063 s)
+thread  7  core 143  1.58 GB/s  (20.017 s)
+thread  8  core 224  3.10 GB/s  (20.034 s)
+thread  9  core 225  3.01 GB/s  (20.050 s)
+thread 10  core 226  3.39 GB/s  (20.063 s)
+thread 11  core 227  3.29 GB/s  (20.056 s)
+---
+aggregate: 25.52 GB/s  (12 threads, mode=wb_load)
+RESULT mode=wb_load threads=12 bw_gbps=25.515 throttle=0
+=== MODE=wb_load THREADS=12 RUN=3 SIZE_MB=256 ===
+thread  0  core 136  1.59 GB/s  (20.060 s)
+thread  1  core 137  1.58 GB/s  (20.053 s)
+thread  2  core 138  1.62 GB/s  (20.051 s)
+thread  3  core 139  1.64 GB/s  (20.019 s)
+thread  4  core 140  1.58 GB/s  (20.026 s)
+thread  5  core 141  1.58 GB/s  (20.028 s)
+thread  6  core 142  1.59 GB/s  (20.047 s)
+thread  7  core 143  1.59 GB/s  (20.060 s)
+thread  8  core 224  3.10 GB/s  (20.028 s)
+thread  9  core 225  3.02 GB/s  (20.024 s)
+thread 10  core 226  3.38 GB/s  (20.015 s)
+thread 11  core 227  3.30 GB/s  (20.021 s)
+---
+aggregate: 25.53 GB/s  (12 threads, mode=wb_load)
+RESULT mode=wb_load threads=12 bw_gbps=25.532 throttle=0
+=== MODE=wb_load THREADS=16 RUN=1 SIZE_MB=256 ===
+thread  0  core 136  1.62 GB/s  (20.073 s)
+thread  1  core 137  1.61 GB/s  (20.051 s)
+thread  2  core 138  1.63 GB/s  (20.070 s)
+thread  3  core 139  1.67 GB/s  (20.093 s)
+thread  4  core 140  1.62 GB/s  (20.098 s)
+thread  5  core 141  1.62 GB/s  (20.101 s)
+thread  6  core 142  1.62 GB/s  (20.079 s)
+thread  7  core 143  1.62 GB/s  (20.085 s)
+thread  8  core 224  1.64 GB/s  (20.106 s)
+thread  9  core 225  1.62 GB/s  (20.066 s)
+thread 10  core 226  1.66 GB/s  (20.102 s)
+thread 11  core 227  1.67 GB/s  (20.106 s)
+thread 12  core 228  1.62 GB/s  (20.044 s)
+thread 13  core 229  1.62 GB/s  (20.102 s)
+thread 14  core 230  1.62 GB/s  (20.034 s)
+thread 15  core 231  1.62 GB/s  (20.099 s)
+---
+aggregate: 26.02 GB/s  (16 threads, mode=wb_load)
+RESULT mode=wb_load threads=16 bw_gbps=26.021 throttle=0
+=== MODE=wb_load THREADS=16 RUN=2 SIZE_MB=256 ===
+thread  0  core 136  1.60 GB/s  (20.006 s)
+thread  1  core 137  1.61 GB/s  (20.036 s)
+thread  2  core 138  1.65 GB/s  (20.034 s)
+thread  3  core 139  1.67 GB/s  (20.092 s)
+thread  4  core 140  1.62 GB/s  (20.084 s)
+thread  5  core 141  1.62 GB/s  (20.096 s)
+thread  6  core 142  1.62 GB/s  (20.053 s)
+thread  7  core 143  1.62 GB/s  (20.088 s)
+thread  8  core 224  1.64 GB/s  (20.100 s)
+thread  9  core 225  1.61 GB/s  (20.007 s)
+thread 10  core 226  1.66 GB/s  (20.104 s)
+thread 11  core 227  1.67 GB/s  (20.106 s)
+thread 12  core 228  1.62 GB/s  (20.054 s)
+thread 13  core 229  1.62 GB/s  (20.105 s)
+thread 14  core 230  1.63 GB/s  (20.106 s)
+thread 15  core 231  1.62 GB/s  (20.071 s)
+---
+aggregate: 26.01 GB/s  (16 threads, mode=wb_load)
+RESULT mode=wb_load threads=16 bw_gbps=26.007 throttle=0
+=== MODE=wb_load THREADS=16 RUN=3 SIZE_MB=256 ===
+thread  0  core 136  1.62 GB/s  (20.098 s)
+thread  1  core 137  1.61 GB/s  (20.022 s)
+thread  2  core 138  1.65 GB/s  (20.063 s)
+thread  3  core 139  1.67 GB/s  (20.090 s)
+thread  4  core 140  1.62 GB/s  (20.098 s)
+thread  5  core 141  1.62 GB/s  (20.099 s)
+thread  6  core 142  1.62 GB/s  (20.081 s)
+thread  7  core 143  1.62 GB/s  (20.087 s)
+thread  8  core 224  1.65 GB/s  (20.021 s)
+thread  9  core 225  1.61 GB/s  (20.062 s)
+thread 10  core 226  1.65 GB/s  (20.051 s)
+thread 11  core 227  1.67 GB/s  (20.056 s)
+thread 12  core 228  1.62 GB/s  (20.066 s)
+thread 13  core 229  1.59 GB/s  (20.057 s)
+thread 14  core 230  1.63 GB/s  (20.073 s)
+thread 15  core 231  1.62 GB/s  (20.060 s)
+---
+aggregate: 26.00 GB/s  (16 threads, mode=wb_load)
+RESULT mode=wb_load threads=16 bw_gbps=26.004 throttle=0
+=== MODE=wc_ntdqa THREADS=1 RUN=1 SIZE_MB=256 ===
+thread  0  core 136  4.17 GB/s  (20.011 s)
+---
+aggregate: 4.17 GB/s  (1 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=1 bw_gbps=4.172 throttle=0
+=== MODE=wc_ntdqa THREADS=1 RUN=2 SIZE_MB=256 ===
+thread  0  core 136  4.18 GB/s  (20.041 s)
+---
+aggregate: 4.18 GB/s  (1 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=1 bw_gbps=4.179 throttle=0
+=== MODE=wc_ntdqa THREADS=1 RUN=3 SIZE_MB=256 ===
+thread  0  core 136  4.18 GB/s  (20.047 s)
+---
+aggregate: 4.18 GB/s  (1 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=1 bw_gbps=4.178 throttle=0
+=== MODE=wc_ntdqa THREADS=2 RUN=1 SIZE_MB=256 ===
+thread  0  core 136  4.11 GB/s  (20.033 s)
+thread  1  core 137  4.12 GB/s  (20.008 s)
+---
+aggregate: 8.23 GB/s  (2 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=2 bw_gbps=8.227 throttle=0
+=== MODE=wc_ntdqa THREADS=2 RUN=2 SIZE_MB=256 ===
+thread  0  core 136  4.12 GB/s  (20.023 s)
+thread  1  core 137  4.12 GB/s  (20.017 s)
+---
+aggregate: 8.23 GB/s  (2 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=2 bw_gbps=8.232 throttle=0
+=== MODE=wc_ntdqa THREADS=2 RUN=3 SIZE_MB=256 ===
+thread  0  core 136  4.12 GB/s  (20.054 s)
+thread  1  core 137  4.12 GB/s  (20.044 s)
+---
+aggregate: 8.25 GB/s  (2 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=2 bw_gbps=8.246 throttle=0
+=== MODE=wc_ntdqa THREADS=4 RUN=1 SIZE_MB=256 ===
+thread  0  core 136  3.85 GB/s  (20.004 s)
+thread  1  core 137  3.86 GB/s  (20.015 s)
+thread  2  core 138  3.85 GB/s  (20.055 s)
+thread  3  core 139  3.85 GB/s  (20.033 s)
+---
+aggregate: 15.39 GB/s  (4 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=4 bw_gbps=15.393 throttle=0
+=== MODE=wc_ntdqa THREADS=4 RUN=2 SIZE_MB=256 ===
+thread  0  core 136  3.86 GB/s  (20.026 s)
+thread  1  core 137  3.87 GB/s  (20.058 s)
+thread  2  core 138  3.86 GB/s  (20.035 s)
+thread  3  core 139  3.85 GB/s  (20.030 s)
+---
+aggregate: 15.42 GB/s  (4 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=4 bw_gbps=15.417 throttle=0
+=== MODE=wc_ntdqa THREADS=4 RUN=3 SIZE_MB=256 ===
+thread  0  core 136  3.86 GB/s  (20.007 s)
+thread  1  core 137  3.84 GB/s  (20.041 s)
+thread  2  core 138  3.85 GB/s  (20.013 s)
+thread  3  core 139  3.84 GB/s  (20.050 s)
+---
+aggregate: 15.38 GB/s  (4 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=4 bw_gbps=15.383 throttle=0
+=== MODE=wc_ntdqa THREADS=6 RUN=1 SIZE_MB=256 ===
+thread  0  core 136  2.99 GB/s  (20.038 s)
+thread  1  core 137  2.99 GB/s  (20.008 s)
+thread  2  core 138  2.99 GB/s  (20.051 s)
+thread  3  core 139  2.98 GB/s  (20.056 s)
+thread  4  core 140  2.98 GB/s  (20.007 s)
+thread  5  core 141  2.98 GB/s  (20.019 s)
+---
+aggregate: 17.88 GB/s  (6 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=6 bw_gbps=17.881 throttle=0
+=== MODE=wc_ntdqa THREADS=6 RUN=2 SIZE_MB=256 ===
+thread  0  core 136  2.99 GB/s  (20.044 s)
+thread  1  core 137  2.99 GB/s  (20.007 s)
+thread  2  core 138  2.99 GB/s  (20.034 s)
+thread  3  core 139  2.98 GB/s  (20.059 s)
+thread  4  core 140  2.98 GB/s  (20.011 s)
+thread  5  core 141  2.97 GB/s  (20.039 s)
+---
+aggregate: 17.88 GB/s  (6 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=6 bw_gbps=17.878 throttle=0
+=== MODE=wc_ntdqa THREADS=6 RUN=3 SIZE_MB=256 ===
+thread  0  core 136  3.00 GB/s  (20.055 s)
+thread  1  core 137  3.00 GB/s  (20.067 s)
+thread  2  core 138  2.99 GB/s  (20.031 s)
+thread  3  core 139  2.97 GB/s  (20.033 s)
+thread  4  core 140  2.98 GB/s  (20.005 s)
+thread  5  core 141  2.97 GB/s  (20.032 s)
+---
+aggregate: 17.89 GB/s  (6 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=6 bw_gbps=17.885 throttle=0
+=== MODE=wc_ntdqa THREADS=8 RUN=1 SIZE_MB=256 ===
+thread  0  core 136  2.24 GB/s  (20.044 s)
+thread  1  core 137  2.24 GB/s  (20.004 s)
+thread  2  core 138  2.24 GB/s  (20.029 s)
+thread  3  core 139  2.24 GB/s  (20.045 s)
+thread  4  core 140  2.23 GB/s  (20.073 s)
+thread  5  core 141  2.23 GB/s  (20.064 s)
+thread  6  core 142  2.23 GB/s  (20.008 s)
+thread  7  core 143  2.23 GB/s  (20.004 s)
+---
+aggregate: 17.84 GB/s  (8 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=8 bw_gbps=17.839 throttle=0
+=== MODE=wc_ntdqa THREADS=8 RUN=2 SIZE_MB=256 ===
+thread  0  core 136  2.24 GB/s  (20.004 s)
+thread  1  core 137  2.24 GB/s  (20.005 s)
+thread  2  core 138  2.24 GB/s  (20.030 s)
+thread  3  core 139  2.24 GB/s  (20.056 s)
+thread  4  core 140  2.24 GB/s  (20.053 s)
+thread  5  core 141  2.23 GB/s  (20.025 s)
+thread  6  core 142  2.23 GB/s  (20.011 s)
+thread  7  core 143  2.23 GB/s  (20.005 s)
+---
+aggregate: 17.84 GB/s  (8 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=8 bw_gbps=17.841 throttle=0
+=== MODE=wc_ntdqa THREADS=8 RUN=3 SIZE_MB=256 ===
+thread  0  core 136  2.23 GB/s  (20.068 s)
+thread  1  core 137  2.25 GB/s  (20.072 s)
+thread  2  core 138  2.24 GB/s  (20.035 s)
+thread  3  core 139  2.24 GB/s  (20.047 s)
+thread  4  core 140  2.23 GB/s  (20.064 s)
+thread  5  core 141  2.23 GB/s  (20.071 s)
+thread  6  core 142  2.23 GB/s  (20.017 s)
+thread  7  core 143  2.23 GB/s  (20.013 s)
+---
+aggregate: 17.85 GB/s  (8 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=8 bw_gbps=17.854 throttle=0
+=== MODE=wc_ntdqa THREADS=12 RUN=1 SIZE_MB=256 ===
+thread  0  core 136  1.66 GB/s  (20.102 s)
+thread  1  core 137  1.66 GB/s  (20.070 s)
+thread  2  core 138  1.66 GB/s  (20.076 s)
+thread  3  core 139  1.66 GB/s  (20.083 s)
+thread  4  core 140  1.66 GB/s  (20.087 s)
+thread  5  core 141  1.66 GB/s  (20.093 s)
+thread  6  core 142  1.66 GB/s  (20.107 s)
+thread  7  core 143  1.66 GB/s  (20.104 s)
+thread  8  core 224  2.93 GB/s  (20.063 s)
+thread  9  core 225  2.93 GB/s  (20.041 s)
+thread 10  core 226  2.93 GB/s  (20.067 s)
+thread 11  core 227  2.93 GB/s  (20.072 s)
+---
+aggregate: 24.94 GB/s  (12 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=12 bw_gbps=24.938 throttle=0
+=== MODE=wc_ntdqa THREADS=12 RUN=2 SIZE_MB=256 ===
+thread  0  core 136  1.66 GB/s  (20.095 s)
+thread  1  core 137  1.66 GB/s  (20.056 s)
+thread  2  core 138  1.66 GB/s  (20.077 s)
+thread  3  core 139  1.66 GB/s  (20.082 s)
+thread  4  core 140  1.66 GB/s  (20.103 s)
+thread  5  core 141  1.66 GB/s  (20.089 s)
+thread  6  core 142  1.66 GB/s  (20.103 s)
+thread  7  core 143  1.66 GB/s  (20.102 s)
+thread  8  core 224  2.93 GB/s  (20.055 s)
+thread  9  core 225  2.93 GB/s  (20.052 s)
+thread 10  core 226  2.93 GB/s  (20.003 s)
+thread 11  core 227  2.92 GB/s  (20.013 s)
+---
+aggregate: 24.92 GB/s  (12 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=12 bw_gbps=24.916 throttle=0
+=== MODE=wc_ntdqa THREADS=12 RUN=3 SIZE_MB=256 ===
+thread  0  core 136  1.66 GB/s  (20.079 s)
+thread  1  core 137  1.66 GB/s  (20.102 s)
+thread  2  core 138  1.66 GB/s  (20.081 s)
+thread  3  core 139  1.66 GB/s  (20.092 s)
+thread  4  core 140  1.66 GB/s  (20.091 s)
+thread  5  core 141  1.66 GB/s  (20.083 s)
+thread  6  core 142  1.66 GB/s  (20.108 s)
+thread  7  core 143  1.66 GB/s  (20.112 s)
+thread  8  core 224  2.93 GB/s  (20.048 s)
+thread  9  core 225  2.93 GB/s  (20.081 s)
+thread 10  core 226  2.93 GB/s  (20.082 s)
+thread 11  core 227  2.93 GB/s  (20.086 s)
+---
+aggregate: 24.93 GB/s  (12 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=12 bw_gbps=24.933 throttle=0
+=== MODE=wc_ntdqa THREADS=16 RUN=1 SIZE_MB=256 ===
+thread  0  core 136  1.56 GB/s  (20.106 s)
+thread  1  core 137  1.57 GB/s  (20.057 s)
+thread  2  core 138  1.56 GB/s  (20.080 s)
+thread  3  core 139  1.56 GB/s  (20.092 s)
+thread  4  core 140  1.56 GB/s  (20.092 s)
+thread  5  core 141  1.56 GB/s  (20.085 s)
+thread  6  core 142  1.56 GB/s  (20.114 s)
+thread  7  core 143  1.56 GB/s  (20.107 s)
+thread  8  core 224  1.57 GB/s  (20.060 s)
+thread  9  core 225  1.57 GB/s  (20.065 s)
+thread 10  core 226  1.56 GB/s  (20.075 s)
+thread 11  core 227  1.56 GB/s  (20.078 s)
+thread 12  core 228  1.56 GB/s  (20.105 s)
+thread 13  core 229  1.56 GB/s  (20.093 s)
+thread 14  core 230  1.56 GB/s  (20.104 s)
+thread 15  core 231  1.56 GB/s  (20.102 s)
+---
+aggregate: 24.98 GB/s  (16 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=16 bw_gbps=24.984 throttle=0
+=== MODE=wc_ntdqa THREADS=16 RUN=2 SIZE_MB=256 ===
+thread  0  core 136  1.56 GB/s  (20.098 s)
+thread  1  core 137  1.57 GB/s  (20.066 s)
+thread  2  core 138  1.56 GB/s  (20.076 s)
+thread  3  core 139  1.56 GB/s  (20.081 s)
+thread  4  core 140  1.56 GB/s  (20.084 s)
+thread  5  core 141  1.56 GB/s  (20.071 s)
+thread  6  core 142  1.56 GB/s  (20.102 s)
+thread  7  core 143  1.56 GB/s  (20.103 s)
+thread  8  core 224  1.57 GB/s  (20.047 s)
+thread  9  core 225  1.57 GB/s  (20.038 s)
+thread 10  core 226  1.57 GB/s  (20.067 s)
+thread 11  core 227  1.57 GB/s  (20.067 s)
+thread 12  core 228  1.56 GB/s  (20.075 s)
+thread 13  core 229  1.56 GB/s  (20.076 s)
+thread 14  core 230  1.56 GB/s  (20.009 s)
+thread 15  core 231  1.56 GB/s  (20.095 s)
+---
+aggregate: 24.98 GB/s  (16 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=16 bw_gbps=24.983 throttle=0
+=== MODE=wc_ntdqa THREADS=16 RUN=3 SIZE_MB=256 ===
+thread  0  core 136  1.57 GB/s  (20.064 s)
+thread  1  core 137  1.56 GB/s  (20.099 s)
+thread  2  core 138  1.56 GB/s  (20.075 s)
+thread  3  core 139  1.56 GB/s  (20.086 s)
+thread  4  core 140  1.56 GB/s  (20.087 s)
+thread  5  core 141  1.56 GB/s  (20.075 s)
+thread  6  core 142  1.56 GB/s  (20.108 s)
+thread  7  core 143  1.56 GB/s  (20.101 s)
+thread  8  core 224  1.57 GB/s  (20.062 s)
+thread  9  core 225  1.57 GB/s  (20.059 s)
+thread 10  core 226  1.57 GB/s  (20.064 s)
+thread 11  core 227  1.56 GB/s  (20.071 s)
+thread 12  core 228  1.56 GB/s  (20.083 s)
+thread 13  core 229  1.56 GB/s  (20.104 s)
+thread 14  core 230  1.56 GB/s  (20.102 s)
+thread 15  core 231  1.56 GB/s  (20.100 s)
+---
+aggregate: 24.99 GB/s  (16 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=16 bw_gbps=24.990 throttle=0
+=== MODE=uc_load THREADS=1 RUN=1 SIZE_MB=8 ===
+thread  0  core 136  0.03 GB/s  (20.271 s)
+---
+aggregate: 0.03 GB/s  (1 threads, mode=uc_load)
+RESULT mode=uc_load threads=1 bw_gbps=0.025 throttle=0
+=== MODE=uc_load THREADS=1 RUN=2 SIZE_MB=8 ===
+thread  0  core 136  0.03 GB/s  (20.217 s)
+---
+aggregate: 0.03 GB/s  (1 threads, mode=uc_load)
+RESULT mode=uc_load threads=1 bw_gbps=0.025 throttle=0
+=== MODE=uc_load THREADS=1 RUN=3 SIZE_MB=8 ===
+thread  0  core 136  0.03 GB/s  (20.218 s)
+---
+aggregate: 0.03 GB/s  (1 threads, mode=uc_load)
+RESULT mode=uc_load threads=1 bw_gbps=0.025 throttle=0
+=== MODE=uc_load THREADS=2 RUN=1 SIZE_MB=8 ===
+thread  0  core 136  0.03 GB/s  (20.251 s)
+thread  1  core 137  0.03 GB/s  (20.195 s)
+---
+aggregate: 0.05 GB/s  (2 threads, mode=uc_load)
+RESULT mode=uc_load threads=2 bw_gbps=0.051 throttle=0
+=== MODE=uc_load THREADS=2 RUN=2 SIZE_MB=8 ===
+thread  0  core 136  0.03 GB/s  (20.195 s)
+thread  1  core 137  0.03 GB/s  (20.253 s)
+---
+aggregate: 0.05 GB/s  (2 threads, mode=uc_load)
+RESULT mode=uc_load threads=2 bw_gbps=0.051 throttle=0
+=== MODE=uc_load THREADS=2 RUN=3 SIZE_MB=8 ===
+thread  0  core 136  0.03 GB/s  (20.192 s)
+thread  1  core 137  0.03 GB/s  (20.255 s)
+---
+aggregate: 0.05 GB/s  (2 threads, mode=uc_load)
+RESULT mode=uc_load threads=2 bw_gbps=0.051 throttle=0
+=== MODE=uc_load THREADS=4 RUN=1 SIZE_MB=8 ===
+thread  0  core 136  0.03 GB/s  (20.187 s)
+thread  1  core 137  0.03 GB/s  (20.201 s)
+thread  2  core 138  0.03 GB/s  (20.315 s)
+thread  3  core 139  0.03 GB/s  (20.253 s)
+---
+aggregate: 0.10 GB/s  (4 threads, mode=uc_load)
+RESULT mode=uc_load threads=4 bw_gbps=0.101 throttle=0
+=== MODE=uc_load THREADS=4 RUN=2 SIZE_MB=8 ===
+thread  0  core 136  0.03 GB/s  (20.136 s)
+thread  1  core 137  0.03 GB/s  (20.149 s)
+thread  2  core 138  0.03 GB/s  (20.221 s)
+thread  3  core 139  0.03 GB/s  (20.292 s)
+---
+aggregate: 0.10 GB/s  (4 threads, mode=uc_load)
+RESULT mode=uc_load threads=4 bw_gbps=0.101 throttle=0
+=== MODE=uc_load THREADS=4 RUN=3 SIZE_MB=8 ===
+thread  0  core 136  0.03 GB/s  (20.193 s)
+thread  1  core 137  0.03 GB/s  (20.146 s)
+thread  2  core 138  0.03 GB/s  (20.223 s)
+thread  3  core 139  0.03 GB/s  (20.235 s)
+---
+aggregate: 0.10 GB/s  (4 threads, mode=uc_load)
+RESULT mode=uc_load threads=4 bw_gbps=0.101 throttle=0
+=== MODE=uc_load THREADS=6 RUN=1 SIZE_MB=8 ===
+thread  0  core 136  0.03 GB/s  (20.200 s)
+thread  1  core 137  0.03 GB/s  (20.219 s)
+thread  2  core 138  0.03 GB/s  (20.258 s)
+thread  3  core 139  0.03 GB/s  (20.265 s)
+thread  4  core 140  0.03 GB/s  (20.297 s)
+thread  5  core 141  0.03 GB/s  (20.015 s)
+---
+aggregate: 0.15 GB/s  (6 threads, mode=uc_load)
+RESULT mode=uc_load threads=6 bw_gbps=0.151 throttle=0
+=== MODE=uc_load THREADS=6 RUN=2 SIZE_MB=8 ===
+thread  0  core 136  0.03 GB/s  (20.291 s)
+thread  1  core 137  0.03 GB/s  (20.200 s)
+thread  2  core 138  0.03 GB/s  (20.254 s)
+thread  3  core 139  0.03 GB/s  (20.257 s)
+thread  4  core 140  0.03 GB/s  (20.290 s)
+thread  5  core 141  0.03 GB/s  (20.282 s)
+---
+aggregate: 0.15 GB/s  (6 threads, mode=uc_load)
+RESULT mode=uc_load threads=6 bw_gbps=0.151 throttle=0
+=== MODE=uc_load THREADS=6 RUN=3 SIZE_MB=8 ===
+thread  0  core 136  0.03 GB/s  (20.202 s)
+thread  1  core 137  0.03 GB/s  (20.269 s)
+thread  2  core 138  0.03 GB/s  (20.264 s)
+thread  3  core 139  0.03 GB/s  (20.254 s)
+thread  4  core 140  0.03 GB/s  (20.296 s)
+thread  5  core 141  0.03 GB/s  (20.288 s)
+---
+aggregate: 0.15 GB/s  (6 threads, mode=uc_load)
+RESULT mode=uc_load threads=6 bw_gbps=0.151 throttle=0
+=== MODE=uc_load THREADS=8 RUN=1 SIZE_MB=8 ===
+thread  0  core 136  0.03 GB/s  (20.207 s)
+thread  1  core 137  0.03 GB/s  (20.203 s)
+thread  2  core 138  0.03 GB/s  (20.268 s)
+thread  3  core 139  0.03 GB/s  (20.263 s)
+thread  4  core 140  0.03 GB/s  (20.322 s)
+thread  5  core 141  0.03 GB/s  (20.019 s)
+thread  6  core 142  0.03 GB/s  (20.313 s)
+thread  7  core 143  0.03 GB/s  (20.312 s)
+---
+aggregate: 0.20 GB/s  (8 threads, mode=uc_load)
+RESULT mode=uc_load threads=8 bw_gbps=0.201 throttle=0
+=== MODE=uc_load THREADS=8 RUN=2 SIZE_MB=8 ===
+thread  0  core 136  0.03 GB/s  (20.209 s)
+thread  1  core 137  0.03 GB/s  (20.202 s)
+thread  2  core 138  0.03 GB/s  (20.269 s)
+thread  3  core 139  0.03 GB/s  (20.263 s)
+thread  4  core 140  0.03 GB/s  (20.323 s)
+thread  5  core 141  0.03 GB/s  (20.019 s)
+thread  6  core 142  0.03 GB/s  (20.316 s)
+thread  7  core 143  0.03 GB/s  (20.315 s)
+---
+aggregate: 0.20 GB/s  (8 threads, mode=uc_load)
+RESULT mode=uc_load threads=8 bw_gbps=0.201 throttle=0
+=== MODE=uc_load THREADS=8 RUN=3 SIZE_MB=8 ===
+thread  0  core 136  0.03 GB/s  (20.242 s)
+thread  1  core 137  0.03 GB/s  (20.211 s)
+thread  2  core 138  0.03 GB/s  (20.262 s)
+thread  3  core 139  0.03 GB/s  (20.261 s)
+thread  4  core 140  0.03 GB/s  (20.312 s)
+thread  5  core 141  0.03 GB/s  (20.025 s)
+thread  6  core 142  0.03 GB/s  (20.319 s)
+thread  7  core 143  0.03 GB/s  (20.319 s)
+---
+aggregate: 0.20 GB/s  (8 threads, mode=uc_load)
+RESULT mode=uc_load threads=8 bw_gbps=0.201 throttle=0
+=== MODE=uc_load THREADS=12 RUN=1 SIZE_MB=8 ===
+thread  0  core 136  0.03 GB/s  (20.013 s)
+thread  1  core 137  0.03 GB/s  (20.272 s)
+thread  2  core 138  0.03 GB/s  (20.312 s)
+thread  3  core 139  0.03 GB/s  (20.311 s)
+thread  4  core 140  0.03 GB/s  (20.046 s)
+thread  5  core 141  0.03 GB/s  (20.006 s)
+thread  6  core 142  0.03 GB/s  (20.046 s)
+thread  7  core 143  0.03 GB/s  (20.046 s)
+thread  8  core 224  0.03 GB/s  (20.296 s)
+thread  9  core 225  0.03 GB/s  (20.286 s)
+thread 10  core 226  0.03 GB/s  (20.329 s)
+thread 11  core 227  0.03 GB/s  (20.328 s)
+---
+aggregate: 0.30 GB/s  (12 threads, mode=uc_load)
+RESULT mode=uc_load threads=12 bw_gbps=0.300 throttle=0
+=== MODE=uc_load THREADS=12 RUN=2 SIZE_MB=8 ===
+thread  0  core 136  0.03 GB/s  (20.023 s)
+thread  1  core 137  0.03 GB/s  (20.269 s)
+thread  2  core 138  0.03 GB/s  (20.016 s)
+thread  3  core 139  0.03 GB/s  (20.311 s)
+thread  4  core 140  0.03 GB/s  (20.011 s)
+thread  5  core 141  0.03 GB/s  (20.014 s)
+thread  6  core 142  0.03 GB/s  (20.043 s)
+thread  7  core 143  0.03 GB/s  (20.044 s)
+thread  8  core 224  0.03 GB/s  (20.290 s)
+thread  9  core 225  0.03 GB/s  (20.282 s)
+thread 10  core 226  0.03 GB/s  (20.328 s)
+thread 11  core 227  0.03 GB/s  (20.326 s)
+---
+aggregate: 0.30 GB/s  (12 threads, mode=uc_load)
+RESULT mode=uc_load threads=12 bw_gbps=0.300 throttle=0
+=== MODE=uc_load THREADS=12 RUN=3 SIZE_MB=8 ===
+thread  0  core 136  0.03 GB/s  (20.278 s)
+thread  1  core 137  0.03 GB/s  (20.272 s)
+thread  2  core 138  0.03 GB/s  (20.317 s)
+thread  3  core 139  0.03 GB/s  (20.312 s)
+thread  4  core 140  0.03 GB/s  (20.015 s)
+thread  5  core 141  0.03 GB/s  (20.014 s)
+thread  6  core 142  0.03 GB/s  (20.035 s)
+thread  7  core 143  0.03 GB/s  (20.035 s)
+thread  8  core 224  0.03 GB/s  (20.290 s)
+thread  9  core 225  0.03 GB/s  (20.279 s)
+thread 10  core 226  0.03 GB/s  (20.332 s)
+thread 11  core 227  0.03 GB/s  (20.065 s)
+---
+aggregate: 0.30 GB/s  (12 threads, mode=uc_load)
+RESULT mode=uc_load threads=12 bw_gbps=0.300 throttle=0
+=== MODE=uc_load THREADS=16 RUN=1 SIZE_MB=8 ===
+thread  0  core 136  0.03 GB/s  (20.287 s)
+thread  1  core 137  0.03 GB/s  (20.279 s)
+thread  2  core 138  0.03 GB/s  (20.324 s)
+thread  3  core 139  0.03 GB/s  (20.327 s)
+thread  4  core 140  0.03 GB/s  (20.036 s)
+thread  5  core 141  0.03 GB/s  (20.030 s)
+thread  6  core 142  0.03 GB/s  (20.077 s)
+thread  7  core 143  0.03 GB/s  (20.078 s)
+thread  8  core 224  0.03 GB/s  (20.305 s)
+thread  9  core 225  0.03 GB/s  (20.301 s)
+thread 10  core 226  0.03 GB/s  (20.105 s)
+thread 11  core 227  0.03 GB/s  (20.012 s)
+thread 12  core 228  0.03 GB/s  (20.055 s)
+thread 13  core 229  0.03 GB/s  (20.054 s)
+thread 14  core 230  0.03 GB/s  (20.096 s)
+thread 15  core 231  0.03 GB/s  (20.097 s)
+---
+aggregate: 0.40 GB/s  (16 threads, mode=uc_load)
+RESULT mode=uc_load threads=16 bw_gbps=0.399 throttle=0
+=== MODE=uc_load THREADS=16 RUN=2 SIZE_MB=8 ===
+thread  0  core 136  0.03 GB/s  (20.315 s)
+thread  1  core 137  0.03 GB/s  (20.304 s)
+thread  2  core 138  0.03 GB/s  (20.024 s)
+thread  3  core 139  0.03 GB/s  (20.022 s)
+thread  4  core 140  0.03 GB/s  (20.108 s)
+thread  5  core 141  0.03 GB/s  (20.049 s)
+thread  6  core 142  0.03 GB/s  (20.103 s)
+thread  7  core 143  0.03 GB/s  (20.104 s)
+thread  8  core 224  0.03 GB/s  (20.297 s)
+thread  9  core 225  0.03 GB/s  (20.283 s)
+thread 10  core 226  0.03 GB/s  (20.325 s)
+thread 11  core 227  0.03 GB/s  (20.318 s)
+thread 12  core 228  0.03 GB/s  (20.030 s)
+thread 13  core 229  0.03 GB/s  (20.021 s)
+thread 14  core 230  0.03 GB/s  (20.054 s)
+thread 15  core 231  0.03 GB/s  (20.104 s)
+---
+aggregate: 0.40 GB/s  (16 threads, mode=uc_load)
+RESULT mode=uc_load threads=16 bw_gbps=0.399 throttle=0
+=== MODE=uc_load THREADS=16 RUN=3 SIZE_MB=8 ===
+thread  0  core 136  0.03 GB/s  (20.088 s)
+thread  1  core 137  0.03 GB/s  (20.304 s)
+thread  2  core 138  0.03 GB/s  (20.017 s)
+thread  3  core 139  0.03 GB/s  (20.007 s)
+thread  4  core 140  0.03 GB/s  (20.087 s)
+thread  5  core 141  0.03 GB/s  (20.077 s)
+thread  6  core 142  0.03 GB/s  (20.102 s)
+thread  7  core 143  0.03 GB/s  (20.102 s)
+thread  8  core 224  0.03 GB/s  (20.283 s)
+thread  9  core 225  0.03 GB/s  (20.273 s)
+thread 10  core 226  0.03 GB/s  (20.320 s)
+thread 11  core 227  0.03 GB/s  (20.311 s)
+thread 12  core 228  0.03 GB/s  (20.020 s)
+thread 13  core 229  0.03 GB/s  (20.087 s)
+thread 14  core 230  0.03 GB/s  (20.063 s)
+thread 15  core 231  0.03 GB/s  (20.086 s)
+---
+aggregate: 0.40 GB/s  (16 threads, mode=uc_load)
+RESULT mode=uc_load threads=16 bw_gbps=0.398 throttle=0
+=== MODE=wb_ntdqa THREADS=1 RUN=1 SIZE_MB=256 ===
+thread  0  core 136  15.79 GB/s  (20.012 s)
+---
+aggregate: 15.79 GB/s  (1 threads, mode=wb_ntdqa)
+RESULT mode=wb_ntdqa threads=1 bw_gbps=15.788 throttle=0
+=== MODE=wb_ntdqa THREADS=1 RUN=2 SIZE_MB=256 ===
+thread  0  core 136  15.79 GB/s  (20.009 s)
+---
+aggregate: 15.79 GB/s  (1 threads, mode=wb_ntdqa)
+RESULT mode=wb_ntdqa threads=1 bw_gbps=15.790 throttle=0
+=== MODE=wb_ntdqa THREADS=1 RUN=3 SIZE_MB=256 ===
+thread  0  core 136  15.79 GB/s  (20.005 s)
+---
+aggregate: 15.79 GB/s  (1 threads, mode=wb_ntdqa)
+RESULT mode=wb_ntdqa threads=1 bw_gbps=15.793 throttle=0
+=== MODE=wb_ntdqa THREADS=2 RUN=1 SIZE_MB=256 ===
+thread  0  core 136  10.38 GB/s  (20.018 s)
+thread  1  core 137  10.42 GB/s  (20.011 s)
+---
+aggregate: 20.80 GB/s  (2 threads, mode=wb_ntdqa)
+RESULT mode=wb_ntdqa threads=2 bw_gbps=20.798 throttle=0
+=== MODE=wb_ntdqa THREADS=2 RUN=2 SIZE_MB=256 ===
+thread  0  core 136  10.43 GB/s  (20.006 s)
+thread  1  core 137  10.38 GB/s  (20.019 s)
+---
+aggregate: 20.80 GB/s  (2 threads, mode=wb_ntdqa)
+RESULT mode=wb_ntdqa threads=2 bw_gbps=20.797 throttle=0
+=== MODE=wb_ntdqa THREADS=2 RUN=3 SIZE_MB=256 ===
+thread  0  core 136  10.37 GB/s  (20.018 s)
+thread  1  core 137  10.42 GB/s  (20.021 s)
+---
+aggregate: 20.78 GB/s  (2 threads, mode=wb_ntdqa)
+RESULT mode=wb_ntdqa threads=2 bw_gbps=20.782 throttle=0
+=== MODE=wb_ntdqa THREADS=4 RUN=1 SIZE_MB=256 ===
+thread  0  core 136  5.60 GB/s  (20.025 s)
+thread  1  core 137  5.73 GB/s  (20.009 s)
+thread  2  core 138  6.17 GB/s  (20.003 s)
+thread  3  core 139  6.19 GB/s  (20.028 s)
+---
+aggregate: 23.68 GB/s  (4 threads, mode=wb_ntdqa)
+RESULT mode=wb_ntdqa threads=4 bw_gbps=23.684 throttle=0
+=== MODE=wb_ntdqa THREADS=4 RUN=2 SIZE_MB=256 ===
+thread  0  core 136  5.60 GB/s  (20.007 s)
+thread  1  core 137  5.73 GB/s  (20.017 s)
+thread  2  core 138  6.18 GB/s  (20.027 s)
+thread  3  core 139  6.16 GB/s  (20.012 s)
+---
+aggregate: 23.64 GB/s  (4 threads, mode=wb_ntdqa)
+RESULT mode=wb_ntdqa threads=4 bw_gbps=23.644 throttle=0
+=== MODE=wb_ntdqa THREADS=4 RUN=3 SIZE_MB=256 ===
+thread  0  core 136  5.59 GB/s  (20.010 s)
+thread  1  core 137  5.73 GB/s  (20.020 s)
+thread  2  core 138  6.17 GB/s  (20.022 s)
+thread  3  core 139  6.18 GB/s  (20.020 s)
+---
+aggregate: 23.66 GB/s  (4 threads, mode=wb_ntdqa)
+RESULT mode=wb_ntdqa threads=4 bw_gbps=23.664 throttle=0
+=== MODE=wb_ntdqa THREADS=6 RUN=1 SIZE_MB=256 ===
+thread  0  core 136  3.84 GB/s  (20.003 s)
+thread  1  core 137  3.90 GB/s  (20.025 s)
+thread  2  core 138  4.16 GB/s  (20.011 s)
+thread  3  core 139  4.09 GB/s  (20.005 s)
+thread  4  core 140  3.99 GB/s  (20.003 s)
+thread  5  core 141  4.00 GB/s  (20.018 s)
+---
+aggregate: 23.95 GB/s  (6 threads, mode=wb_ntdqa)
+RESULT mode=wb_ntdqa threads=6 bw_gbps=23.954 throttle=0
+=== MODE=wb_ntdqa THREADS=6 RUN=2 SIZE_MB=256 ===
+thread  0  core 136  3.84 GB/s  (20.015 s)
+thread  1  core 137  3.92 GB/s  (20.008 s)
+thread  2  core 138  4.18 GB/s  (20.029 s)
+thread  3  core 139  4.09 GB/s  (20.033 s)
+thread  4  core 140  3.98 GB/s  (20.026 s)
+thread  5  core 141  4.01 GB/s  (20.010 s)
+---
+aggregate: 24.00 GB/s  (6 threads, mode=wb_ntdqa)
+RESULT mode=wb_ntdqa threads=6 bw_gbps=23.998 throttle=0
+=== MODE=wb_ntdqa THREADS=6 RUN=3 SIZE_MB=256 ===
+thread  0  core 136  3.83 GB/s  (20.039 s)
+thread  1  core 137  3.91 GB/s  (20.038 s)
+thread  2  core 138  4.17 GB/s  (20.019 s)
+thread  3  core 139  4.07 GB/s  (20.008 s)
+thread  4  core 140  3.98 GB/s  (20.030 s)
+thread  5  core 141  4.01 GB/s  (20.040 s)
+---
+aggregate: 23.95 GB/s  (6 threads, mode=wb_ntdqa)
+RESULT mode=wb_ntdqa threads=6 bw_gbps=23.950 throttle=0
+=== MODE=wb_ntdqa THREADS=8 RUN=1 SIZE_MB=256 ===
+thread  0  core 136  3.07 GB/s  (20.054 s)
+thread  1  core 137  3.11 GB/s  (20.055 s)
+thread  2  core 138  3.16 GB/s  (20.030 s)
+thread  3  core 139  3.16 GB/s  (20.024 s)
+thread  4  core 140  3.08 GB/s  (20.057 s)
+thread  5  core 141  3.08 GB/s  (20.031 s)
+thread  6  core 142  3.09 GB/s  (20.052 s)
+thread  7  core 143  3.08 GB/s  (20.052 s)
+---
+aggregate: 24.81 GB/s  (8 threads, mode=wb_ntdqa)
+RESULT mode=wb_ntdqa threads=8 bw_gbps=24.813 throttle=0
+=== MODE=wb_ntdqa THREADS=8 RUN=2 SIZE_MB=256 ===
+thread  0  core 136  3.06 GB/s  (20.019 s)
+thread  1  core 137  3.11 GB/s  (20.044 s)
+thread  2  core 138  3.16 GB/s  (20.034 s)
+thread  3  core 139  3.15 GB/s  (20.019 s)
+thread  4  core 140  3.08 GB/s  (20.030 s)
+thread  5  core 141  3.08 GB/s  (20.031 s)
+thread  6  core 142  3.09 GB/s  (20.045 s)
+thread  7  core 143  3.07 GB/s  (20.007 s)
+---
+aggregate: 24.79 GB/s  (8 threads, mode=wb_ntdqa)
+RESULT mode=wb_ntdqa threads=8 bw_gbps=24.788 throttle=0
+=== MODE=wb_ntdqa THREADS=8 RUN=3 SIZE_MB=256 ===
+thread  0  core 136  3.06 GB/s  (20.034 s)
+thread  1  core 137  3.10 GB/s  (20.029 s)
+thread  2  core 138  3.15 GB/s  (20.044 s)
+thread  3  core 139  3.16 GB/s  (20.050 s)
+thread  4  core 140  3.08 GB/s  (20.040 s)
+thread  5  core 141  3.08 GB/s  (20.049 s)
+thread  6  core 142  3.08 GB/s  (20.033 s)
+thread  7  core 143  3.07 GB/s  (20.022 s)
+---
+aggregate: 24.76 GB/s  (8 threads, mode=wb_ntdqa)
+RESULT mode=wb_ntdqa threads=8 bw_gbps=24.756 throttle=0
+=== MODE=wb_ntdqa THREADS=12 RUN=1 SIZE_MB=256 ===
+thread  0  core 136  1.58 GB/s  (20.049 s)
+thread  1  core 137  1.59 GB/s  (20.060 s)
+thread  2  core 138  1.61 GB/s  (20.013 s)
+thread  3  core 139  1.64 GB/s  (20.029 s)
+thread  4  core 140  1.59 GB/s  (20.053 s)
+thread  5  core 141  1.59 GB/s  (20.059 s)
+thread  6  core 142  1.59 GB/s  (20.046 s)
+thread  7  core 143  1.58 GB/s  (20.012 s)
+thread  8  core 224  3.05 GB/s  (20.007 s)
+thread  9  core 225  3.08 GB/s  (20.030 s)
+thread 10  core 226  3.35 GB/s  (20.024 s)
+thread 11  core 227  3.34 GB/s  (20.028 s)
+---
+aggregate: 25.56 GB/s  (12 threads, mode=wb_ntdqa)
+RESULT mode=wb_ntdqa threads=12 bw_gbps=25.559 throttle=0
+=== MODE=wb_ntdqa THREADS=12 RUN=2 SIZE_MB=256 ===
+thread  0  core 136  1.58 GB/s  (20.067 s)
+thread  1  core 137  1.59 GB/s  (20.071 s)
+thread  2  core 138  1.62 GB/s  (20.021 s)
+thread  3  core 139  1.63 GB/s  (20.035 s)
+thread  4  core 140  1.59 GB/s  (20.073 s)
+thread  5  core 141  1.58 GB/s  (20.004 s)
+thread  6  core 142  1.59 GB/s  (20.048 s)
+thread  7  core 143  1.58 GB/s  (20.004 s)
+thread  8  core 224  3.04 GB/s  (20.054 s)
+thread  9  core 225  3.08 GB/s  (20.073 s)
+thread 10  core 226  3.36 GB/s  (20.074 s)
+thread 11  core 227  3.33 GB/s  (20.074 s)
+---
+aggregate: 25.55 GB/s  (12 threads, mode=wb_ntdqa)
+RESULT mode=wb_ntdqa threads=12 bw_gbps=25.554 throttle=0
+=== MODE=wb_ntdqa THREADS=12 RUN=3 SIZE_MB=256 ===
+thread  0  core 136  1.58 GB/s  (20.060 s)
+thread  1  core 137  1.58 GB/s  (20.068 s)
+thread  2  core 138  1.62 GB/s  (20.056 s)
+thread  3  core 139  1.64 GB/s  (20.024 s)
+thread  4  core 140  1.59 GB/s  (20.069 s)
+thread  5  core 141  1.58 GB/s  (20.008 s)
+thread  6  core 142  1.59 GB/s  (20.060 s)
+thread  7  core 143  1.58 GB/s  (20.032 s)
+thread  8  core 224  3.04 GB/s  (20.046 s)
+thread  9  core 225  3.08 GB/s  (20.050 s)
+thread 10  core 226  3.35 GB/s  (20.041 s)
+thread 11  core 227  3.33 GB/s  (20.050 s)
+---
+aggregate: 25.53 GB/s  (12 threads, mode=wb_ntdqa)
+RESULT mode=wb_ntdqa threads=12 bw_gbps=25.535 throttle=0
+=== MODE=wb_ntdqa THREADS=16 RUN=1 SIZE_MB=256 ===
+thread  0  core 136  1.61 GB/s  (20.050 s)
+thread  1  core 137  1.62 GB/s  (20.088 s)
+thread  2  core 138  1.65 GB/s  (20.049 s)
+thread  3  core 139  1.67 GB/s  (20.088 s)
+thread  4  core 140  1.62 GB/s  (20.085 s)
+thread  5  core 141  1.60 GB/s  (20.021 s)
+thread  6  core 142  1.62 GB/s  (20.054 s)
+thread  7  core 143  1.61 GB/s  (20.006 s)
+thread  8  core 224  1.63 GB/s  (20.058 s)
+thread  9  core 225  1.62 GB/s  (20.080 s)
+thread 10  core 226  1.66 GB/s  (20.091 s)
+thread 11  core 227  1.66 GB/s  (20.035 s)
+thread 12  core 228  1.62 GB/s  (20.062 s)
+thread 13  core 229  1.62 GB/s  (20.091 s)
+thread 14  core 230  1.62 GB/s  (20.015 s)
+thread 15  core 231  1.62 GB/s  (20.084 s)
+---
+aggregate: 25.99 GB/s  (16 threads, mode=wb_ntdqa)
+RESULT mode=wb_ntdqa threads=16 bw_gbps=25.987 throttle=0
+=== MODE=wb_ntdqa THREADS=16 RUN=2 SIZE_MB=256 ===
+thread  0  core 136  1.61 GB/s  (20.046 s)
+thread  1  core 137  1.62 GB/s  (20.083 s)
+thread  2  core 138  1.63 GB/s  (20.047 s)
+thread  3  core 139  1.66 GB/s  (20.027 s)
+thread  4  core 140  1.62 GB/s  (20.071 s)
+thread  5  core 141  1.62 GB/s  (20.081 s)
+thread  6  core 142  1.62 GB/s  (20.065 s)
+thread  7  core 143  1.61 GB/s  (20.011 s)
+thread  8  core 224  1.63 GB/s  (20.080 s)
+thread  9  core 225  1.62 GB/s  (20.031 s)
+thread 10  core 226  1.66 GB/s  (20.081 s)
+thread 11  core 227  1.66 GB/s  (20.044 s)
+thread 12  core 228  1.62 GB/s  (20.059 s)
+thread 13  core 229  1.62 GB/s  (20.082 s)
+thread 14  core 230  1.62 GB/s  (20.033 s)
+thread 15  core 231  1.62 GB/s  (20.084 s)
+---
+aggregate: 26.00 GB/s  (16 threads, mode=wb_ntdqa)
+RESULT mode=wb_ntdqa threads=16 bw_gbps=25.996 throttle=0
+=== MODE=wb_ntdqa THREADS=16 RUN=3 SIZE_MB=256 ===
+thread  0  core 136  1.59 GB/s  (20.081 s)
+thread  1  core 137  1.62 GB/s  (20.082 s)
+thread  2  core 138  1.65 GB/s  (20.026 s)
+thread  3  core 139  1.66 GB/s  (20.049 s)
+thread  4  core 140  1.62 GB/s  (20.085 s)
+thread  5  core 141  1.61 GB/s  (20.013 s)
+thread  6  core 142  1.62 GB/s  (20.067 s)
+thread  7  core 143  1.61 GB/s  (20.028 s)
+thread  8  core 224  1.63 GB/s  (20.095 s)
+thread  9  core 225  1.62 GB/s  (20.081 s)
+thread 10  core 226  1.66 GB/s  (20.099 s)
+thread 11  core 227  1.66 GB/s  (20.065 s)
+thread 12  core 228  1.62 GB/s  (20.069 s)
+thread 13  core 229  1.62 GB/s  (20.097 s)
+thread 14  core 230  1.62 GB/s  (20.085 s)
+thread 15  core 231  1.62 GB/s  (20.097 s)
+---
+aggregate: 25.96 GB/s  (16 threads, mode=wb_ntdqa)
+RESULT mode=wb_ntdqa threads=16 bw_gbps=25.963 throttle=0

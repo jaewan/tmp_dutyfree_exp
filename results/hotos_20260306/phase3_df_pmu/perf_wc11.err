@@ -1,0 +1,9 @@
+event syntax error: 'amd_df/event=0x07,umask=0x38/'
+                     \___ Bad event or PMU
+
+Unable to find PMU or event on a PMU of 'amd_df'
+Run 'perf list' for a list of valid events
+
+ Usage: perf stat [<options>] [<command>]
+
+    -e, --event <event>   event selector. use 'perf list' to list available events

@@ -1,0 +1,1205 @@
+RUN placement=A mode=wb_load th=8 run=1 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wb_load -t 8 -c 137,138,139,140,141,142,143,393 -s 256 -d 15
+[aggressor] mode=wb_load threads=8 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2048 MB CXL memory at 0x7f8576400000
+[aggressor] GO
+thread  0  core 137  1.66 GB/s  (15.013 s)
+thread  1  core 138  3.71 GB/s  (15.054 s)
+thread  2  core 139  3.50 GB/s  (15.039 s)
+thread  3  core 140  3.48 GB/s  (15.055 s)
+thread  4  core 141  3.44 GB/s  (15.054 s)
+thread  5  core 142  3.43 GB/s  (15.011 s)
+thread  6  core 143  3.48 GB/s  (15.024 s)
+thread  7  core 393  1.86 GB/s  (15.044 s)
+---
+aggregate: 24.54 GB/s  (8 threads, mode=wb_load)
+RESULT mode=wb_load threads=8 bw_gbps=24.535 throttle=0
+RUN placement=A mode=wb_load th=8 run=2 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wb_load -t 8 -c 137,138,139,140,141,142,143,393 -s 256 -d 15
+[aggressor] mode=wb_load threads=8 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2048 MB CXL memory at 0x70cc87a00000
+[aggressor] GO
+thread  0  core 137  1.61 GB/s  (15.042 s)
+thread  1  core 138  3.70 GB/s  (15.005 s)
+thread  2  core 139  3.47 GB/s  (15.005 s)
+thread  3  core 140  3.48 GB/s  (15.034 s)
+thread  4  core 141  3.44 GB/s  (15.040 s)
+thread  5  core 142  3.45 GB/s  (15.035 s)
+thread  6  core 143  3.48 GB/s  (15.026 s)
+thread  7  core 393  1.91 GB/s  (15.048 s)
+---
+aggregate: 24.51 GB/s  (8 threads, mode=wb_load)
+RESULT mode=wb_load threads=8 bw_gbps=24.510 throttle=0
+RUN placement=A mode=wb_load th=8 run=3 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wb_load -t 8 -c 137,138,139,140,141,142,143,393 -s 256 -d 15
+[aggressor] mode=wb_load threads=8 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2048 MB CXL memory at 0x72474b600000
+[aggressor] GO
+thread  0  core 137  1.66 GB/s  (15.048 s)
+thread  1  core 138  3.71 GB/s  (15.051 s)
+thread  2  core 139  3.50 GB/s  (15.033 s)
+thread  3  core 140  3.48 GB/s  (15.049 s)
+thread  4  core 141  3.44 GB/s  (15.051 s)
+thread  5  core 142  3.44 GB/s  (15.044 s)
+thread  6  core 143  3.48 GB/s  (15.022 s)
+thread  7  core 393  1.84 GB/s  (15.054 s)
+---
+aggregate: 24.54 GB/s  (8 threads, mode=wb_load)
+RESULT mode=wb_load threads=8 bw_gbps=24.536 throttle=0
+RUN placement=A mode=wc_ntdqa th=8 run=1 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 8 -c 137,138,139,140,141,142,143,393 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=8 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2048 MB CXL memory at 0x7391b0000000
+[aggressor] GO
+thread  0  core 137  1.21 GB/s  (15.062 s)
+thread  1  core 138  2.57 GB/s  (15.064 s)
+thread  2  core 139  2.56 GB/s  (15.078 s)
+thread  3  core 140  2.55 GB/s  (15.027 s)
+thread  4  core 141  2.56 GB/s  (15.021 s)
+thread  5  core 142  2.55 GB/s  (15.039 s)
+thread  6  core 143  2.55 GB/s  (15.054 s)
+thread  7  core 393  1.36 GB/s  (15.033 s)
+---
+aggregate: 17.87 GB/s  (8 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=8 bw_gbps=17.874 throttle=0
+RUN placement=A mode=wc_ntdqa th=8 run=2 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 8 -c 137,138,139,140,141,142,143,393 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=8 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2048 MB CXL memory at 0x75da6d600000
+[aggressor] GO
+thread  0  core 137  1.21 GB/s  (15.065 s)
+thread  1  core 138  2.57 GB/s  (15.068 s)
+thread  2  core 139  2.56 GB/s  (15.079 s)
+thread  3  core 140  2.55 GB/s  (15.028 s)
+thread  4  core 141  2.55 GB/s  (15.043 s)
+thread  5  core 142  2.55 GB/s  (15.041 s)
+thread  6  core 143  2.55 GB/s  (15.038 s)
+thread  7  core 393  1.36 GB/s  (15.038 s)
+---
+aggregate: 17.87 GB/s  (8 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=8 bw_gbps=17.873 throttle=0
+RUN placement=A mode=wc_ntdqa th=8 run=3 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 8 -c 137,138,139,140,141,142,143,393 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=8 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2048 MB CXL memory at 0x7bf37f600000
+[aggressor] GO
+thread  0  core 137  1.21 GB/s  (15.061 s)
+thread  1  core 138  2.57 GB/s  (15.062 s)
+thread  2  core 139  2.56 GB/s  (15.020 s)
+thread  3  core 140  2.56 GB/s  (15.022 s)
+thread  4  core 141  2.55 GB/s  (15.025 s)
+thread  5  core 142  2.55 GB/s  (15.036 s)
+thread  6  core 143  2.55 GB/s  (15.035 s)
+thread  7  core 393  1.36 GB/s  (15.041 s)
+---
+aggregate: 17.88 GB/s  (8 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=8 bw_gbps=17.876 throttle=0
+RUN placement=A mode=wc_ntdqa th=9 run=1 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 9 -c 137,138,139,140,141,142,143,393,394 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=9 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2304 MB CXL memory at 0x733df1e00000
+[aggressor] GO
+thread  0  core 137  1.21 GB/s  (15.061 s)
+thread  1  core 138  1.22 GB/s  (15.004 s)
+thread  2  core 139  2.56 GB/s  (15.070 s)
+thread  3  core 140  2.55 GB/s  (15.037 s)
+thread  4  core 141  2.55 GB/s  (15.025 s)
+thread  5  core 142  2.55 GB/s  (15.036 s)
+thread  6  core 143  2.55 GB/s  (15.041 s)
+thread  7  core 393  1.36 GB/s  (15.049 s)
+thread  8  core 394  1.35 GB/s  (15.066 s)
+---
+aggregate: 17.88 GB/s  (9 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=9 bw_gbps=17.883 throttle=0
+RUN placement=A mode=wc_ntdqa th=9 run=2 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 9 -c 137,138,139,140,141,142,143,393,394 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=9 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2304 MB CXL memory at 0x71fecd400000
+[aggressor] GO
+thread  0  core 137  1.21 GB/s  (15.064 s)
+thread  1  core 138  1.21 GB/s  (15.036 s)
+thread  2  core 139  2.56 GB/s  (15.078 s)
+thread  3  core 140  2.55 GB/s  (15.030 s)
+thread  4  core 141  2.55 GB/s  (15.031 s)
+thread  5  core 142  2.55 GB/s  (15.037 s)
+thread  6  core 143  2.55 GB/s  (15.049 s)
+thread  7  core 393  1.36 GB/s  (15.040 s)
+thread  8  core 394  1.35 GB/s  (15.072 s)
+---
+aggregate: 17.87 GB/s  (9 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=9 bw_gbps=17.874 throttle=0
+RUN placement=A mode=wc_ntdqa th=9 run=3 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 9 -c 137,138,139,140,141,142,143,393,394 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=9 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2304 MB CXL memory at 0x7c3242200000
+[aggressor] GO
+thread  0  core 137  1.21 GB/s  (15.063 s)
+thread  1  core 138  1.21 GB/s  (15.071 s)
+thread  2  core 139  2.56 GB/s  (15.078 s)
+thread  3  core 140  2.55 GB/s  (15.027 s)
+thread  4  core 141  2.55 GB/s  (15.029 s)
+thread  5  core 142  2.55 GB/s  (15.042 s)
+thread  6  core 143  2.55 GB/s  (15.043 s)
+thread  7  core 393  1.36 GB/s  (15.046 s)
+thread  8  core 394  1.36 GB/s  (15.037 s)
+---
+aggregate: 17.87 GB/s  (9 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=9 bw_gbps=17.874 throttle=0
+RUN placement=A mode=wc_ntdqa th=10 run=1 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 10 -c 137,138,139,140,141,142,143,393,394,395 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=10 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2560 MB CXL memory at 0x752ab7200000
+[aggressor] GO
+thread  0  core 137  1.22 GB/s  (15.006 s)
+thread  1  core 138  1.21 GB/s  (15.026 s)
+thread  2  core 139  1.22 GB/s  (15.142 s)
+thread  3  core 140  2.55 GB/s  (15.031 s)
+thread  4  core 141  2.55 GB/s  (15.037 s)
+thread  5  core 142  2.55 GB/s  (15.047 s)
+thread  6  core 143  2.55 GB/s  (15.048 s)
+thread  7  core 393  1.35 GB/s  (15.072 s)
+thread  8  core 394  1.35 GB/s  (15.074 s)
+thread  9  core 395  1.35 GB/s  (15.136 s)
+---
+aggregate: 17.82 GB/s  (10 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=10 bw_gbps=17.817 throttle=0
+RUN placement=A mode=wc_ntdqa th=10 run=2 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 10 -c 137,138,139,140,141,142,143,393,394,395 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=10 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2560 MB CXL memory at 0x77a13a000000
+[aggressor] GO
+thread  0  core 137  1.21 GB/s  (15.059 s)
+thread  1  core 138  1.21 GB/s  (15.026 s)
+thread  2  core 139  1.22 GB/s  (15.134 s)
+thread  3  core 140  2.56 GB/s  (15.018 s)
+thread  4  core 141  2.55 GB/s  (15.028 s)
+thread  5  core 142  2.55 GB/s  (15.047 s)
+thread  6  core 143  2.55 GB/s  (15.039 s)
+thread  7  core 393  1.36 GB/s  (15.047 s)
+thread  8  core 394  1.35 GB/s  (15.066 s)
+thread  9  core 395  1.35 GB/s  (15.123 s)
+---
+aggregate: 17.83 GB/s  (10 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=10 bw_gbps=17.826 throttle=0
+RUN placement=A mode=wc_ntdqa th=10 run=3 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 10 -c 137,138,139,140,141,142,143,393,394,395 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=10 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2560 MB CXL memory at 0x753946a00000
+[aggressor] GO
+thread  0  core 137  1.21 GB/s  (15.063 s)
+thread  1  core 138  1.21 GB/s  (15.026 s)
+thread  2  core 139  1.21 GB/s  (15.035 s)
+thread  3  core 140  2.55 GB/s  (15.027 s)
+thread  4  core 141  2.55 GB/s  (15.028 s)
+thread  5  core 142  2.55 GB/s  (15.036 s)
+thread  6  core 143  2.55 GB/s  (15.053 s)
+thread  7  core 393  1.36 GB/s  (15.048 s)
+thread  8  core 394  1.35 GB/s  (15.072 s)
+thread  9  core 395  1.35 GB/s  (15.072 s)
+---
+aggregate: 17.88 GB/s  (10 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=10 bw_gbps=17.881 throttle=0
+RUN placement=A mode=wc_ntdqa th=11 run=1 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 11 -c 137,138,139,140,141,142,143,393,394,395,396 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=11 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2816 MB CXL memory at 0x7ad272c00000
+[aggressor] GO
+thread  0  core 137  1.21 GB/s  (15.068 s)
+thread  1  core 138  1.21 GB/s  (15.032 s)
+thread  2  core 139  1.23 GB/s  (15.083 s)
+thread  3  core 140  1.21 GB/s  (15.059 s)
+thread  4  core 141  2.55 GB/s  (15.037 s)
+thread  5  core 142  2.55 GB/s  (15.049 s)
+thread  6  core 143  2.55 GB/s  (15.042 s)
+thread  7  core 393  1.36 GB/s  (15.028 s)
+thread  8  core 394  1.35 GB/s  (15.077 s)
+thread  9  core 395  1.34 GB/s  (15.057 s)
+thread 10  core 396  1.35 GB/s  (15.090 s)
+---
+aggregate: 17.88 GB/s  (11 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=11 bw_gbps=17.878 throttle=0
+RUN placement=A mode=wc_ntdqa th=11 run=2 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 11 -c 137,138,139,140,141,142,143,393,394,395,396 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=11 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2816 MB CXL memory at 0x792ea0a00000
+[aggressor] GO
+thread  0  core 137  1.21 GB/s  (15.068 s)
+thread  1  core 138  1.21 GB/s  (15.039 s)
+thread  2  core 139  1.21 GB/s  (15.030 s)
+thread  3  core 140  1.21 GB/s  (15.053 s)
+thread  4  core 141  2.56 GB/s  (15.023 s)
+thread  5  core 142  2.55 GB/s  (15.034 s)
+thread  6  core 143  2.55 GB/s  (15.048 s)
+thread  7  core 393  1.36 GB/s  (15.040 s)
+thread  8  core 394  1.35 GB/s  (15.074 s)
+thread  9  core 395  1.35 GB/s  (15.077 s)
+thread 10  core 396  1.35 GB/s  (15.090 s)
+---
+aggregate: 17.88 GB/s  (11 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=11 bw_gbps=17.878 throttle=0
+RUN placement=A mode=wc_ntdqa th=11 run=3 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 11 -c 137,138,139,140,141,142,143,393,394,395,396 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=11 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2816 MB CXL memory at 0x71d02fe00000
+[aggressor] GO
+thread  0  core 137  1.20 GB/s  (15.013 s)
+thread  1  core 138  1.21 GB/s  (15.049 s)
+thread  2  core 139  1.21 GB/s  (15.029 s)
+thread  3  core 140  1.21 GB/s  (15.043 s)
+thread  4  core 141  2.56 GB/s  (15.018 s)
+thread  5  core 142  2.55 GB/s  (15.036 s)
+thread  6  core 143  2.55 GB/s  (15.039 s)
+thread  7  core 393  1.37 GB/s  (15.067 s)
+thread  8  core 394  1.35 GB/s  (15.072 s)
+thread  9  core 395  1.35 GB/s  (15.077 s)
+thread 10  core 396  1.35 GB/s  (15.090 s)
+---
+aggregate: 17.88 GB/s  (11 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=11 bw_gbps=17.878 throttle=0
+RUN placement=A mode=wc_ntdqa th=12 run=1 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 12 -c 137,138,139,140,141,142,143,393,394,395,396,397 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=12 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 3072 MB CXL memory at 0x7d782de00000
+[aggressor] GO
+thread  0  core 137  1.21 GB/s  (15.053 s)
+thread  1  core 138  1.21 GB/s  (15.056 s)
+thread  2  core 139  1.21 GB/s  (15.034 s)
+thread  3  core 140  1.21 GB/s  (15.098 s)
+thread  4  core 141  1.23 GB/s  (15.106 s)
+thread  5  core 142  2.55 GB/s  (15.040 s)
+thread  6  core 143  2.55 GB/s  (15.042 s)
+thread  7  core 393  1.35 GB/s  (15.062 s)
+thread  8  core 394  1.35 GB/s  (15.081 s)
+thread  9  core 395  1.35 GB/s  (15.081 s)
+thread 10  core 396  1.35 GB/s  (15.061 s)
+thread 11  core 397  1.33 GB/s  (15.084 s)
+---
+aggregate: 17.88 GB/s  (12 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=12 bw_gbps=17.876 throttle=0
+RUN placement=A mode=wc_ntdqa th=12 run=2 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 12 -c 137,138,139,140,141,142,143,393,394,395,396,397 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=12 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 3072 MB CXL memory at 0x7a44f1e00000
+[aggressor] GO
+thread  0  core 137  1.21 GB/s  (15.072 s)
+thread  1  core 138  1.21 GB/s  (15.062 s)
+thread  2  core 139  1.21 GB/s  (15.055 s)
+thread  3  core 140  1.21 GB/s  (15.076 s)
+thread  4  core 141  1.21 GB/s  (15.100 s)
+thread  5  core 142  2.55 GB/s  (15.047 s)
+thread  6  core 143  2.55 GB/s  (15.034 s)
+thread  7  core 393  1.36 GB/s  (15.039 s)
+thread  8  core 394  1.35 GB/s  (15.079 s)
+thread  9  core 395  1.35 GB/s  (15.081 s)
+thread 10  core 396  1.35 GB/s  (15.096 s)
+thread 11  core 397  1.35 GB/s  (15.081 s)
+---
+aggregate: 17.88 GB/s  (12 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=12 bw_gbps=17.884 throttle=0
+RUN placement=A mode=wc_ntdqa th=12 run=3 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 12 -c 137,138,139,140,141,142,143,393,394,395,396,397 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=12 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 3072 MB CXL memory at 0x747a71000000
+[aggressor] GO
+thread  0  core 137  1.21 GB/s  (15.071 s)
+thread  1  core 138  1.21 GB/s  (15.085 s)
+thread  2  core 139  1.21 GB/s  (15.046 s)
+thread  3  core 140  1.21 GB/s  (15.064 s)
+thread  4  core 141  1.21 GB/s  (15.056 s)
+thread  5  core 142  2.55 GB/s  (15.056 s)
+thread  6  core 143  2.55 GB/s  (15.049 s)
+thread  7  core 393  1.36 GB/s  (15.042 s)
+thread  8  core 394  1.35 GB/s  (15.068 s)
+thread  9  core 395  1.35 GB/s  (15.085 s)
+thread 10  core 396  1.35 GB/s  (15.099 s)
+thread 11  core 397  1.35 GB/s  (15.102 s)
+---
+aggregate: 17.88 GB/s  (12 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=12 bw_gbps=17.882 throttle=0
+RUN placement=B mode=wb_load th=8 run=1 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wb_load -t 8 -c 136,137,138,139,140,141,142,143 -s 256 -d 15
+[aggressor] mode=wb_load threads=8 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2048 MB CXL memory at 0x70ab65000000
+[aggressor] GO
+thread  0  core 136  3.07 GB/s  (15.031 s)
+thread  1  core 137  3.09 GB/s  (15.047 s)
+thread  2  core 138  3.16 GB/s  (15.038 s)
+thread  3  core 139  3.18 GB/s  (15.047 s)
+thread  4  core 140  3.09 GB/s  (15.045 s)
+thread  5  core 141  3.09 GB/s  (15.046 s)
+thread  6  core 142  3.09 GB/s  (15.025 s)
+thread  7  core 143  3.07 GB/s  (15.015 s)
+---
+aggregate: 24.82 GB/s  (8 threads, mode=wb_load)
+RESULT mode=wb_load threads=8 bw_gbps=24.815 throttle=0
+RUN placement=B mode=wb_load th=8 run=2 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wb_load -t 8 -c 136,137,138,139,140,141,142,143 -s 256 -d 15
+[aggressor] mode=wb_load threads=8 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2048 MB CXL memory at 0x76af79a00000
+[aggressor] GO
+thread  0  core 136  3.07 GB/s  (15.048 s)
+thread  1  core 137  3.11 GB/s  (15.039 s)
+thread  2  core 138  3.16 GB/s  (15.023 s)
+thread  3  core 139  3.16 GB/s  (15.043 s)
+thread  4  core 140  3.09 GB/s  (15.045 s)
+thread  5  core 141  3.09 GB/s  (15.051 s)
+thread  6  core 142  3.07 GB/s  (15.032 s)
+thread  7  core 143  3.07 GB/s  (15.020 s)
+---
+aggregate: 24.79 GB/s  (8 threads, mode=wb_load)
+RESULT mode=wb_load threads=8 bw_gbps=24.790 throttle=0
+RUN placement=B mode=wb_load th=8 run=3 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wb_load -t 8 -c 136,137,138,139,140,141,142,143 -s 256 -d 15
+[aggressor] mode=wb_load threads=8 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2048 MB CXL memory at 0x713eea000000
+[aggressor] GO
+thread  0  core 136  3.08 GB/s  (15.010 s)
+thread  1  core 137  3.11 GB/s  (15.024 s)
+thread  2  core 138  3.17 GB/s  (15.009 s)
+thread  3  core 139  3.16 GB/s  (15.030 s)
+thread  4  core 140  3.09 GB/s  (15.027 s)
+thread  5  core 141  3.09 GB/s  (15.034 s)
+thread  6  core 142  3.09 GB/s  (15.024 s)
+thread  7  core 143  3.09 GB/s  (15.038 s)
+---
+aggregate: 24.85 GB/s  (8 threads, mode=wb_load)
+RESULT mode=wb_load threads=8 bw_gbps=24.848 throttle=0
+RUN placement=B mode=wc_ntdqa th=8 run=1 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 8 -c 136,137,138,139,140,141,142,143 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=8 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2048 MB CXL memory at 0x72e679000000
+[aggressor] GO
+thread  0  core 136  2.23 GB/s  (15.040 s)
+thread  1  core 137  2.24 GB/s  (15.069 s)
+thread  2  core 138  2.24 GB/s  (15.083 s)
+thread  3  core 139  2.23 GB/s  (15.024 s)
+thread  4  core 140  2.23 GB/s  (15.040 s)
+thread  5  core 141  2.23 GB/s  (15.041 s)
+thread  6  core 142  2.23 GB/s  (15.046 s)
+thread  7  core 143  2.23 GB/s  (15.052 s)
+---
+aggregate: 17.83 GB/s  (8 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=8 bw_gbps=17.832 throttle=0
+RUN placement=B mode=wc_ntdqa th=8 run=2 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 8 -c 136,137,138,139,140,141,142,143 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=8 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2048 MB CXL memory at 0x70f6a7e00000
+[aggressor] GO
+thread  0  core 136  2.23 GB/s  (15.017 s)
+thread  1  core 137  2.24 GB/s  (15.006 s)
+thread  2  core 138  2.24 GB/s  (15.013 s)
+thread  3  core 139  2.23 GB/s  (15.023 s)
+thread  4  core 140  2.23 GB/s  (15.033 s)
+thread  5  core 141  2.23 GB/s  (15.036 s)
+thread  6  core 142  2.23 GB/s  (15.043 s)
+thread  7  core 143  2.23 GB/s  (15.046 s)
+---
+aggregate: 17.84 GB/s  (8 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=8 bw_gbps=17.841 throttle=0
+RUN placement=B mode=wc_ntdqa th=8 run=3 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 8 -c 136,137,138,139,140,141,142,143 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=8 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2048 MB CXL memory at 0x722585e00000
+[aggressor] GO
+thread  0  core 136  2.23 GB/s  (15.015 s)
+thread  1  core 137  2.25 GB/s  (15.064 s)
+thread  2  core 138  2.24 GB/s  (15.082 s)
+thread  3  core 139  2.23 GB/s  (15.040 s)
+thread  4  core 140  2.23 GB/s  (15.039 s)
+thread  5  core 141  2.23 GB/s  (15.045 s)
+thread  6  core 142  2.23 GB/s  (15.049 s)
+thread  7  core 143  2.23 GB/s  (15.055 s)
+---
+aggregate: 17.83 GB/s  (8 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=8 bw_gbps=17.834 throttle=0
+RUN placement=B mode=wc_ntdqa th=9 run=1 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 9 -c 136,137,138,139,140,141,142,143,224 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=9 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2304 MB CXL memory at 0x7780e9600000
+[aggressor] GO
+thread  0  core 136  2.17 GB/s  (15.083 s)
+thread  1  core 137  2.17 GB/s  (15.082 s)
+thread  2  core 138  2.16 GB/s  (15.015 s)
+thread  3  core 139  2.16 GB/s  (15.051 s)
+thread  4  core 140  2.16 GB/s  (15.035 s)
+thread  5  core 141  2.16 GB/s  (15.061 s)
+thread  6  core 142  2.16 GB/s  (15.054 s)
+thread  7  core 143  2.16 GB/s  (15.056 s)
+thread  8  core 224  3.71 GB/s  (15.068 s)
+---
+aggregate: 20.97 GB/s  (9 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=9 bw_gbps=20.965 throttle=0
+RUN placement=B mode=wc_ntdqa th=9 run=2 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 9 -c 136,137,138,139,140,141,142,143,224 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=9 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2304 MB CXL memory at 0x70d5aa000000
+[aggressor] GO
+thread  0  core 136  2.16 GB/s  (15.008 s)
+thread  1  core 137  2.16 GB/s  (15.021 s)
+thread  2  core 138  2.16 GB/s  (15.014 s)
+thread  3  core 139  2.16 GB/s  (15.026 s)
+thread  4  core 140  2.16 GB/s  (15.037 s)
+thread  5  core 141  2.16 GB/s  (15.043 s)
+thread  6  core 142  2.16 GB/s  (15.044 s)
+thread  7  core 143  2.16 GB/s  (15.050 s)
+thread  8  core 224  3.70 GB/s  (15.014 s)
+---
+aggregate: 20.96 GB/s  (9 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=9 bw_gbps=20.957 throttle=0
+RUN placement=B mode=wc_ntdqa th=9 run=3 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 9 -c 136,137,138,139,140,141,142,143,224 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=9 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2304 MB CXL memory at 0x780550200000
+[aggressor] GO
+thread  0  core 136  2.16 GB/s  (15.017 s)
+thread  1  core 137  2.16 GB/s  (15.010 s)
+thread  2  core 138  2.16 GB/s  (15.029 s)
+thread  3  core 139  2.16 GB/s  (15.035 s)
+thread  4  core 140  2.16 GB/s  (15.050 s)
+thread  5  core 141  2.16 GB/s  (15.055 s)
+thread  6  core 142  2.16 GB/s  (15.058 s)
+thread  7  core 143  2.16 GB/s  (15.060 s)
+thread  8  core 224  3.68 GB/s  (15.010 s)
+---
+aggregate: 20.93 GB/s  (9 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=9 bw_gbps=20.925 throttle=0
+RUN placement=B mode=wc_ntdqa th=10 run=1 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 10 -c 136,137,138,139,140,141,142,143,224,225 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=10 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2560 MB CXL memory at 0x7ac0fec00000
+[aggressor] GO
+thread  0  core 136  2.09 GB/s  (15.033 s)
+thread  1  core 137  2.10 GB/s  (15.078 s)
+thread  2  core 138  2.09 GB/s  (15.020 s)
+thread  3  core 139  2.09 GB/s  (15.027 s)
+thread  4  core 140  2.09 GB/s  (15.031 s)
+thread  5  core 141  2.09 GB/s  (15.048 s)
+thread  6  core 142  2.09 GB/s  (15.046 s)
+thread  7  core 143  2.09 GB/s  (15.049 s)
+thread  8  core 224  3.61 GB/s  (15.026 s)
+thread  9  core 225  3.61 GB/s  (15.014 s)
+---
+aggregate: 23.87 GB/s  (10 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=10 bw_gbps=23.875 throttle=0
+RUN placement=B mode=wc_ntdqa th=10 run=2 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 10 -c 136,137,138,139,140,141,142,143,224,225 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=10 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2560 MB CXL memory at 0x73243e200000
+[aggressor] GO
+thread  0  core 136  2.09 GB/s  (15.012 s)
+thread  1  core 137  2.09 GB/s  (15.048 s)
+thread  2  core 138  2.09 GB/s  (15.031 s)
+thread  3  core 139  2.09 GB/s  (15.034 s)
+thread  4  core 140  2.09 GB/s  (15.040 s)
+thread  5  core 141  2.09 GB/s  (15.047 s)
+thread  6  core 142  2.09 GB/s  (15.046 s)
+thread  7  core 143  2.09 GB/s  (15.049 s)
+thread  8  core 224  3.61 GB/s  (15.020 s)
+thread  9  core 225  3.61 GB/s  (15.020 s)
+---
+aggregate: 23.90 GB/s  (10 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=10 bw_gbps=23.902 throttle=0
+RUN placement=B mode=wc_ntdqa th=10 run=3 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 10 -c 136,137,138,139,140,141,142,143,224,225 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=10 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2560 MB CXL memory at 0x7fa640e00000
+[aggressor] GO
+thread  0  core 136  2.09 GB/s  (15.024 s)
+thread  1  core 137  2.09 GB/s  (15.015 s)
+thread  2  core 138  2.09 GB/s  (15.028 s)
+thread  3  core 139  2.09 GB/s  (15.036 s)
+thread  4  core 140  2.09 GB/s  (15.045 s)
+thread  5  core 141  2.09 GB/s  (15.051 s)
+thread  6  core 142  2.09 GB/s  (15.050 s)
+thread  7  core 143  2.09 GB/s  (15.057 s)
+thread  8  core 224  3.60 GB/s  (15.003 s)
+thread  9  core 225  3.61 GB/s  (15.026 s)
+---
+aggregate: 23.87 GB/s  (10 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=10 bw_gbps=23.871 throttle=0
+RUN placement=B mode=wc_ntdqa th=11 run=1 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 11 -c 136,137,138,139,140,141,142,143,224,225,226 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=11 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2816 MB CXL memory at 0x7fac69e00000
+[aggressor] GO
+thread  0  core 136  1.87 GB/s  (15.036 s)
+thread  1  core 137  1.89 GB/s  (15.080 s)
+thread  2  core 138  1.88 GB/s  (15.022 s)
+thread  3  core 139  1.88 GB/s  (15.025 s)
+thread  4  core 140  1.87 GB/s  (15.034 s)
+thread  5  core 141  1.87 GB/s  (15.038 s)
+thread  6  core 142  1.87 GB/s  (15.036 s)
+thread  7  core 143  1.87 GB/s  (15.039 s)
+thread  8  core 224  3.28 GB/s  (15.071 s)
+thread  9  core 225  3.28 GB/s  (15.050 s)
+thread 10  core 226  3.27 GB/s  (15.004 s)
+---
+aggregate: 24.78 GB/s  (11 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=11 bw_gbps=24.779 throttle=0
+RUN placement=B mode=wc_ntdqa th=11 run=2 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 11 -c 136,137,138,139,140,141,142,143,224,225,226 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=11 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2816 MB CXL memory at 0x784ae3200000
+[aggressor] GO
+thread  0  core 136  1.89 GB/s  (15.068 s)
+thread  1  core 137  1.89 GB/s  (15.062 s)
+thread  2  core 138  1.89 GB/s  (15.075 s)
+thread  3  core 139  1.89 GB/s  (15.078 s)
+thread  4  core 140  1.88 GB/s  (15.012 s)
+thread  5  core 141  1.88 GB/s  (15.014 s)
+thread  6  core 142  1.87 GB/s  (15.036 s)
+thread  7  core 143  1.88 GB/s  (15.030 s)
+thread  8  core 224  3.28 GB/s  (15.073 s)
+thread  9  core 225  3.29 GB/s  (15.026 s)
+thread 10  core 226  3.28 GB/s  (15.050 s)
+---
+aggregate: 24.85 GB/s  (11 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=11 bw_gbps=24.853 throttle=0
+RUN placement=B mode=wc_ntdqa th=11 run=3 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 11 -c 136,137,138,139,140,141,142,143,224,225,226 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=11 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2816 MB CXL memory at 0x71ed3f400000
+[aggressor] GO
+thread  0  core 136  1.88 GB/s  (15.007 s)
+thread  1  core 137  1.88 GB/s  (15.032 s)
+thread  2  core 138  1.88 GB/s  (15.021 s)
+thread  3  core 139  1.88 GB/s  (15.026 s)
+thread  4  core 140  1.87 GB/s  (15.035 s)
+thread  5  core 141  1.87 GB/s  (15.038 s)
+thread  6  core 142  1.87 GB/s  (15.040 s)
+thread  7  core 143  1.87 GB/s  (15.053 s)
+thread  8  core 224  3.27 GB/s  (15.003 s)
+thread  9  core 225  3.28 GB/s  (15.067 s)
+thread 10  core 226  3.27 GB/s  (15.017 s)
+---
+aggregate: 24.76 GB/s  (11 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=11 bw_gbps=24.764 throttle=0
+RUN placement=B mode=wc_ntdqa th=12 run=1 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 12 -c 136,137,138,139,140,141,142,143,224,225,226,227 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=12 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 3072 MB CXL memory at 0x722b57600000
+[aggressor] GO
+thread  0  core 136  1.66 GB/s  (15.056 s)
+thread  1  core 137  1.66 GB/s  (15.051 s)
+thread  2  core 138  1.66 GB/s  (15.058 s)
+thread  3  core 139  1.66 GB/s  (15.065 s)
+thread  4  core 140  1.66 GB/s  (15.072 s)
+thread  5  core 141  1.66 GB/s  (15.069 s)
+thread  6  core 142  1.66 GB/s  (15.071 s)
+thread  7  core 143  1.66 GB/s  (15.075 s)
+thread  8  core 224  2.92 GB/s  (15.064 s)
+thread  9  core 225  2.93 GB/s  (15.005 s)
+thread 10  core 226  2.93 GB/s  (15.034 s)
+thread 11  core 227  2.93 GB/s  (15.030 s)
+---
+aggregate: 24.93 GB/s  (12 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=12 bw_gbps=24.930 throttle=0
+RUN placement=B mode=wc_ntdqa th=12 run=2 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 12 -c 136,137,138,139,140,141,142,143,224,225,226,227 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=12 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 3072 MB CXL memory at 0x70fa0e000000
+[aggressor] GO
+thread  0  core 136  1.66 GB/s  (15.075 s)
+thread  1  core 137  1.66 GB/s  (15.044 s)
+thread  2  core 138  1.66 GB/s  (15.071 s)
+thread  3  core 139  1.66 GB/s  (15.061 s)
+thread  4  core 140  1.66 GB/s  (15.068 s)
+thread  5  core 141  1.66 GB/s  (15.071 s)
+thread  6  core 142  1.66 GB/s  (15.075 s)
+thread  7  core 143  1.66 GB/s  (15.077 s)
+thread  8  core 224  2.93 GB/s  (15.017 s)
+thread  9  core 225  2.93 GB/s  (15.016 s)
+thread 10  core 226  2.93 GB/s  (15.038 s)
+thread 11  core 227  2.93 GB/s  (15.036 s)
+---
+aggregate: 24.93 GB/s  (12 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=12 bw_gbps=24.926 throttle=0
+RUN placement=B mode=wc_ntdqa th=12 run=3 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 12 -c 136,137,138,139,140,141,142,143,224,225,226,227 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=12 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 3072 MB CXL memory at 0x7d33b0400000
+[aggressor] GO
+thread  0  core 136  1.66 GB/s  (15.069 s)
+thread  1  core 137  1.66 GB/s  (15.081 s)
+thread  2  core 138  1.66 GB/s  (15.071 s)
+thread  3  core 139  1.66 GB/s  (15.078 s)
+thread  4  core 140  1.66 GB/s  (15.080 s)
+thread  5  core 141  1.66 GB/s  (15.083 s)
+thread  6  core 142  1.65 GB/s  (15.087 s)
+thread  7  core 143  1.65 GB/s  (15.091 s)
+thread  8  core 224  2.92 GB/s  (15.056 s)
+thread  9  core 225  2.93 GB/s  (15.030 s)
+thread 10  core 226  2.93 GB/s  (15.049 s)
+thread 11  core 227  2.93 GB/s  (15.050 s)
+---
+aggregate: 24.90 GB/s  (12 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=12 bw_gbps=24.903 throttle=0
+RUN placement=C mode=wb_load th=8 run=1 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wb_load -t 8 -c 136,137,138,139,140,141,142,143 -s 256 -d 15
+[aggressor] mode=wb_load threads=8 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2048 MB CXL memory at 0x7e41e2800000
+[aggressor] GO
+thread  0  core 136  3.05 GB/s  (15.038 s)
+thread  1  core 137  3.10 GB/s  (15.043 s)
+thread  2  core 138  3.16 GB/s  (15.033 s)
+thread  3  core 139  3.16 GB/s  (15.036 s)
+thread  4  core 140  3.08 GB/s  (15.005 s)
+thread  5  core 141  3.07 GB/s  (15.030 s)
+thread  6  core 142  3.07 GB/s  (15.033 s)
+thread  7  core 143  3.07 GB/s  (15.036 s)
+---
+aggregate: 24.75 GB/s  (8 threads, mode=wb_load)
+RESULT mode=wb_load threads=8 bw_gbps=24.750 throttle=0
+RUN placement=C mode=wb_load th=8 run=2 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wb_load -t 8 -c 136,137,138,139,140,141,142,143 -s 256 -d 15
+[aggressor] mode=wb_load threads=8 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2048 MB CXL memory at 0x722337600000
+[aggressor] GO
+thread  0  core 136  3.07 GB/s  (15.021 s)
+thread  1  core 137  3.11 GB/s  (15.029 s)
+thread  2  core 138  3.17 GB/s  (15.049 s)
+thread  3  core 139  3.18 GB/s  (15.049 s)
+thread  4  core 140  3.07 GB/s  (15.028 s)
+thread  5  core 141  3.09 GB/s  (15.038 s)
+thread  6  core 142  3.09 GB/s  (15.010 s)
+thread  7  core 143  3.09 GB/s  (15.052 s)
+---
+aggregate: 24.84 GB/s  (8 threads, mode=wb_load)
+RESULT mode=wb_load threads=8 bw_gbps=24.843 throttle=0
+RUN placement=C mode=wb_load th=8 run=3 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wb_load -t 8 -c 136,137,138,139,140,141,142,143 -s 256 -d 15
+[aggressor] mode=wb_load threads=8 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2048 MB CXL memory at 0x7a0581400000
+[aggressor] GO
+thread  0  core 136  3.06 GB/s  (15.015 s)
+thread  1  core 137  3.11 GB/s  (15.036 s)
+thread  2  core 138  3.15 GB/s  (15.005 s)
+thread  3  core 139  3.16 GB/s  (15.041 s)
+thread  4  core 140  3.09 GB/s  (15.041 s)
+thread  5  core 141  3.07 GB/s  (15.016 s)
+thread  6  core 142  3.08 GB/s  (15.012 s)
+thread  7  core 143  3.07 GB/s  (15.027 s)
+---
+aggregate: 24.75 GB/s  (8 threads, mode=wb_load)
+RESULT mode=wb_load threads=8 bw_gbps=24.754 throttle=0
+RUN placement=C mode=wc_ntdqa th=8 run=1 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 8 -c 136,137,138,139,140,141,142,143 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=8 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2048 MB CXL memory at 0x7dbbd8000000
+[aggressor] GO
+thread  0  core 136  2.23 GB/s  (15.015 s)
+thread  1  core 137  2.25 GB/s  (15.066 s)
+thread  2  core 138  2.24 GB/s  (15.077 s)
+thread  3  core 139  2.23 GB/s  (15.017 s)
+thread  4  core 140  2.23 GB/s  (15.028 s)
+thread  5  core 141  2.23 GB/s  (15.050 s)
+thread  6  core 142  2.23 GB/s  (15.044 s)
+thread  7  core 143  2.23 GB/s  (15.052 s)
+---
+aggregate: 17.84 GB/s  (8 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=8 bw_gbps=17.839 throttle=0
+RUN placement=C mode=wc_ntdqa th=8 run=2 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 8 -c 136,137,138,139,140,141,142,143 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=8 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2048 MB CXL memory at 0x7e32e9400000
+[aggressor] GO
+thread  0  core 136  2.23 GB/s  (15.018 s)
+thread  1  core 137  2.25 GB/s  (15.053 s)
+thread  2  core 138  2.24 GB/s  (15.069 s)
+thread  3  core 139  2.24 GB/s  (15.007 s)
+thread  4  core 140  2.23 GB/s  (15.027 s)
+thread  5  core 141  2.23 GB/s  (15.033 s)
+thread  6  core 142  2.23 GB/s  (15.039 s)
+thread  7  core 143  2.23 GB/s  (15.049 s)
+---
+aggregate: 17.85 GB/s  (8 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=8 bw_gbps=17.850 throttle=0
+RUN placement=C mode=wc_ntdqa th=8 run=3 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 8 -c 136,137,138,139,140,141,142,143 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=8 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2048 MB CXL memory at 0x729f09200000
+[aggressor] GO
+thread  0  core 136  2.23 GB/s  (15.020 s)
+thread  1  core 137  2.25 GB/s  (15.065 s)
+thread  2  core 138  2.24 GB/s  (15.077 s)
+thread  3  core 139  2.24 GB/s  (15.003 s)
+thread  4  core 140  2.23 GB/s  (15.030 s)
+thread  5  core 141  2.23 GB/s  (15.030 s)
+thread  6  core 142  2.23 GB/s  (15.035 s)
+thread  7  core 143  2.23 GB/s  (15.055 s)
+---
+aggregate: 17.84 GB/s  (8 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=8 bw_gbps=17.840 throttle=0
+RUN placement=C mode=wc_ntdqa th=9 run=1 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 9 -c 136,137,138,139,140,141,142,143,224 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=9 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2304 MB CXL memory at 0x7a43af400000
+[aggressor] GO
+thread  0  core 136  2.16 GB/s  (15.017 s)
+thread  1  core 137  2.16 GB/s  (15.005 s)
+thread  2  core 138  2.16 GB/s  (15.024 s)
+thread  3  core 139  2.16 GB/s  (15.030 s)
+thread  4  core 140  2.16 GB/s  (15.051 s)
+thread  5  core 141  2.16 GB/s  (15.035 s)
+thread  6  core 142  2.16 GB/s  (15.044 s)
+thread  7  core 143  2.16 GB/s  (15.049 s)
+thread  8  core 224  3.70 GB/s  (15.018 s)
+---
+aggregate: 20.96 GB/s  (9 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=9 bw_gbps=20.956 throttle=0
+RUN placement=C mode=wc_ntdqa th=9 run=2 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 9 -c 136,137,138,139,140,141,142,143,224 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=9 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2304 MB CXL memory at 0x7953d6600000
+[aggressor] GO
+thread  0  core 136  2.16 GB/s  (15.010 s)
+thread  1  core 137  2.16 GB/s  (15.004 s)
+thread  2  core 138  2.16 GB/s  (15.021 s)
+thread  3  core 139  2.16 GB/s  (15.029 s)
+thread  4  core 140  2.16 GB/s  (15.056 s)
+thread  5  core 141  2.16 GB/s  (15.048 s)
+thread  6  core 142  2.16 GB/s  (15.052 s)
+thread  7  core 143  2.16 GB/s  (15.056 s)
+thread  8  core 224  3.70 GB/s  (15.037 s)
+---
+aggregate: 20.95 GB/s  (9 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=9 bw_gbps=20.950 throttle=0
+RUN placement=C mode=wc_ntdqa th=9 run=3 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 9 -c 136,137,138,139,140,141,142,143,224 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=9 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2304 MB CXL memory at 0x7e51b4a00000
+[aggressor] GO
+thread  0  core 136  2.16 GB/s  (15.036 s)
+thread  1  core 137  2.17 GB/s  (15.084 s)
+thread  2  core 138  2.16 GB/s  (15.021 s)
+thread  3  core 139  2.16 GB/s  (15.045 s)
+thread  4  core 140  2.16 GB/s  (15.050 s)
+thread  5  core 141  2.16 GB/s  (15.051 s)
+thread  6  core 142  2.16 GB/s  (15.059 s)
+thread  7  core 143  2.16 GB/s  (15.061 s)
+thread  8  core 224  3.70 GB/s  (15.003 s)
+---
+aggregate: 20.93 GB/s  (9 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=9 bw_gbps=20.928 throttle=0
+RUN placement=C mode=wc_ntdqa th=10 run=1 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 10 -c 136,137,138,139,140,141,142,143,224,225 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=10 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2560 MB CXL memory at 0x72d9bfc00000
+[aggressor] GO
+thread  0  core 136  2.09 GB/s  (15.019 s)
+thread  1  core 137  2.09 GB/s  (15.008 s)
+thread  2  core 138  2.09 GB/s  (15.018 s)
+thread  3  core 139  2.09 GB/s  (15.026 s)
+thread  4  core 140  2.09 GB/s  (15.040 s)
+thread  5  core 141  2.09 GB/s  (15.057 s)
+thread  6  core 142  2.09 GB/s  (15.050 s)
+thread  7  core 143  2.09 GB/s  (15.052 s)
+thread  8  core 224  3.60 GB/s  (15.053 s)
+thread  9  core 225  3.61 GB/s  (15.025 s)
+---
+aggregate: 23.89 GB/s  (10 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=10 bw_gbps=23.890 throttle=0
+RUN placement=C mode=wc_ntdqa th=10 run=2 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 10 -c 136,137,138,139,140,141,142,143,224,225 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=10 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2560 MB CXL memory at 0x7f8057a00000
+[aggressor] GO
+thread  0  core 136  2.09 GB/s  (15.035 s)
+thread  1  core 137  2.09 GB/s  (15.024 s)
+thread  2  core 138  2.09 GB/s  (15.043 s)
+thread  3  core 139  2.09 GB/s  (15.050 s)
+thread  4  core 140  2.09 GB/s  (15.062 s)
+thread  5  core 141  2.09 GB/s  (15.061 s)
+thread  6  core 142  2.08 GB/s  (15.064 s)
+thread  7  core 143  2.08 GB/s  (15.071 s)
+thread  8  core 224  3.60 GB/s  (15.072 s)
+thread  9  core 225  3.60 GB/s  (15.055 s)
+---
+aggregate: 23.87 GB/s  (10 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=10 bw_gbps=23.866 throttle=0
+RUN placement=C mode=wc_ntdqa th=10 run=3 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 10 -c 136,137,138,139,140,141,142,143,224,225 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=10 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2560 MB CXL memory at 0x7104e8400000
+[aggressor] GO
+thread  0  core 136  2.09 GB/s  (15.037 s)
+thread  1  core 137  2.10 GB/s  (15.080 s)
+thread  2  core 138  2.09 GB/s  (15.024 s)
+thread  3  core 139  2.09 GB/s  (15.026 s)
+thread  4  core 140  2.09 GB/s  (15.045 s)
+thread  5  core 141  2.09 GB/s  (15.044 s)
+thread  6  core 142  2.09 GB/s  (15.051 s)
+thread  7  core 143  2.09 GB/s  (15.051 s)
+thread  8  core 224  3.61 GB/s  (15.031 s)
+thread  9  core 225  3.61 GB/s  (15.020 s)
+---
+aggregate: 23.87 GB/s  (10 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=10 bw_gbps=23.871 throttle=0
+RUN placement=C mode=wc_ntdqa th=11 run=1 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 11 -c 136,137,138,139,140,141,142,143,224,225,226 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=11 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2816 MB CXL memory at 0x7954a5e00000
+[aggressor] GO
+thread  0  core 136  1.88 GB/s  (15.018 s)
+thread  1  core 137  1.89 GB/s  (15.071 s)
+thread  2  core 138  1.89 GB/s  (15.081 s)
+thread  3  core 139  1.89 GB/s  (15.083 s)
+thread  4  core 140  1.88 GB/s  (15.021 s)
+thread  5  core 141  1.88 GB/s  (15.021 s)
+thread  6  core 142  1.88 GB/s  (15.026 s)
+thread  7  core 143  1.88 GB/s  (15.032 s)
+thread  8  core 224  3.28 GB/s  (15.042 s)
+thread  9  core 225  3.28 GB/s  (15.058 s)
+thread 10  core 226  3.28 GB/s  (15.070 s)
+---
+aggregate: 24.83 GB/s  (11 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=11 bw_gbps=24.827 throttle=0
+RUN placement=C mode=wc_ntdqa th=11 run=2 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 11 -c 136,137,138,139,140,141,142,143,224,225,226 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=11 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2816 MB CXL memory at 0x7bd9fde00000
+[aggressor] GO
+thread  0  core 136  1.89 GB/s  (15.075 s)
+thread  1  core 137  1.89 GB/s  (15.061 s)
+thread  2  core 138  1.89 GB/s  (15.078 s)
+thread  3  core 139  1.89 GB/s  (15.082 s)
+thread  4  core 140  1.87 GB/s  (15.037 s)
+thread  5  core 141  1.88 GB/s  (15.022 s)
+thread  6  core 142  1.88 GB/s  (15.024 s)
+thread  7  core 143  1.88 GB/s  (15.027 s)
+thread  8  core 224  3.28 GB/s  (15.070 s)
+thread  9  core 225  3.29 GB/s  (15.034 s)
+thread 10  core 226  3.28 GB/s  (15.058 s)
+---
+aggregate: 24.85 GB/s  (11 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=11 bw_gbps=24.846 throttle=0
+RUN placement=C mode=wc_ntdqa th=11 run=3 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 11 -c 136,137,138,139,140,141,142,143,224,225,226 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=11 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2816 MB CXL memory at 0x76db0c800000
+[aggressor] GO
+thread  0  core 136  1.88 GB/s  (15.020 s)
+thread  1  core 137  1.88 GB/s  (15.003 s)
+thread  2  core 138  1.88 GB/s  (15.010 s)
+thread  3  core 139  1.88 GB/s  (15.016 s)
+thread  4  core 140  1.88 GB/s  (15.029 s)
+thread  5  core 141  1.88 GB/s  (15.031 s)
+thread  6  core 142  1.88 GB/s  (15.032 s)
+thread  7  core 143  1.87 GB/s  (15.040 s)
+thread  8  core 224  3.27 GB/s  (15.020 s)
+thread  9  core 225  3.28 GB/s  (15.053 s)
+thread 10  core 226  3.28 GB/s  (15.071 s)
+---
+aggregate: 24.78 GB/s  (11 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=11 bw_gbps=24.776 throttle=0
+RUN placement=C mode=wc_ntdqa th=12 run=1 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 12 -c 136,137,138,139,140,141,142,143,224,225,226,227 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=12 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 3072 MB CXL memory at 0x7ea038a00000
+[aggressor] GO
+thread  0  core 136  1.66 GB/s  (15.055 s)
+thread  1  core 137  1.66 GB/s  (15.062 s)
+thread  2  core 138  1.66 GB/s  (15.064 s)
+thread  3  core 139  1.66 GB/s  (15.069 s)
+thread  4  core 140  1.65 GB/s  (15.088 s)
+thread  5  core 141  1.66 GB/s  (15.080 s)
+thread  6  core 142  1.66 GB/s  (15.083 s)
+thread  7  core 143  1.65 GB/s  (15.087 s)
+thread  8  core 224  2.92 GB/s  (15.062 s)
+thread  9  core 225  2.93 GB/s  (15.024 s)
+thread 10  core 226  2.93 GB/s  (15.037 s)
+thread 11  core 227  2.93 GB/s  (15.042 s)
+---
+aggregate: 24.91 GB/s  (12 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=12 bw_gbps=24.908 throttle=0
+RUN placement=C mode=wc_ntdqa th=12 run=2 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 12 -c 136,137,138,139,140,141,142,143,224,225,226,227 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=12 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 3072 MB CXL memory at 0x7fd6fee00000
+[aggressor] GO
+thread  0  core 136  1.66 GB/s  (15.046 s)
+thread  1  core 137  1.66 GB/s  (15.035 s)
+thread  2  core 138  1.66 GB/s  (15.046 s)
+thread  3  core 139  1.66 GB/s  (15.048 s)
+thread  4  core 140  1.66 GB/s  (15.059 s)
+thread  5  core 141  1.66 GB/s  (15.061 s)
+thread  6  core 142  1.66 GB/s  (15.065 s)
+thread  7  core 143  1.66 GB/s  (15.069 s)
+thread  8  core 224  2.93 GB/s  (15.050 s)
+thread  9  core 225  2.93 GB/s  (15.011 s)
+thread 10  core 226  2.93 GB/s  (15.027 s)
+thread 11  core 227  2.93 GB/s  (15.049 s)
+---
+aggregate: 24.94 GB/s  (12 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=12 bw_gbps=24.938 throttle=0
+RUN placement=C mode=wc_ntdqa th=12 run=3 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 12 -c 136,137,138,139,140,141,142,143,224,225,226,227 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=12 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 3072 MB CXL memory at 0x7f1fad200000
+[aggressor] GO
+thread  0  core 136  1.66 GB/s  (15.042 s)
+thread  1  core 137  1.66 GB/s  (15.040 s)
+thread  2  core 138  1.66 GB/s  (15.050 s)
+thread  3  core 139  1.66 GB/s  (15.053 s)
+thread  4  core 140  1.66 GB/s  (15.063 s)
+thread  5  core 141  1.66 GB/s  (15.065 s)
+thread  6  core 142  1.66 GB/s  (15.077 s)
+thread  7  core 143  1.66 GB/s  (15.071 s)
+thread  8  core 224  2.93 GB/s  (15.043 s)
+thread  9  core 225  2.93 GB/s  (15.005 s)
+thread 10  core 226  2.93 GB/s  (15.036 s)
+thread 11  core 227  2.93 GB/s  (15.031 s)
+---
+aggregate: 24.93 GB/s  (12 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=12 bw_gbps=24.926 throttle=0
+RUN placement=D mode=wb_load th=8 run=1 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wb_load -t 8 -c 16,17,18,19,136,137,138,139 -s 256 -d 15
+[aggressor] mode=wb_load threads=8 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2048 MB CXL memory at 0x79cdb5000000
+[aggressor] GO
+thread  0  core 16  2.86 GB/s  (15.034 s)
+thread  1  core 17  2.90 GB/s  (15.017 s)
+thread  2  core 18  3.18 GB/s  (15.045 s)
+thread  3  core 19  3.12 GB/s  (15.051 s)
+thread  4  core 136  3.14 GB/s  (15.035 s)
+thread  5  core 137  3.10 GB/s  (15.047 s)
+thread  6  core 138  3.45 GB/s  (15.012 s)
+thread  7  core 139  3.37 GB/s  (15.036 s)
+---
+aggregate: 25.09 GB/s  (8 threads, mode=wb_load)
+RESULT mode=wb_load threads=8 bw_gbps=25.094 throttle=0
+RUN placement=D mode=wb_load th=8 run=2 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wb_load -t 8 -c 16,17,18,19,136,137,138,139 -s 256 -d 15
+[aggressor] mode=wb_load threads=8 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2048 MB CXL memory at 0x72416ba00000
+[aggressor] GO
+thread  0  core 16  2.86 GB/s  (15.026 s)
+thread  1  core 17  2.92 GB/s  (15.063 s)
+thread  2  core 18  3.17 GB/s  (15.051 s)
+thread  3  core 19  3.10 GB/s  (15.048 s)
+thread  4  core 136  3.16 GB/s  (15.054 s)
+thread  5  core 137  3.08 GB/s  (15.063 s)
+thread  6  core 138  3.46 GB/s  (15.065 s)
+thread  7  core 139  3.39 GB/s  (15.065 s)
+---
+aggregate: 25.12 GB/s  (8 threads, mode=wb_load)
+RESULT mode=wb_load threads=8 bw_gbps=25.124 throttle=0
+RUN placement=D mode=wb_load th=8 run=3 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wb_load -t 8 -c 16,17,18,19,136,137,138,139 -s 256 -d 15
+[aggressor] mode=wb_load threads=8 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2048 MB CXL memory at 0x7a37ade00000
+[aggressor] GO
+thread  0  core 16  2.86 GB/s  (15.040 s)
+thread  1  core 17  2.91 GB/s  (15.034 s)
+thread  2  core 18  3.17 GB/s  (15.052 s)
+thread  3  core 19  3.11 GB/s  (15.014 s)
+thread  4  core 136  3.16 GB/s  (15.038 s)
+thread  5  core 137  3.06 GB/s  (15.019 s)
+thread  6  core 138  3.46 GB/s  (15.051 s)
+thread  7  core 139  3.39 GB/s  (15.045 s)
+---
+aggregate: 25.09 GB/s  (8 threads, mode=wb_load)
+RESULT mode=wb_load threads=8 bw_gbps=25.093 throttle=0
+RUN placement=D mode=wc_ntdqa th=8 run=1 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 8 -c 16,17,18,19,136,137,138,139 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=8 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2048 MB CXL memory at 0x72e5d5200000
+[aggressor] GO
+thread  0  core 16  2.73 GB/s  (15.041 s)
+thread  1  core 17  2.74 GB/s  (15.006 s)
+thread  2  core 18  2.73 GB/s  (15.029 s)
+thread  3  core 19  2.73 GB/s  (15.038 s)
+thread  4  core 136  3.42 GB/s  (15.060 s)
+thread  5  core 137  3.42 GB/s  (15.050 s)
+thread  6  core 138  3.42 GB/s  (15.002 s)
+thread  7  core 139  3.41 GB/s  (15.034 s)
+---
+aggregate: 24.56 GB/s  (8 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=8 bw_gbps=24.562 throttle=0
+RUN placement=D mode=wc_ntdqa th=8 run=2 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 8 -c 16,17,18,19,136,137,138,139 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=8 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2048 MB CXL memory at 0x7c1c24800000
+[aggressor] GO
+thread  0  core 16  2.73 GB/s  (15.052 s)
+thread  1  core 17  2.74 GB/s  (15.010 s)
+thread  2  core 18  2.73 GB/s  (15.030 s)
+thread  3  core 19  2.73 GB/s  (15.036 s)
+thread  4  core 136  3.42 GB/s  (15.055 s)
+thread  5  core 137  3.42 GB/s  (15.050 s)
+thread  6  core 138  3.42 GB/s  (15.003 s)
+thread  7  core 139  3.42 GB/s  (15.010 s)
+---
+aggregate: 24.57 GB/s  (8 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=8 bw_gbps=24.570 throttle=0
+RUN placement=D mode=wc_ntdqa th=8 run=3 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 8 -c 16,17,18,19,136,137,138,139 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=8 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2048 MB CXL memory at 0x77211ba00000
+[aggressor] GO
+thread  0  core 16  2.74 GB/s  (15.002 s)
+thread  1  core 17  2.74 GB/s  (15.065 s)
+thread  2  core 18  2.74 GB/s  (15.088 s)
+thread  3  core 19  2.74 GB/s  (15.005 s)
+thread  4  core 136  3.43 GB/s  (15.039 s)
+thread  5  core 137  3.43 GB/s  (15.011 s)
+thread  6  core 138  3.43 GB/s  (15.042 s)
+thread  7  core 139  3.43 GB/s  (15.043 s)
+---
+aggregate: 24.59 GB/s  (8 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=8 bw_gbps=24.588 throttle=0
+RUN placement=D mode=wc_ntdqa th=9 run=1 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 9 -c 16,17,18,19,136,137,138,139,272 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=9 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2304 MB CXL memory at 0x79eaffc00000
+[aggressor] GO
+thread  0  core 16  1.30 GB/s  (15.084 s)
+thread  1  core 17  2.73 GB/s  (15.029 s)
+thread  2  core 18  2.73 GB/s  (15.046 s)
+thread  3  core 19  2.73 GB/s  (15.068 s)
+thread  4  core 136  3.42 GB/s  (15.013 s)
+thread  5  core 137  3.42 GB/s  (15.066 s)
+thread  6  core 138  3.41 GB/s  (15.021 s)
+thread  7  core 139  3.41 GB/s  (15.022 s)
+thread  8  core 272  1.44 GB/s  (15.115 s)
+---
+aggregate: 24.47 GB/s  (9 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=9 bw_gbps=24.472 throttle=0
+RUN placement=D mode=wc_ntdqa th=9 run=2 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 9 -c 16,17,18,19,136,137,138,139,272 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=9 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2304 MB CXL memory at 0x7afb57600000
+[aggressor] GO
+thread  0  core 16  1.30 GB/s  (15.059 s)
+thread  1  core 17  2.74 GB/s  (15.090 s)
+thread  2  core 18  2.73 GB/s  (15.023 s)
+thread  3  core 19  2.73 GB/s  (15.046 s)
+thread  4  core 136  3.42 GB/s  (15.057 s)
+thread  5  core 137  3.43 GB/s  (15.044 s)
+thread  6  core 138  3.42 GB/s  (15.067 s)
+thread  7  core 139  3.42 GB/s  (15.005 s)
+thread  8  core 272  1.44 GB/s  (15.097 s)
+---
+aggregate: 24.56 GB/s  (9 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=9 bw_gbps=24.555 throttle=0
+RUN placement=D mode=wc_ntdqa th=9 run=3 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 9 -c 16,17,18,19,136,137,138,139,272 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=9 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2304 MB CXL memory at 0x711cf8e00000
+[aggressor] GO
+thread  0  core 16  1.30 GB/s  (15.090 s)
+thread  1  core 17  2.74 GB/s  (15.009 s)
+thread  2  core 18  2.73 GB/s  (15.029 s)
+thread  3  core 19  2.73 GB/s  (15.033 s)
+thread  4  core 136  3.42 GB/s  (15.057 s)
+thread  5  core 137  3.42 GB/s  (15.053 s)
+thread  6  core 138  3.41 GB/s  (15.021 s)
+thread  7  core 139  3.42 GB/s  (15.006 s)
+thread  8  core 272  1.44 GB/s  (15.101 s)
+---
+aggregate: 24.51 GB/s  (9 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=9 bw_gbps=24.512 throttle=0
+RUN placement=D mode=wc_ntdqa th=10 run=1 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 10 -c 16,17,18,19,136,137,138,139,272,273 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=10 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2560 MB CXL memory at 0x71397d600000
+[aggressor] GO
+thread  0  core 16  1.32 GB/s  (15.099 s)
+thread  1  core 17  1.32 GB/s  (15.086 s)
+thread  2  core 18  2.74 GB/s  (15.017 s)
+thread  3  core 19  2.73 GB/s  (15.020 s)
+thread  4  core 136  3.42 GB/s  (15.007 s)
+thread  5  core 137  3.42 GB/s  (15.063 s)
+thread  6  core 138  3.41 GB/s  (15.014 s)
+thread  7  core 139  3.41 GB/s  (15.018 s)
+thread  8  core 272  1.43 GB/s  (15.052 s)
+thread  9  core 273  1.43 GB/s  (15.024 s)
+---
+aggregate: 24.52 GB/s  (10 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=10 bw_gbps=24.516 throttle=0
+RUN placement=D mode=wc_ntdqa th=10 run=2 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 10 -c 16,17,18,19,136,137,138,139,272,273 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=10 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2560 MB CXL memory at 0x7c1f58400000
+[aggressor] GO
+thread  0  core 16  1.30 GB/s  (15.079 s)
+thread  1  core 17  1.31 GB/s  (15.160 s)
+thread  2  core 18  2.74 GB/s  (15.091 s)
+thread  3  core 19  2.74 GB/s  (15.008 s)
+thread  4  core 136  3.42 GB/s  (15.057 s)
+thread  5  core 137  3.42 GB/s  (15.064 s)
+thread  6  core 138  3.42 GB/s  (15.070 s)
+thread  7  core 139  3.42 GB/s  (15.007 s)
+thread  8  core 272  1.44 GB/s  (15.057 s)
+thread  9  core 273  1.44 GB/s  (15.145 s)
+---
+aggregate: 24.49 GB/s  (10 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=10 bw_gbps=24.488 throttle=0
+RUN placement=D mode=wc_ntdqa th=10 run=3 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 10 -c 16,17,18,19,136,137,138,139,272,273 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=10 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2560 MB CXL memory at 0x7d145ee00000
+[aggressor] GO
+thread  0  core 16  1.30 GB/s  (15.035 s)
+thread  1  core 17  1.31 GB/s  (15.141 s)
+thread  2  core 18  2.74 GB/s  (15.006 s)
+thread  3  core 19  2.74 GB/s  (15.086 s)
+thread  4  core 136  3.43 GB/s  (15.035 s)
+thread  5  core 137  3.43 GB/s  (15.016 s)
+thread  6  core 138  3.43 GB/s  (15.041 s)
+thread  7  core 139  3.43 GB/s  (15.047 s)
+thread  8  core 272  1.44 GB/s  (15.066 s)
+thread  9  core 273  1.44 GB/s  (15.112 s)
+---
+aggregate: 24.54 GB/s  (10 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=10 bw_gbps=24.537 throttle=0
+RUN placement=D mode=wc_ntdqa th=11 run=1 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 11 -c 16,17,18,19,136,137,138,139,272,273,274 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=11 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2816 MB CXL memory at 0x7ad21e600000
+[aggressor] GO
+thread  0  core 16  1.30 GB/s  (15.026 s)
+thread  1  core 17  1.32 GB/s  (15.105 s)
+thread  2  core 18  1.31 GB/s  (15.121 s)
+thread  3  core 19  2.75 GB/s  (15.045 s)
+thread  4  core 136  3.44 GB/s  (15.053 s)
+thread  5  core 137  3.45 GB/s  (15.023 s)
+thread  6  core 138  3.44 GB/s  (15.040 s)
+thread  7  core 139  3.44 GB/s  (15.049 s)
+thread  8  core 272  1.45 GB/s  (15.013 s)
+thread  9  core 273  1.44 GB/s  (15.078 s)
+thread 10  core 274  1.44 GB/s  (15.085 s)
+---
+aggregate: 24.68 GB/s  (11 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=11 bw_gbps=24.676 throttle=0
+RUN placement=D mode=wc_ntdqa th=11 run=2 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 11 -c 16,17,18,19,136,137,138,139,272,273,274 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=11 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2816 MB CXL memory at 0x7ec9f4e00000
+[aggressor] GO
+thread  0  core 16  1.30 GB/s  (15.024 s)
+thread  1  core 17  1.31 GB/s  (15.133 s)
+thread  2  core 18  1.32 GB/s  (15.071 s)
+thread  3  core 19  2.74 GB/s  (15.071 s)
+thread  4  core 136  3.44 GB/s  (15.057 s)
+thread  5  core 137  3.44 GB/s  (15.053 s)
+thread  6  core 138  3.43 GB/s  (15.007 s)
+thread  7  core 139  3.43 GB/s  (15.030 s)
+thread  8  core 272  1.44 GB/s  (15.055 s)
+thread  9  core 273  1.44 GB/s  (15.132 s)
+thread 10  core 274  1.43 GB/s  (15.059 s)
+---
+aggregate: 24.60 GB/s  (11 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=11 bw_gbps=24.603 throttle=0
+RUN placement=D mode=wc_ntdqa th=11 run=3 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 11 -c 16,17,18,19,136,137,138,139,272,273,274 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=11 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 2816 MB CXL memory at 0x7af209200000
+[aggressor] GO
+thread  0  core 16  1.32 GB/s  (15.105 s)
+thread  1  core 17  1.31 GB/s  (15.003 s)
+thread  2  core 18  1.30 GB/s  (15.022 s)
+thread  3  core 19  2.73 GB/s  (15.024 s)
+thread  4  core 136  3.43 GB/s  (15.028 s)
+thread  5  core 137  3.43 GB/s  (15.033 s)
+thread  6  core 138  3.43 GB/s  (15.045 s)
+thread  7  core 139  3.42 GB/s  (15.056 s)
+thread  8  core 272  1.43 GB/s  (15.053 s)
+thread  9  core 273  1.43 GB/s  (15.002 s)
+thread 10  core 274  1.43 GB/s  (15.006 s)
+---
+aggregate: 24.54 GB/s  (11 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=11 bw_gbps=24.542 throttle=0
+RUN placement=D mode=wc_ntdqa th=12 run=1 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 12 -c 16,17,18,19,136,137,138,139,272,273,274,275 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=12 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 3072 MB CXL memory at 0x7f1352600000
+[aggressor] GO
+thread  0  core 16  1.30 GB/s  (15.059 s)
+thread  1  core 17  1.30 GB/s  (15.022 s)
+thread  2  core 18  1.31 GB/s  (15.016 s)
+thread  3  core 19  1.31 GB/s  (15.015 s)
+thread  4  core 136  3.44 GB/s  (15.071 s)
+thread  5  core 137  3.44 GB/s  (15.071 s)
+thread  6  core 138  3.43 GB/s  (15.011 s)
+thread  7  core 139  3.43 GB/s  (15.020 s)
+thread  8  core 272  1.44 GB/s  (15.080 s)
+thread  9  core 273  1.44 GB/s  (15.070 s)
+thread 10  core 274  1.44 GB/s  (15.091 s)
+thread 11  core 275  1.44 GB/s  (15.092 s)
+---
+aggregate: 24.65 GB/s  (12 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=12 bw_gbps=24.652 throttle=0
+RUN placement=D mode=wc_ntdqa th=12 run=2 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 12 -c 16,17,18,19,136,137,138,139,272,273,274,275 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=12 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 3072 MB CXL memory at 0x750077000000
+[aggressor] GO
+thread  0  core 16  1.30 GB/s  (15.023 s)
+thread  1  core 17  1.31 GB/s  (15.120 s)
+thread  2  core 18  1.31 GB/s  (15.140 s)
+thread  3  core 19  1.31 GB/s  (15.139 s)
+thread  4  core 136  3.44 GB/s  (15.073 s)
+thread  5  core 137  3.44 GB/s  (15.058 s)
+thread  6  core 138  3.43 GB/s  (15.027 s)
+thread  7  core 139  3.43 GB/s  (15.016 s)
+thread  8  core 272  1.45 GB/s  (15.042 s)
+thread  9  core 273  1.44 GB/s  (15.092 s)
+thread 10  core 274  1.44 GB/s  (15.134 s)
+thread 11  core 275  1.44 GB/s  (15.141 s)
+---
+aggregate: 24.63 GB/s  (12 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=12 bw_gbps=24.626 throttle=0
+RUN placement=D mode=wc_ntdqa th=12 run=3 cmd=/home/domin/CoherenceTest/APNET/bin/aggressor -m wc_ntdqa -t 12 -c 16,17,18,19,136,137,138,139,272,273,274,275 -s 256 -d 15
+[aggressor] mode=wc_ntdqa threads=12 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 3072 MB CXL memory at 0x7ca915200000
+[aggressor] GO
+thread  0  core 16  1.31 GB/s  (15.112 s)
+thread  1  core 17  1.31 GB/s  (15.128 s)
+thread  2  core 18  1.31 GB/s  (15.145 s)
+thread  3  core 19  1.31 GB/s  (15.146 s)
+thread  4  core 136  3.44 GB/s  (15.055 s)
+thread  5  core 137  3.44 GB/s  (15.066 s)
+thread  6  core 138  3.43 GB/s  (15.006 s)
+thread  7  core 139  3.43 GB/s  (15.011 s)
+thread  8  core 272  1.44 GB/s  (15.140 s)
+thread  9  core 273  1.44 GB/s  (15.124 s)
+thread 10  core 274  1.44 GB/s  (15.131 s)
+thread 11  core 275  1.44 GB/s  (15.128 s)
+---
+aggregate: 24.64 GB/s  (12 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=12 bw_gbps=24.636 throttle=0
+done
+placement=A wb8=24.527 best_wc_t=12 wc=17.881 delta=-6.646
+placement=B wb8=24.818 best_wc_t=11 wc=24.799 delta=-0.019
+placement=C wb8=24.782 best_wc_t=11 wc=24.816 delta=+0.034
+placement=D wb8=25.104 best_wc_t=12 wc=24.638 delta=-0.466

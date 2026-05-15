@@ -1,0 +1,4 @@
+# started on Sat Mar  7 09:10:17 2026
+
+92107||amd_df/event=0x07,umask=0x38/|30009624446|100.00||
+6275253475||amd_l3/event=0x04,umask=0xff/|480165949614|100.00||

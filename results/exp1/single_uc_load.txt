@@ -1,0 +1,7 @@
+[aggressor] mode=uc_load threads=1 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 256 MB CXL memory at 0x728a08200000
+[aggressor] GO
+thread  0  core 136  0.03 GB/s  (21.278 s)
+---
+aggregate: 0.03 GB/s  (1 threads, mode=uc_load)
+RESULT mode=uc_load threads=1 bw_gbps=0.025 throttle=0

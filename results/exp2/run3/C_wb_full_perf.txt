@@ -1,0 +1,14 @@
+# started on Thu Mar  5 18:07:46 2026
+
+
+ Performance counter stats for process id '99097':
+
+    28,798,486,622      cycles                                                                  (42.86%)
+    10,832,287,528      instructions                     #    0.38  insn per cycle              (42.86%)
+     4,924,570,419      r7064                                                                   (42.85%)
+       367,134,784      r0864                                                                   (57.14%)
+       905,343,447      l2_pf_miss_l2_hit_l3.all                                                (71.42%)
+         1,534,331      l2_pf_miss_l2_l3.all                                                    (85.70%)
+
+      13.001821061 seconds time elapsed
+

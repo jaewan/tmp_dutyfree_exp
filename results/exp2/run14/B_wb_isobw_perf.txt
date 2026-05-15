@@ -1,0 +1,14 @@
+# started on Thu Mar  5 18:22:33 2026
+
+
+ Performance counter stats for process id '101480':
+
+    28,893,273,412      cycles                                                                  (42.86%)
+    27,434,721,002      instructions                     #    0.95  insn per cycle              (42.86%)
+    12,853,394,467      r7064                                                                   (42.86%)
+       616,095,658      r0864                                                                   (57.14%)
+     1,102,191,832      l2_pf_miss_l2_hit_l3.all                                                (71.42%)
+           805,459      l2_pf_miss_l2_l3.all                                                    (85.71%)
+
+      13.001903518 seconds time elapsed
+

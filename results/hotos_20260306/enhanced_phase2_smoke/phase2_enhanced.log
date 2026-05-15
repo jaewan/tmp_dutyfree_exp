@@ -1,0 +1,263 @@
+=== ENHANCED_PHASE2 START ===
+config victim_core=128 victim_node=1 warmup=1 measure=3 runs=1 seed=20260306
+config cores=136,137,138,139,140,141,142,143,224,225,226,227,228,229,230,231
+config pairs=low,1,4 high,12,12
+=== BLOCK_START profile=l2hot run=1 ===
+--- pair=low wb_t=1 wc_t=4 order=wc wb ---
+=== BASELINE profile=l2hot pair=low run=1 tag=pre ===
+[victim] core=128 node=1 ws=64 KB duration=3 warmup=1 chase=0
+[victim] warming up for 1 s …
+[victim] measuring for 3 s …
+[victim] interim: IPC=0.996  L2miss_rate=0.00%  iters=354892
+[victim] interim: IPC=0.996  L2miss_rate=0.00%  iters=709860
+[victim] DONE: IPC=0.9963  L2_miss=0.00%
+VICTIM core=128 ipc=0.9963 l2_miss_rate=0.00 cycles=6688598968 insns=6663711922 l2_hit=3308292149 l2_miss=115367 iters=1064658 sec=3.00
+=== BASELINE_RC profile=l2hot pair=low run=1 tag=pre rc=0 ===
+=== CORUN profile=l2hot pair=low run=1 mode=wc_ntdqa threads=4 START ===
+[victim] core=128 node=1 ws=64 KB duration=3 warmup=1 chase=0
+[victim] warming up for 1 s …
+[aggressor] mode=wc_ntdqa threads=4 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 1024 MB CXL memory at 0x700b70a00000
+[victim] measuring for 3 s …
+[aggressor] GO
+[victim] interim: IPC=0.996  L2miss_rate=0.00%  iters=354280
+[victim] interim: IPC=0.996  L2miss_rate=0.00%  iters=708578
+[victim] DONE: IPC=0.9959  L2_miss=0.00%
+VICTIM core=128 ipc=0.9959 l2_miss_rate=0.00 cycles=6680002941 insns=6652345509 l2_hit=3302573795 l2_miss=118881 iters=1062842 sec=3.00
+thread  0  core 136  3.86 GB/s  (3.062 s)
+thread  1  core 137  3.86 GB/s  (3.063 s)
+thread  2  core 138  3.84 GB/s  (3.008 s)
+thread  3  core 139  3.83 GB/s  (3.011 s)
+---
+aggregate: 15.25 GB/s  (4 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=4 bw_gbps=15.249 throttle=0
+=== CORUN_RC profile=l2hot pair=low run=1 mode=wc_ntdqa threads=4 victim=0 aggressor=0 ===
+=== CORUN profile=l2hot pair=low run=1 mode=wb_load threads=1 START ===
+[victim] core=128 node=1 ws=64 KB duration=3 warmup=1 chase=0
+[victim] warming up for 1 s …
+[aggressor] mode=wb_load threads=1 bufsz=256MB/thread throttle=0 MBps
+[victim] measuring for 3 s …
+[aggressor] mapped 256 MB CXL memory at 0x736207800000
+[aggressor] GO
+[victim] interim: IPC=0.995  L2miss_rate=0.00%  iters=354289
+[victim] interim: IPC=0.995  L2miss_rate=0.00%  iters=708474
+[victim] DONE: IPC=0.9955  L2_miss=0.00%
+VICTIM core=128 ipc=0.9955 l2_miss_rate=0.00 cycles=6683124104 insns=6652952503 l2_hit=3303579346 l2_miss=117267 iters=1062939 sec=3.00
+thread  0  core 136  15.82 GB/s  (3.004 s)
+---
+aggregate: 15.82 GB/s  (1 threads, mode=wb_load)
+RESULT mode=wb_load threads=1 bw_gbps=15.817 throttle=0
+=== CORUN_RC profile=l2hot pair=low run=1 mode=wb_load threads=1 victim=0 aggressor=0 ===
+=== BASELINE profile=l2hot pair=low run=1 tag=post ===
+[victim] core=128 node=1 ws=64 KB duration=3 warmup=1 chase=0
+[victim] warming up for 1 s …
+[victim] measuring for 3 s …
+[victim] interim: IPC=0.997  L2miss_rate=0.00%  iters=355225
+[victim] interim: IPC=0.997  L2miss_rate=0.00%  iters=709565
+[victim] DONE: IPC=0.9965  L2_miss=0.00%
+VICTIM core=128 ipc=0.9965 l2_miss_rate=0.00 cycles=6686239938 insns=6662760658 l2_hit=3307404625 l2_miss=115204 iters=1064506 sec=3.00
+=== BASELINE_RC profile=l2hot pair=low run=1 tag=post rc=0 ===
+--- pair=high wb_t=12 wc_t=12 order=wb wc ---
+=== BASELINE profile=l2hot pair=high run=1 tag=pre ===
+[victim] core=128 node=1 ws=64 KB duration=3 warmup=1 chase=0
+[victim] warming up for 1 s …
+[victim] measuring for 3 s …
+[victim] interim: IPC=0.994  L2miss_rate=0.00%  iters=354169
+[victim] interim: IPC=0.994  L2miss_rate=0.00%  iters=708625
+[victim] DONE: IPC=0.9943  L2_miss=0.00%
+VICTIM core=128 ipc=0.9943 l2_miss_rate=0.00 cycles=6690446062 insns=6652583732 l2_hit=3304072499 l2_miss=116522 iters=1062880 sec=3.00
+=== BASELINE_RC profile=l2hot pair=high run=1 tag=pre rc=0 ===
+=== CORUN profile=l2hot pair=high run=1 mode=wb_load threads=12 START ===
+[victim] core=128 node=1 ws=64 KB duration=3 warmup=1 chase=0
+[victim] warming up for 1 s …
+[aggressor] mode=wb_load threads=12 bufsz=256MB/thread throttle=0 MBps
+[victim] measuring for 3 s …
+[victim] interim: IPC=0.993  L2miss_rate=0.00%  iters=354504
+[aggressor] mapped 3072 MB CXL memory at 0x7aca41a00000
+[aggressor] GO
+[victim] interim: IPC=0.993  L2miss_rate=0.00%  iters=706954
+[victim] DONE: IPC=0.9719  L2_miss=0.00%
+VICTIM core=128 ipc=0.9719 l2_miss_rate=0.00 cycles=6661446356 insns=6474576963 l2_hit=3216570370 l2_miss=96931 iters=1034440 sec=3.00
+thread  0  core 136  1.59 GB/s  (3.030 s)
+thread  1  core 137  1.59 GB/s  (3.048 s)
+thread  2  core 138  1.61 GB/s  (3.007 s)
+thread  3  core 139  1.67 GB/s  (3.056 s)
+thread  4  core 140  1.59 GB/s  (3.037 s)
+thread  5  core 141  1.59 GB/s  (3.043 s)
+thread  6  core 142  1.59 GB/s  (3.046 s)
+thread  7  core 143  1.59 GB/s  (3.045 s)
+thread  8  core 224  3.10 GB/s  (3.035 s)
+thread  9  core 225  3.08 GB/s  (3.052 s)
+thread 10  core 226  3.37 GB/s  (3.024 s)
+thread 11  core 227  3.28 GB/s  (3.028 s)
+---
+aggregate: 25.47 GB/s  (12 threads, mode=wb_load)
+RESULT mode=wb_load threads=12 bw_gbps=25.475 throttle=0
+=== CORUN_RC profile=l2hot pair=high run=1 mode=wb_load threads=12 victim=0 aggressor=0 ===
+=== CORUN profile=l2hot pair=high run=1 mode=wc_ntdqa threads=12 START ===
+[victim] core=128 node=1 ws=64 KB duration=3 warmup=1 chase=0
+[victim] warming up for 1 s …
+[aggressor] mode=wc_ntdqa threads=12 bufsz=256MB/thread throttle=0 MBps
+[victim] measuring for 3 s …
+[aggressor] mapped 3072 MB CXL memory at 0x7ef254800000
+[aggressor] GO
+[victim] interim: IPC=0.996  L2miss_rate=0.00%  iters=354196
+[victim] interim: IPC=0.996  L2miss_rate=0.00%  iters=707376
+[victim] DONE: IPC=0.9960  L2_miss=0.00%
+VICTIM core=128 ipc=0.9960 l2_miss_rate=0.00 cycles=6670289422 insns=6643839589 l2_hit=3298048211 l2_miss=109892 iters=1061483 sec=3.00
+thread  0  core 136  1.66 GB/s  (3.079 s)
+thread  1  core 137  1.66 GB/s  (3.078 s)
+thread  2  core 138  1.66 GB/s  (3.080 s)
+thread  3  core 139  1.66 GB/s  (3.081 s)
+thread  4  core 140  1.65 GB/s  (3.082 s)
+thread  5  core 141  1.65 GB/s  (3.083 s)
+thread  6  core 142  1.65 GB/s  (3.083 s)
+thread  7  core 143  1.65 GB/s  (3.084 s)
+thread  8  core 224  2.92 GB/s  (3.032 s)
+thread  9  core 225  2.92 GB/s  (3.033 s)
+thread 10  core 226  2.92 GB/s  (3.038 s)
+thread 11  core 227  2.92 GB/s  (3.037 s)
+---
+aggregate: 24.72 GB/s  (12 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=12 bw_gbps=24.719 throttle=0
+=== CORUN_RC profile=l2hot pair=high run=1 mode=wc_ntdqa threads=12 victim=0 aggressor=0 ===
+=== BASELINE profile=l2hot pair=high run=1 tag=post ===
+[victim] core=128 node=1 ws=64 KB duration=3 warmup=1 chase=0
+[victim] warming up for 1 s …
+[victim] measuring for 3 s …
+[victim] interim: IPC=0.996  L2miss_rate=0.00%  iters=355160
+[victim] interim: IPC=0.996  L2miss_rate=0.00%  iters=710214
+[victim] DONE: IPC=0.9964  L2_miss=0.00%
+VICTIM core=128 ipc=0.9964 l2_miss_rate=0.00 cycles=6690320929 insns=6666278081 l2_hit=3309835574 l2_miss=114717 iters=1065068 sec=3.00
+=== BASELINE_RC profile=l2hot pair=high run=1 tag=post rc=0 ===
+=== BLOCK_END profile=l2hot run=1 ===
+=== BLOCK_START profile=chase_miss run=1 ===
+--- pair=low wb_t=1 wc_t=4 order=wb wc ---
+=== BASELINE profile=chase_miss pair=low run=1 tag=pre ===
+[victim] core=128 node=1 ws=4096 KB duration=3 warmup=1 chase=1
+[victim] warming up for 1 s …
+[victim] measuring for 3 s …
+[victim] interim: IPC=0.045  L2miss_rate=86.60%  iters=618
+[victim] interim: IPC=0.045  L2miss_rate=86.60%  iters=1236
+[victim] DONE: IPC=0.0455  L2_miss=86.60%
+VICTIM core=128 ipc=0.0455 l2_miss_rate=86.60 cycles=6680413727 insns=303646596 l2_hit=16262481 l2_miss=105139384 iters=1852 sec=3.00
+=== BASELINE_RC profile=chase_miss pair=low run=1 tag=pre rc=0 ===
+=== CORUN profile=chase_miss pair=low run=1 mode=wb_load threads=1 START ===
+[victim] core=128 node=1 ws=4096 KB duration=3 warmup=1 chase=1
+[victim] warming up for 1 s …
+[aggressor] mode=wb_load threads=1 bufsz=256MB/thread throttle=0 MBps
+[victim] measuring for 3 s …
+[aggressor] mapped 256 MB CXL memory at 0x7bd033e00000
+[aggressor] GO
+[victim] interim: IPC=0.045  L2miss_rate=86.70%  iters=617
+[victim] interim: IPC=0.045  L2miss_rate=86.69%  iters=1234
+[victim] DONE: IPC=0.0454  L2_miss=86.69%
+VICTIM core=128 ipc=0.0454 l2_miss_rate=86.69 cycles=6670382327 insns=302826901 l2_hit=16115016 l2_miss=104959067 iters=1847 sec=3.00
+thread  0  core 136  15.83 GB/s  (3.018 s)
+---
+aggregate: 15.83 GB/s  (1 threads, mode=wb_load)
+RESULT mode=wb_load threads=1 bw_gbps=15.835 throttle=0
+=== CORUN_RC profile=chase_miss pair=low run=1 mode=wb_load threads=1 victim=0 aggressor=0 ===
+=== CORUN profile=chase_miss pair=low run=1 mode=wc_ntdqa threads=4 START ===
+[victim] core=128 node=1 ws=4096 KB duration=3 warmup=1 chase=1
+[victim] warming up for 1 s …
+[aggressor] mode=wc_ntdqa threads=4 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 1024 MB CXL memory at 0x72129aa00000
+[victim] measuring for 3 s …
+[aggressor] GO
+[victim] interim: IPC=0.045  L2miss_rate=87.37%  iters=613
+[victim] interim: IPC=0.045  L2miss_rate=87.31%  iters=1227
+[victim] DONE: IPC=0.0452  L2_miss=87.29%
+VICTIM core=128 ipc=0.0452 l2_miss_rate=87.29 cycles=6675201319 insns=301515311 l2_hit=15327042 l2_miss=105224348 iters=1839 sec=3.00
+thread  0  core 136  3.86 GB/s  (3.057 s)
+thread  1  core 137  3.86 GB/s  (3.061 s)
+thread  2  core 138  3.85 GB/s  (3.002 s)
+thread  3  core 139  3.84 GB/s  (3.009 s)
+---
+aggregate: 15.26 GB/s  (4 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=4 bw_gbps=15.258 throttle=0
+=== CORUN_RC profile=chase_miss pair=low run=1 mode=wc_ntdqa threads=4 victim=0 aggressor=0 ===
+=== BASELINE profile=chase_miss pair=low run=1 tag=post ===
+[victim] core=128 node=1 ws=4096 KB duration=3 warmup=1 chase=1
+[victim] warming up for 1 s …
+[victim] measuring for 3 s …
+[victim] interim: IPC=0.045  L2miss_rate=89.55%  iters=606
+[victim] interim: IPC=0.045  L2miss_rate=89.55%  iters=1212
+[victim] DONE: IPC=0.0446  L2_miss=89.55%
+VICTIM core=128 ipc=0.0446 l2_miss_rate=89.55 cycles=6674911234 insns=297744491 l2_hit=12436867 l2_miss=106605112 iters=1816 sec=3.00
+=== BASELINE_RC profile=chase_miss pair=low run=1 tag=post rc=0 ===
+--- pair=high wb_t=12 wc_t=12 order=wb wc ---
+=== BASELINE profile=chase_miss pair=high run=1 tag=pre ===
+[victim] core=128 node=1 ws=4096 KB duration=3 warmup=1 chase=1
+[victim] warming up for 1 s …
+[victim] measuring for 3 s …
+[victim] interim: IPC=0.046  L2miss_rate=86.17%  iters=620
+[victim] interim: IPC=0.046  L2miss_rate=86.32%  iters=1238
+[victim] DONE: IPC=0.0456  L2_miss=86.21%
+VICTIM core=128 ipc=0.0456 l2_miss_rate=86.21 cycles=6679538227 insns=304302528 l2_hit=16772937 l2_miss=104891049 iters=1856 sec=3.00
+=== BASELINE_RC profile=chase_miss pair=high run=1 tag=pre rc=0 ===
+=== CORUN profile=chase_miss pair=high run=1 mode=wb_load threads=12 START ===
+[victim] core=128 node=1 ws=4096 KB duration=3 warmup=1 chase=1
+[victim] warming up for 1 s …
+[aggressor] mode=wb_load threads=12 bufsz=256MB/thread throttle=0 MBps
+[victim] measuring for 3 s …
+[aggressor] mapped 3072 MB CXL memory at 0x7224e5a00000
+[victim] interim: IPC=0.043  L2miss_rate=89.05%  iters=588
+[aggressor] GO
+[victim] interim: IPC=0.035  L2miss_rate=93.24%  iters=952
+[victim] DONE: IPC=0.0323  L2_miss=95.05%
+VICTIM core=128 ipc=0.0323 l2_miss_rate=95.05 cycles=6607790532 insns=213146252 l2_hit=4221523 l2_miss=80997211 iters=1300 sec=3.00
+thread  0  core 136  1.60 GB/s  (3.021 s)
+thread  1  core 137  1.58 GB/s  (3.052 s)
+thread  2  core 138  1.60 GB/s  (3.011 s)
+thread  3  core 139  1.67 GB/s  (3.058 s)
+thread  4  core 140  1.59 GB/s  (3.045 s)
+thread  5  core 141  1.58 GB/s  (3.051 s)
+thread  6  core 142  1.59 GB/s  (3.043 s)
+thread  7  core 143  1.58 GB/s  (3.051 s)
+thread  8  core 224  3.08 GB/s  (3.050 s)
+thread  9  core 225  3.08 GB/s  (3.049 s)
+thread 10  core 226  3.36 GB/s  (3.032 s)
+thread 11  core 227  3.30 GB/s  (3.014 s)
+---
+aggregate: 25.46 GB/s  (12 threads, mode=wb_load)
+RESULT mode=wb_load threads=12 bw_gbps=25.458 throttle=0
+=== CORUN_RC profile=chase_miss pair=high run=1 mode=wb_load threads=12 victim=0 aggressor=0 ===
+=== CORUN profile=chase_miss pair=high run=1 mode=wc_ntdqa threads=12 START ===
+[victim] core=128 node=1 ws=4096 KB duration=3 warmup=1 chase=1
+[victim] warming up for 1 s …
+[aggressor] mode=wc_ntdqa threads=12 bufsz=256MB/thread throttle=0 MBps
+[aggressor] mapped 3072 MB CXL memory at 0x77d9f2600000
+[victim] measuring for 3 s …
+[aggressor] GO
+[victim] interim: IPC=0.044  L2miss_rate=90.38%  iters=592
+[victim] interim: IPC=0.044  L2miss_rate=89.92%  iters=1195
+[victim] DONE: IPC=0.0442  L2_miss=89.77%
+VICTIM core=128 ipc=0.0442 l2_miss_rate=89.77 cycles=6664185605 insns=294301536 l2_hit=12039877 l2_miss=105625815 iters=1795 sec=3.00
+thread  0  core 136  1.66 GB/s  (3.080 s)
+thread  1  core 137  1.66 GB/s  (3.078 s)
+thread  2  core 138  1.66 GB/s  (3.078 s)
+thread  3  core 139  1.66 GB/s  (3.080 s)
+thread  4  core 140  1.65 GB/s  (3.083 s)
+thread  5  core 141  1.65 GB/s  (3.083 s)
+thread  6  core 142  1.65 GB/s  (3.083 s)
+thread  7  core 143  1.65 GB/s  (3.083 s)
+thread  8  core 224  2.92 GB/s  (3.033 s)
+thread  9  core 225  2.92 GB/s  (3.034 s)
+thread 10  core 226  2.92 GB/s  (3.038 s)
+thread 11  core 227  2.92 GB/s  (3.038 s)
+---
+aggregate: 24.72 GB/s  (12 threads, mode=wc_ntdqa)
+RESULT mode=wc_ntdqa threads=12 bw_gbps=24.724 throttle=0
+=== CORUN_RC profile=chase_miss pair=high run=1 mode=wc_ntdqa threads=12 victim=0 aggressor=0 ===
+=== BASELINE profile=chase_miss pair=high run=1 tag=post ===
+[victim] core=128 node=1 ws=4096 KB duration=3 warmup=1 chase=1
+[victim] warming up for 1 s …
+[victim] measuring for 3 s …
+[victim] interim: IPC=0.045  L2miss_rate=87.12%  iters=616
+[victim] interim: IPC=0.045  L2miss_rate=87.12%  iters=1232
+[victim] DONE: IPC=0.0453  L2_miss=87.12%
+VICTIM core=128 ipc=0.0453 l2_miss_rate=87.12 cycles=6678316591 insns=302498936 l2_hit=15574935 l2_miss=105368768 iters=1845 sec=3.00
+=== BASELINE_RC profile=chase_miss pair=high run=1 tag=post rc=0 ===
+=== BLOCK_END profile=chase_miss run=1 ===
+=== ENHANCED_PHASE2 DONE ===

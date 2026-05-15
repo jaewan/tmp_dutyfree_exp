@@ -1,0 +1,5 @@
+placement,wb_threads,wc_threads,bw_wb_mean,bw_wc_mean,l2hot_wb_delta_ipc_pct,chase_wb_delta_cpi_pct,chase_wc_delta_cpi_pct,chase_wb_minus_wc_delta_cpi_pct
+A_same_ccd,1,12,15.830,17.840,0.028,280.096,-0.414,280.510
+B_diff_ccd_same_socket,8,11,24.885,24.801,-0.036,28.854,1.281,27.574
+C_diff_socket,8,11,24.826,24.817,0.058,0.602,-0.020,0.623
+D_both_sockets,8,12,25.128,24.597,0.062,0.877,0.830,0.047

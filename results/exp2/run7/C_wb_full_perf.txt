@@ -1,0 +1,14 @@
+# started on Thu Mar  5 18:13:01 2026
+
+
+ Performance counter stats for process id '99901':
+
+    28,808,546,565      cycles                                                                  (42.87%)
+    15,142,207,169      instructions                     #    0.53  insn per cycle              (42.87%)
+     7,234,394,801      r7064                                                                   (42.84%)
+       256,160,632      r0864                                                                   (57.13%)
+       629,758,629      l2_pf_miss_l2_hit_l3.all                                                (71.42%)
+         1,510,209      l2_pf_miss_l2_l3.all                                                    (85.71%)
+
+      13.002008511 seconds time elapsed
+

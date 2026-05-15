@@ -1,0 +1,44 @@
+PHASE: CAT_WITHIN1PCT
+CMD: create resctrl groups + split ways on socket1
+CMD: baseline victim
+VICTIM core=128 ipc=0.9957 l2_miss_rate=0.00 cycles=44611625804 insns=44420076169 l2_hit=22061788846 l2_miss=781847 iters=7096971 sec=20.00
+CMD: victim + WB aggressor under CAT
+thread  0  core 136  3.10 GB/s  (18.038 s)
+thread  1  core 137  3.10 GB/s  (18.036 s)
+thread  2  core 138  3.15 GB/s  (18.043 s)
+thread  3  core 139  3.17 GB/s  (18.051 s)
+thread  4  core 140  3.08 GB/s  (18.040 s)
+thread  5  core 141  3.08 GB/s  (18.048 s)
+thread  6  core 142  3.08 GB/s  (18.032 s)
+thread  7  core 143  3.07 GB/s  (18.003 s)
+---
+aggregate: 24.80 GB/s  (8 threads, mode=wb_load)
+RESULT mode=wb_load threads=8 bw_gbps=24.805 throttle=0
+[victim] core=128 node=1 ws=64 KB duration=23 warmup=5 chase=0
+[victim] warming up for 5 s …
+[victim] measuring for 23 s …
+[victim] interim: IPC=0.996  L2miss_rate=0.00%  iters=354899
+[victim] interim: IPC=0.996  L2miss_rate=0.00%  iters=708800
+[victim] interim: IPC=0.996  L2miss_rate=0.00%  iters=1062270
+[victim] interim: IPC=0.996  L2miss_rate=0.00%  iters=1416308
+[victim] interim: IPC=0.996  L2miss_rate=0.00%  iters=1770433
+[victim] interim: IPC=0.996  L2miss_rate=0.00%  iters=2124405
+[victim] interim: IPC=0.996  L2miss_rate=0.00%  iters=2477622
+[victim] interim: IPC=0.996  L2miss_rate=0.00%  iters=2831518
+[victim] interim: IPC=0.996  L2miss_rate=0.00%  iters=3185528
+[victim] interim: IPC=0.996  L2miss_rate=0.00%  iters=3539563
+[victim] interim: IPC=0.996  L2miss_rate=0.00%  iters=3893501
+[victim] interim: IPC=0.996  L2miss_rate=0.00%  iters=4247614
+[victim] interim: IPC=0.996  L2miss_rate=0.00%  iters=4601620
+[victim] interim: IPC=0.996  L2miss_rate=0.00%  iters=4955689
+[victim] interim: IPC=0.996  L2miss_rate=0.00%  iters=5309769
+[victim] interim: IPC=0.996  L2miss_rate=0.00%  iters=5663813
+[victim] interim: IPC=0.996  L2miss_rate=0.00%  iters=6016855
+[victim] interim: IPC=0.996  L2miss_rate=0.00%  iters=6370947
+[victim] interim: IPC=0.996  L2miss_rate=0.00%  iters=6724882
+[victim] interim: IPC=0.996  L2miss_rate=0.00%  iters=7079372
+[victim] interim: IPC=0.996  L2miss_rate=0.00%  iters=7434327
+[victim] interim: IPC=0.996  L2miss_rate=0.00%  iters=7789277
+[victim] DONE: IPC=0.9956  L2_miss=0.00%
+VICTIM core=128 ipc=0.9956 l2_miss_rate=0.00 cycles=51198547596 insns=50973533505 l2_hit=25304007321 l2_miss=801523 iters=8144013 sec=23.00
+GATE_STATUS: completed

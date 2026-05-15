@@ -1,0 +1,12 @@
+# started on Sat Mar  7 08:29:55 2026
+
+
+ Performance counter stats for process id '166183':
+
+       28952334855      cycles                                                                  (59.99%)
+       27118496400      instructions                     #    0.94  insn per cycle              (59.99%)
+       12663713347      r7064                                                                   (60.00%)
+         612597278      r0864                                                                   (80.00%)
+
+      13.002075983 seconds time elapsed
+

@@ -1,0 +1,14 @@
+# started on Thu Mar  5 18:06:21 2026
+
+
+ Performance counter stats for process id '98888':
+
+    28,819,775,879      cycles                                                                  (42.86%)
+    10,819,146,839      instructions                     #    0.38  insn per cycle              (42.86%)
+     4,917,271,899      r7064                                                                   (42.85%)
+       375,264,107      r0864                                                                   (57.13%)
+       914,026,584      l2_pf_miss_l2_hit_l3.all                                                (71.42%)
+         1,436,732      l2_pf_miss_l2_l3.all                                                    (85.71%)
+
+      13.001890801 seconds time elapsed
+

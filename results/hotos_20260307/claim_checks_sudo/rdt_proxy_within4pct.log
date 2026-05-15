@@ -1,0 +1,26 @@
+PHASE: RDT_PROXY_WITHIN4PCT
+CMD: WB baseline throughput
+thread  0  core 136  3.05 GB/s  (15.028 s)
+thread  1  core 137  3.11 GB/s  (15.014 s)
+thread  2  core 138  3.17 GB/s  (15.053 s)
+thread  3  core 139  3.16 GB/s  (15.035 s)
+thread  4  core 140  3.09 GB/s  (15.042 s)
+thread  5  core 141  3.09 GB/s  (15.044 s)
+thread  6  core 142  3.09 GB/s  (15.044 s)
+thread  7  core 143  3.09 GB/s  (15.053 s)
+---
+aggregate: 24.82 GB/s  (8 threads, mode=wb_load)
+RESULT mode=wb_load threads=8 bw_gbps=24.823 throttle=0
+CMD: restrict to one L3 way on socket1 and rerun
+thread  0  core 136  3.07 GB/s  (15.021 s)
+thread  1  core 137  3.10 GB/s  (15.047 s)
+thread  2  core 138  3.16 GB/s  (15.023 s)
+thread  3  core 139  3.18 GB/s  (15.032 s)
+thread  4  core 140  3.09 GB/s  (15.036 s)
+thread  5  core 141  3.06 GB/s  (15.024 s)
+thread  6  core 142  3.09 GB/s  (15.021 s)
+thread  7  core 143  3.09 GB/s  (15.046 s)
+---
+aggregate: 24.81 GB/s  (8 threads, mode=wb_load)
+RESULT mode=wb_load threads=8 bw_gbps=24.814 throttle=0
+GATE_STATUS: completed

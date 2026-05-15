@@ -1,0 +1,11 @@
+CMD: getconf LEVEL2_CACHE_SIZE
+1048576
+CMD: lscpu | grep -E "L2|L3|Socket|Core|Model"
+Model name:                              AMD EPYC 9754 128-Core Processor
+Model:                                   160
+Core(s) per socket:                      128
+Socket(s):                               2
+L2 cache:                                256 MiB (256 instances)
+L3 cache:                                512 MiB (32 instances)
+CMD: cat /proc/cpuinfo | grep "model name" | head -1
+model name	: AMD EPYC 9754 128-Core Processor

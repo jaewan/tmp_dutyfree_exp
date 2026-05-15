@@ -1,0 +1,14 @@
+# started on Thu Mar  5 18:38:47 2026
+
+
+ Performance counter stats for process id '104042':
+
+    28,904,660,552      cycles                                                                  (42.86%)
+    27,255,838,098      instructions                     #    0.94  insn per cycle              (42.86%)
+    12,515,778,420      r7064                                                                   (42.85%)
+       786,758,669      r0864                                                                   (57.13%)
+     1,245,014,797      l2_pf_miss_l2_hit_l3.all                                                (71.41%)
+           646,608      l2_pf_miss_l2_l3.all                                                    (85.70%)
+
+      13.001836436 seconds time elapsed
+

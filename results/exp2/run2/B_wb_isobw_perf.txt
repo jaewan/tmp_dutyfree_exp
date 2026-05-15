@@ -1,0 +1,14 @@
+# started on Thu Mar  5 18:05:38 2026
+
+
+ Performance counter stats for process id '98775':
+
+    28,909,080,624      cycles                                                                  (42.86%)
+    26,827,440,958      instructions                     #    0.93  insn per cycle              (42.86%)
+    12,086,420,751      r7064                                                                   (42.86%)
+       931,719,861      r0864                                                                   (57.13%)
+     1,701,151,349      l2_pf_miss_l2_hit_l3.all                                                (71.42%)
+           672,510      l2_pf_miss_l2_l3.all                                                    (85.71%)
+
+      13.001901771 seconds time elapsed
+

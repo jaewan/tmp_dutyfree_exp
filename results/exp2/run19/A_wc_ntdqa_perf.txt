@@ -1,0 +1,14 @@
+# started on Thu Mar  5 18:30:21 2026
+
+
+ Performance counter stats for process id '102833':
+
+    28,926,326,654      cycles                                                                  (42.86%)
+    27,977,553,623      instructions                     #    0.97  insn per cycle              (42.87%)
+    13,586,750,117      r7064                                                                   (42.86%)
+       289,490,039      r0864                                                                   (57.14%)
+       410,382,605      l2_pf_miss_l2_hit_l3.all                                                (71.43%)
+           650,251      l2_pf_miss_l2_l3.all                                                    (85.71%)
+
+      13.001855264 seconds time elapsed
+

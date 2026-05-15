@@ -1,0 +1,4 @@
+[intra] victim_core=128 victim_node=1 ws_kb=4096 warmup=5 measure=15 seed=20269328 mode=wb_load agg_threads=2 per_mb=256
+VICTIM core=128 ipc=0.0352 l2_miss_rate=100.00 cycles=33426392624 insns=1176159297 l2_hit=820 l2_miss=470494182 iters=7178 sec=15.00 cycles_per_iter=4656783.592087 mode=pointer_chase
+AGGRESSOR mode=wb_load threads=2 bw_gbps=20.952 sec=14.99 bytes=314069483520
+RESULT mode=wb_load threads=2 bw_gbps=20.952 victim_cycles_per_iter=4656783.592087 seed=20269328

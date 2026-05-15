@@ -1,0 +1,22 @@
+=== PAPER CLAIMS SUITE START 2026-03-07T08:51:42+09:00 ===
+outdir=/home/domin/CoherenceTest/APNET/results/hotos_20260307_085142/paper_claims_suite reps=5 warmup=5 measure=15 seed=20260307
+victim core=128 node=1 agg_socket=1
+agg_cores_all=136,137,138,139,140,141,142,143,224,225,226,227,228,229,230,231
+wb_high_threads=8 wc_high_threads=11
+WARN: perf list has no amd_df; PMU phase may fail.
+=== PHASE PREFETCH START ===
+=== PHASE PREFETCH DONE ===
+=== PHASE CAT START ===
+CAT mask split: agg=0xff vic=0xff00
+=== PHASE CAT DONE ===
+=== PHASE RDT_PROXY START ===
+one-way mask: 0x1
+=== PHASE RDT_PROXY DONE ===
+=== PHASE PMU START ===
+events: amd_df/event=0x07,umask=0x38/ ; amd_l3/event=0x04,umask=0xff/
+=== PHASE PMU DONE ===
+=== PAPER CLAIMS SUITE DONE 2026-03-07T09:13:40+09:00 ===
+summary_csv=/home/domin/CoherenceTest/APNET/results/hotos_20260307_085142/paper_claims_suite/claims_summary.csv
+summary_md=/home/domin/CoherenceTest/APNET/results/hotos_20260307_085142/paper_claims_suite/claims_summary.md
+ledger=/home/domin/CoherenceTest/APNET/results/hotos_20260307_085142/paper_claims_suite/results_ledger.md
+scripts/run_paper_claims_suite.sh: line 1: grp: unbound variable

@@ -1,0 +1,14 @@
+# started on Thu Mar  5 18:33:50 2026
+
+
+ Performance counter stats for process id '103333':
+
+    28,811,655,175      cycles                                                                  (42.88%)
+    15,709,439,607      instructions                     #    0.55  insn per cycle              (42.87%)
+     7,544,791,191      r7064                                                                   (42.85%)
+       236,653,852      r0864                                                                   (57.12%)
+       591,910,243      l2_pf_miss_l2_hit_l3.all                                                (71.40%)
+         1,526,725      l2_pf_miss_l2_l3.all                                                    (85.69%)
+
+      13.002610745 seconds time elapsed
+
