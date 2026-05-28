@@ -1,5 +1,5 @@
 # Post-Setup Environment Snapshot
-## 2026-05-15T02:14:33+09:00
+## 2026-05-28T18:06:52+09:00
 
 | Setting | Value |
 |---------|-------|
@@ -8,51 +8,51 @@
 | randomize_va_space | 1 |
 | no_turbo | 1 |
 | cpu0 governor | performance |
-| cpu0 min_freq kHz | 1900000 |
-| cpu0 max_freq kHz | 1900000 |
-| cpu0 cur_freq kHz | 1900000 |
-| MSR 0x1A4 cpu0 baseline | 0 |
+| cpu0 min_freq kHz | 2800000 |
+| cpu0 max_freq kHz | 2800000 |
+| cpu0 cur_freq kHz | 2800024 |
+| MSR 0x1A4 cpu0 baseline | 20 |
 | node0 2M hugepages | 24576 |
 | node0 free 2M hugepages | 24576 |
 | node2 present | YES |
 | node2 2M hugepages | 24576 |
 | node2 free 2M hugepages | 24576 |
-| stream_wb_nopf caps | /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/aggressor/stream_wb_nopf cap_sys_rawio=ep |
-| pointer_chase caps | /home/domin/CoherenceTest/APNET/directory-tax-spr/bench/victim/pointer_chase cap_sys_rawio=ep |
+| stream_wb_nopf caps | /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wb_nopf cap_sys_rawio=ep |
+| pointer_chase caps | /home/jb/tmp_dutyfree_exp/intel_experiments/bench/victim/pointer_chase cap_sys_rawio=ep |
 
 ## MSR 0x1A4 Baseline
 ```
-# Baseline MSR 0x1A4 per core — captured 2026-05-15T02:14:30+09:00
-cpu0  : 0
-cpu1  : 0
-cpu2  : 0
-cpu3  : 0
-cpu4  : 0
-cpu5  : 0
-cpu6  : 0
-cpu7  : 0
-cpu8  : 0
-cpu9  : 0
-cpu10 : 0
-cpu11 : 0
-cpu12 : 0
-cpu13 : 0
-cpu14 : 0
-cpu15 : 0
-cpu16 : 0
-cpu17 : 0
-cpu18 : 0
-cpu19 : 0
-cpu20 : 0
-cpu21 : 0
-cpu22 : 0
-cpu23 : 0
-cpu24 : 0
-cpu25 : 0
-cpu26 : 0
-cpu27 : 0
-cpu28 : 0
-cpu29 : 0
-cpu30 : 0
-cpu31 : 0
+# Baseline MSR 0x1A4 per core — captured 2026-05-28T18:06:50+09:00
+cpu0  : 20
+cpu1  : 20
+cpu2  : 20
+cpu3  : 20
+cpu4  : 20
+cpu5  : 20
+cpu6  : 20
+cpu7  : 20
+cpu8  : 20
+cpu9  : 20
+cpu10 : 20
+cpu11 : 20
+cpu12 : 20
+cpu13 : 20
+cpu14 : 20
+cpu15 : 20
+cpu16 : 20
+cpu17 : 20
+cpu18 : 20
+cpu19 : 20
+cpu20 : 20
+cpu21 : 20
+cpu22 : 20
+cpu23 : 20
+cpu24 : 20
+cpu25 : 20
+cpu26 : 20
+cpu27 : 20
+cpu28 : 20
+cpu29 : 20
+cpu30 : 20
+cpu31 : 20
 ```

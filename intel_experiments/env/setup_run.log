@@ -324,3 +324,214 @@ Setting cpu: 255
 
 === setup.sh complete ===
 Next: run env/validate.sh to confirm all conditions are met
+=== directory-tax-spr setup.sh ===
+Date: 2026-05-26T22:12:07+09:00
+Running as: uid=0(root) gid=0(root) groups=0(root)
+Target frequency: 3000 MHz
+Experiment user: jb
+Project root: /home/jb/tmp_dutyfree_exp/intel_experiments
+
+=== Step 1: msr-tools ===
+  msr-tools already present: /usr/sbin/rdmsr
+=== Step 2: msr kernel module ===
+  msr module loaded
+=== Step 3: MSR device permissions ===
+  /dev/cpu/*/msr: owner=jb, mode=0660
+=== Step 4: Baseline MSR 0x1A4 (prefetcher state, as root) ===
+  Full dump: /home/jb/tmp_dutyfree_exp/intel_experiments/env/baseline_msr_1a4.txt
+# Baseline MSR 0x1A4 per core — captured 2026-05-26T22:12:07+09:00
+cpu0  : 20
+cpu1  : 20
+cpu2  : 20
+  CPU0 baseline MSR 0x1A4 = 20
+  WARNING: CPU0 MSR 0x1A4 = 20 (expected 0 — some prefetchers BIOS-disabled)
+=== Step 5: perf_event_paranoid ===
+  perf_event_paranoid = -1
+=== Step 6: Disable turbo ===
+  intel_pstate/no_turbo = 1
+=== Step 7: CPU frequency lock to 3000 MHz ===
+Setting cpu: 127
+  governor set: OK
+Setting cpu: 127
+  frequency range set: OK
+  cpu0 governor=performance, cur_freq=2800000 kHz
+=== Step 7b: HWP energy-performance preference ===
+  HWP energy_performance_preference set to 'performance' on 128 policies
+  cpu0 freq after HWP set: 2800000 kHz
+=== Step 8: NUMA balancing ===
+  numa_balancing = 0
+=== Step 9: ASLR ===
+  randomize_va_space = 1
+=== Step 10: RDPMC ===
+  rdpmc = 2
+=== Step 11: Transparent Hugepages ===
+  THP = always [madvise] never
+=== Step 12: 2MB hugepages on NUMA node 0 ===
+  Node 0 2MB hugepages before: 1024
+  Node 0 2MB hugepages after: 24576
+  2M hugepages system total: 25600
+=== Step 12b: Phase 19 CXL hugepages on NUMA node 2 ===
+  WARNING: NUMA node 2 not present; Phase 19 CXL experiments cannot run
+  2M hugepages system total after Phase 19 reservation: 25600
+  Override targets with: sudo env NODE0_HP_TARGET=16384 NODE2_HP_TARGET=16384 ./env/setup.sh
+=== Step 12c: resctrl (CAT/MBA) ===
+  resctrl mounted at /sys/fs/resctrl
+  L3 cbm_mask=7fff min_cbm_bits=1 | MB min_bandwidth=10 gran=10
+=== Step 12d: optional 1GB hugepages on NUMA node 0 ===
+  Skipped (set NODE0_HP1G_TARGET=N to reserve N×1GB pages for Phase 1c)
+=== Step 13: setcap CAP_SYS_RAWIO for MSR-accessing binaries ===
+  /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wb_nopf: /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wb_nopf cap_sys_rawio=ep
+  setcap: OK — MSR access will work for user jb
+  /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wc_nopf: /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wc_nopf cap_sys_rawio=ep
+  setcap: OK — MSR access will work for user jb
+  /home/jb/tmp_dutyfree_exp/intel_experiments/bench/victim/pointer_chase: /home/jb/tmp_dutyfree_exp/intel_experiments/bench/victim/pointer_chase cap_sys_rawio=ep
+  setcap: OK — MSR access will work for user jb
+  /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/forced_turnover: /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/forced_turnover cap_sys_rawio=ep
+  setcap: OK — MSR access will work for user jb
+=== Step 14: Post-setup snapshot ===
+  Written: /home/jb/tmp_dutyfree_exp/intel_experiments/env/env_report_post_setup.md
+
+=== setup.sh complete ===
+Next: run env/validate.sh to confirm all conditions are met
+=== directory-tax-spr setup.sh ===
+Date: 2026-05-27T23:43:33+09:00
+Running as: uid=0(root) gid=0(root) groups=0(root)
+Target frequency: 3000 MHz
+Experiment user: jb
+Project root: /home/jb/tmp_dutyfree_exp/intel_experiments
+
+=== Step 1: msr-tools ===
+  msr-tools already present: /usr/sbin/rdmsr
+=== Step 2: msr kernel module ===
+  msr module loaded
+=== Step 3: MSR device permissions ===
+  /dev/cpu/*/msr: owner=jb, mode=0660
+=== Step 4: Baseline MSR 0x1A4 (prefetcher state, as root) ===
+  Full dump: /home/jb/tmp_dutyfree_exp/intel_experiments/env/baseline_msr_1a4.txt
+# Baseline MSR 0x1A4 per core — captured 2026-05-27T23:43:34+09:00
+cpu0  : 20
+cpu1  : 20
+cpu2  : 20
+  CPU0 baseline MSR 0x1A4 = 20
+  WARNING: CPU0 MSR 0x1A4 = 20 (expected 0 — some prefetchers BIOS-disabled)
+=== Step 5: perf_event_paranoid ===
+  perf_event_paranoid = -1
+=== Step 6: Disable turbo ===
+  intel_pstate/no_turbo = 1
+=== Step 7: CPU frequency lock to 3000 MHz ===
+Setting cpu: 127
+  governor set: OK
+Setting cpu: 127
+  frequency range set: OK
+  cpu0 governor=performance, cur_freq=2800000 kHz
+=== Step 7b: HWP energy-performance preference ===
+  HWP energy_performance_preference set to 'performance' on 128 policies
+  cpu0 freq after HWP set: 2412636 kHz
+=== Step 8: NUMA balancing ===
+  numa_balancing = 0
+=== Step 9: ASLR ===
+  randomize_va_space = 1
+=== Step 10: RDPMC ===
+  rdpmc = 2
+=== Step 11: Transparent Hugepages ===
+  THP = always [madvise] never
+=== Step 12: 2MB hugepages on NUMA node 0 ===
+  Node 0 2MB hugepages before: 683
+  Node 0 2MB hugepages after: 24576
+  2M hugepages system total: 34816
+=== Step 12b: Phase 19 CXL hugepages on NUMA node 2 ===
+  Node 2 present: cpulist='', size=262144 MB
+  Node 2 2MB hugepages before: 8192
+  Node 2 2MB hugepages after: 24576 (free=24576)
+  2M hugepages system total after Phase 19 reservation: 51200
+  Override targets with: sudo env NODE0_HP_TARGET=16384 NODE2_HP_TARGET=16384 ./env/setup.sh
+=== Step 12c: resctrl (CAT/MBA) ===
+  resctrl mounted at /sys/fs/resctrl
+  L3 cbm_mask=7fff min_cbm_bits=1 | MB min_bandwidth=10 gran=10
+=== Step 12d: optional 1GB hugepages on NUMA node 0 ===
+  Skipped (set NODE0_HP1G_TARGET=N to reserve N×1GB pages for Phase 1c)
+=== Step 13: setcap CAP_SYS_RAWIO for MSR-accessing binaries ===
+  /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wb_nopf: /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wb_nopf cap_sys_rawio=ep
+  setcap: OK — MSR access will work for user jb
+  /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wc_nopf: /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wc_nopf cap_sys_rawio=ep
+  setcap: OK — MSR access will work for user jb
+  /home/jb/tmp_dutyfree_exp/intel_experiments/bench/victim/pointer_chase: /home/jb/tmp_dutyfree_exp/intel_experiments/bench/victim/pointer_chase cap_sys_rawio=ep
+  setcap: OK — MSR access will work for user jb
+  /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/forced_turnover: /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/forced_turnover cap_sys_rawio=ep
+  setcap: OK — MSR access will work for user jb
+=== Step 14: Post-setup snapshot ===
+  Written: /home/jb/tmp_dutyfree_exp/intel_experiments/env/env_report_post_setup.md
+
+=== setup.sh complete ===
+Next: run env/validate.sh to confirm all conditions are met
+=== directory-tax-spr setup.sh ===
+Date: 2026-05-28T18:06:50+09:00
+Running as: uid=0(root) gid=0(root) groups=0(root)
+Target frequency: 3000 MHz
+Experiment user: jb
+Project root: /home/jb/tmp_dutyfree_exp/intel_experiments
+
+=== Step 1: msr-tools ===
+  msr-tools already present: /usr/sbin/rdmsr
+=== Step 2: msr kernel module ===
+  msr module loaded
+=== Step 3: MSR device permissions ===
+  /dev/cpu/*/msr: owner=jb, mode=0660
+=== Step 4: Baseline MSR 0x1A4 (prefetcher state, as root) ===
+  Full dump: /home/jb/tmp_dutyfree_exp/intel_experiments/env/baseline_msr_1a4.txt
+# Baseline MSR 0x1A4 per core — captured 2026-05-28T18:06:50+09:00
+cpu0  : 20
+cpu1  : 20
+cpu2  : 20
+  CPU0 baseline MSR 0x1A4 = 20
+  WARNING: CPU0 MSR 0x1A4 = 20 (expected 0 — some prefetchers BIOS-disabled)
+=== Step 5: perf_event_paranoid ===
+  perf_event_paranoid = -1
+=== Step 6: Disable turbo ===
+  intel_pstate/no_turbo = 1
+=== Step 7: CPU frequency lock to 3000 MHz ===
+Setting cpu: 127
+  governor set: OK
+Setting cpu: 127
+  frequency range set: OK
+  cpu0 governor=performance, cur_freq=2800000 kHz
+=== Step 7b: HWP energy-performance preference ===
+  HWP energy_performance_preference set to 'performance' on 128 policies
+  cpu0 freq after HWP set: 2799584 kHz
+=== Step 8: NUMA balancing ===
+  numa_balancing = 0
+=== Step 9: ASLR ===
+  randomize_va_space = 1
+=== Step 10: RDPMC ===
+  rdpmc = 2
+=== Step 11: Transparent Hugepages ===
+  THP = always [madvise] never
+=== Step 12: 2MB hugepages on NUMA node 0 ===
+  Node 0 2MB hugepages before: 24576
+  Node 0 already has 24576 hugepages
+  2M hugepages system total: 51200
+=== Step 12b: Phase 19 CXL hugepages on NUMA node 2 ===
+  Node 2 present: cpulist='', size=262144 MB
+  Node 2 2MB hugepages before: 24576
+  Node 2 already has 24576 hugepages (free=24576)
+  2M hugepages system total after Phase 19 reservation: 51200
+  Override targets with: sudo env NODE0_HP_TARGET=16384 NODE2_HP_TARGET=16384 ./env/setup.sh
+=== Step 12c: resctrl (CAT/MBA) ===
+  resctrl already mounted at /sys/fs/resctrl
+  L3 cbm_mask=7fff min_cbm_bits=1 | MB min_bandwidth=10 gran=10
+=== Step 12d: optional 1GB hugepages on NUMA node 2 (CXL) ===
+  Skipped (set NODE_HP1G_TARGET=N to reserve N×1GB pages for Phase 1c)
+=== Step 13: setcap CAP_SYS_RAWIO for MSR-accessing binaries ===
+  /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wb_nopf: /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wb_nopf cap_sys_rawio=ep
+  setcap: OK — MSR access will work for user jb
+  /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wc_nopf: /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wc_nopf cap_sys_rawio=ep
+  setcap: OK — MSR access will work for user jb
+  /home/jb/tmp_dutyfree_exp/intel_experiments/bench/victim/pointer_chase: /home/jb/tmp_dutyfree_exp/intel_experiments/bench/victim/pointer_chase cap_sys_rawio=ep
+  setcap: OK — MSR access will work for user jb
+  /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/forced_turnover: /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/forced_turnover cap_sys_rawio=ep
+  setcap: OK — MSR access will work for user jb
+=== Step 14: Post-setup snapshot ===
+  Written: /home/jb/tmp_dutyfree_exp/intel_experiments/env/env_report_post_setup.md
+
+=== setup.sh complete ===
+Next: run env/validate.sh to confirm all conditions are met

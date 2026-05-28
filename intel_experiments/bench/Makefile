@@ -13,6 +13,7 @@ VICTIM_BIN  = victim/pointer_chase
 AGGR_BINS   = aggressor/stream_wb \
               aggressor/stream_wb_nopf \
               aggressor/stream_wc \
+              aggressor/stream_wc_nopf \
               aggressor/stream_nt \
               aggressor/random_chase \
               aggressor/forced_turnover
@@ -35,6 +36,9 @@ aggressor/stream_wb_nopf: aggressor/stream_wb_nopf.c $(LIB_OBJS)
 	$(CC) $(CFLAGS) $^ -o $@ $(LDFLAGS)
 
 aggressor/stream_wc: aggressor/stream_wc.c $(LIB_OBJS)
+	$(CC) $(CFLAGS) $^ -o $@ $(LDFLAGS)
+
+aggressor/stream_wc_nopf: aggressor/stream_wc_nopf.c $(LIB_OBJS)
 	$(CC) $(CFLAGS) $^ -o $@ $(LDFLAGS)
 
 aggressor/stream_nt: aggressor/stream_nt.c $(LIB_OBJS)

@@ -65,6 +65,8 @@ int main(int argc, char **argv)
     size_t region_gb   = DEFAULT_REGION_GB;
     double duration_sec = DEFAULT_DURATION;
     int    verify_msr  = 1;   /* check that MSR 0x1A4 == 0 (prefetcher on) */
+    size_t page_kb     = 2048; /* backing page size: 4, 2048, or 1048576 */
+    int    readonly    = 0;    /* mprotect(PROT_READ) after touch (Streaming epoch proxy) */
 
     static struct option opts[] = {
         {"cpu",         required_argument, 0, 'c'},
@@ -72,16 +74,20 @@ int main(int argc, char **argv)
         {"region-gb",   required_argument, 0, 'r'},
         {"duration-sec",required_argument, 0, 'd'},
         {"no-verify",   no_argument,       0, 'v'},
+        {"page-kb",     required_argument, 0, 'P'},
+        {"readonly",    no_argument,       0, 'O'},
         {0, 0, 0, 0}
     };
     int opt, idx;
-    while ((opt = getopt_long(argc, argv, "c:n:r:d:v", opts, &idx)) != -1) {
+    while ((opt = getopt_long(argc, argv, "c:n:r:d:vP:O", opts, &idx)) != -1) {
         switch (opt) {
             case 'c': cpu        = atoi(optarg); break;
             case 'n': node       = atoi(optarg); break;
             case 'r': region_gb  = (size_t)atol(optarg); break;
             case 'd': duration_sec = atof(optarg); break;
             case 'v': verify_msr = 0; break;
+            case 'P': page_kb    = (size_t)atol(optarg); break;
+            case 'O': readonly   = 1; break;
             default: exit(1);
         }
     }
@@ -97,23 +103,36 @@ int main(int argc, char **argv)
         if (msr_read(cpu, 0x1A4, &msr_val) < 0) {
             fprintf(stderr, "stream_wb: WARNING: cannot read MSR 0x1A4 on cpu%d "
                     "(run sudo setup.sh)\n", cpu);
-        } else if (msr_val != 0) {
+        } else if ((msr_val & 0xF) != 0) {
+            /* Only bits[3:0] are the four HW prefetcher disable bits; higher
+             * bits (e.g. 0x20) may be set by BIOS and do not disable prefetch. */
             fprintf(stderr, "stream_wb: ERROR: MSR 0x1A4 cpu%d = 0x%lx "
-                    "(expected 0x0 for condition A — prefetcher ON)\n", cpu, msr_val);
+                    "(bits[3:0]!=0 — a prefetcher is disabled; expected ON)\n",
+                    cpu, msr_val);
             fprintf(stderr, "  If running condition B, use stream_wb_nopf instead\n");
             exit(1);
         }
     }
 
     size_t region_size = region_gb * 1024UL * 1024UL * 1024UL;
-    void *buf = hugepage_alloc(region_size, node);
+    void *buf = hugepage_alloc_sz(region_size, node, page_kb);
     if (buf == MAP_FAILED) exit(1);
 
     /* Touch all pages (MAP_POPULATE handles this but explicit touch is safer) */
     memset(buf, 0xAB, region_size);
 
-    fprintf(stderr, "stream_wb: cpu=%d node=%d region=%zu GB duration=%.0f s\n",
-            cpu, node, region_gb, duration_sec);
+    /* Streaming epoch proxy: lock the region read-only before streaming.
+     * The producer has published; consumers map it PROT_READ for the epoch. */
+    if (readonly) {
+        if (mprotect(buf, region_size, PROT_READ) < 0) {
+            perror("stream_wb: mprotect(PROT_READ)");
+            exit(1);
+        }
+    }
+
+    fprintf(stderr, "stream_wb: cpu=%d node=%d region=%zu GB duration=%.0f s "
+            "page_kb=%zu readonly=%d\n",
+            cpu, node, region_gb, duration_sec, page_kb, readonly);
 
     struct timespec t0, t1;
     clock_gettime(CLOCK_MONOTONIC, &t0);
@@ -147,8 +166,10 @@ int main(int argc, char **argv)
 
     printf("{\"cpu\": %d, \"condition\": \"A_wb_pf\", \"region_gb\": %zu, "
            "\"iterations\": %d, \"total_bytes\": %lu, "
-           "\"elapsed_sec\": %.3f, \"avg_bw_gbps\": %.3f}\n",
-           cpu, region_gb, iteration, total_bytes, elapsed, avg_bw);
+           "\"elapsed_sec\": %.3f, \"avg_bw_gbps\": %.3f, "
+           "\"page_kb\": %zu, \"readonly\": %s}\n",
+           cpu, region_gb, iteration, total_bytes, elapsed, avg_bw,
+           page_kb, readonly ? "true" : "false");
 
     hugepage_free(buf, region_size);
     return 0;

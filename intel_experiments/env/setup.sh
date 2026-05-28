@@ -225,15 +225,58 @@ HP2M_SYS=$(cat /sys/kernel/mm/hugepages/hugepages-2048kB/nr_hugepages 2>/dev/nul
 tlog "  2M hugepages system total after Phase 19 reservation: $HP2M_SYS"
 tlog "  Override targets with: sudo env NODE0_HP_TARGET=16384 NODE2_HP_TARGET=16384 ./env/setup.sh"
 
+# ── 12c. Mount resctrl for CAT/MBA (Mitigation Trap Plan Phase 2/3) ──────────
+tlog "=== Step 12c: resctrl (CAT/MBA) ==="
+if mountpoint -q /sys/fs/resctrl; then
+    tlog "  resctrl already mounted at /sys/fs/resctrl"
+elif mount -t resctrl resctrl /sys/fs/resctrl 2>>"$LOG"; then
+    tlog "  resctrl mounted at /sys/fs/resctrl"
+else
+    tlog "  WARNING: could not mount resctrl (CAT/MBA Phase 2/3 will be unavailable)"
+    tlog "  Check CPU support: grep -o -E 'cat_l3|mba' /proc/cpuinfo | sort -u"
+fi
+if mountpoint -q /sys/fs/resctrl; then
+    L3_CBM=$(cat /sys/fs/resctrl/info/L3/cbm_mask 2>/dev/null || echo "N/A")
+    L3_MINBITS=$(cat /sys/fs/resctrl/info/L3/min_cbm_bits 2>/dev/null || echo "N/A")
+    MB_MIN=$(cat /sys/fs/resctrl/info/MB/min_bandwidth 2>/dev/null || echo "N/A")
+    MB_GRAN=$(cat /sys/fs/resctrl/info/MB/bandwidth_gran 2>/dev/null || echo "N/A")
+    tlog "  L3 cbm_mask=$L3_CBM min_cbm_bits=$L3_MINBITS | MB min_bandwidth=$MB_MIN gran=$MB_GRAN"
+fi
+
+# ── 12d. Optional 1GB hugepages on the CXL node (Phase 1c TLB isolation) ─────
+# Phase 1c's aggressor allocates its stream buffer on the CXL node, so reserve
+# the 1GB pages there. Override the node with CXL_NODE (default 2).
+HP1G_NODE="${CXL_NODE:-2}"
+tlog "=== Step 12d: optional 1GB hugepages on NUMA node $HP1G_NODE (CXL) ==="
+HP1G_TARGET="${NODE_HP1G_TARGET:-0}"
+HP1G_PATH="/sys/devices/system/node/node${HP1G_NODE}/hugepages/hugepages-1048576kB/nr_hugepages"
+if [[ "$HP1G_TARGET" -gt 0 ]]; then
+    if [[ -f "$HP1G_PATH" ]]; then
+        echo "$HP1G_TARGET" > "$HP1G_PATH" 2>>"$LOG" || true
+        sleep 2
+        AFTER_HP1G=$(cat "$HP1G_PATH")
+        tlog "  Node $HP1G_NODE 1GB hugepages: requested $HP1G_TARGET, got $AFTER_HP1G"
+        if [[ "$AFTER_HP1G" -lt "$HP1G_TARGET" ]]; then
+            tlog "  WARNING: 1GB reservation short (needs contiguous memory; reboot may help)"
+            tlog "  Phase 1c will skip the 1GB point if unavailable"
+        fi
+    else
+        tlog "  WARNING: 1GB hugepage sysfs not found (pdpe1gb unsupported?)"
+    fi
+else
+    tlog "  Skipped (set NODE_HP1G_TARGET=N to reserve N×1GB pages for Phase 1c)"
+fi
+
 # ── 13. Grant CAP_SYS_RAWIO to MSR-accessing benchmark binaries ──────────────
 # Rationale: Linux MSR driver requires CAP_SYS_RAWIO regardless of device file
 # permissions. setcap+ep grants this capability when any user exec's the binary.
 # This is required for condition B and victim prefetcher ablation via MSR 0x1A4.
 tlog "=== Step 13: setcap CAP_SYS_RAWIO for MSR-accessing binaries ==="
 NOPF_BIN="$PROJECT_ROOT/bench/aggressor/stream_wb_nopf"
+WC_NOPF_BIN="$PROJECT_ROOT/bench/aggressor/stream_wc_nopf"
 VICTIM_BIN="$PROJECT_ROOT/bench/victim/pointer_chase"
 TURNOVER_BIN="$PROJECT_ROOT/bench/aggressor/forced_turnover"
-for MSR_BIN in "$NOPF_BIN" "$VICTIM_BIN" "$TURNOVER_BIN"; do
+for MSR_BIN in "$NOPF_BIN" "$WC_NOPF_BIN" "$VICTIM_BIN" "$TURNOVER_BIN"; do
     if [[ -f "$MSR_BIN" ]]; then
         setcap cap_sys_rawio+ep "$MSR_BIN"
         CAPS=$(getcap "$MSR_BIN" 2>/dev/null || echo "FAIL")

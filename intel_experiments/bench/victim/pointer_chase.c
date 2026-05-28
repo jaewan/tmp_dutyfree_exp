@@ -142,6 +142,8 @@ int main(int argc, char **argv)
     int    trials    = DEFAULT_TRIALS;
     double run_sec   = DEFAULT_SEC;
     int    pf_disable = 0;
+    size_t page_kb   = 2048;  /* backing page size: 4, 2048, or 1048576 */
+    int    warmup_trials = 0; /* discarded trials to reach steady-state LLC */
 
     static struct option opts[] = {
         {"cpu",        required_argument, 0, 'c'},
@@ -150,11 +152,13 @@ int main(int argc, char **argv)
         {"trials",     required_argument, 0, 't'},
         {"run-sec",    required_argument, 0, 's'},
         {"pf-disable", no_argument,       0, 'p'},
+        {"page-kb",    required_argument, 0, 'P'},
+        {"warmup-trials", required_argument, 0, 'W'},
         {0, 0, 0, 0}
     };
 
     int opt, idx;
-    while ((opt = getopt_long(argc, argv, "c:n:w:t:s:p", opts, &idx)) != -1) {
+    while ((opt = getopt_long(argc, argv, "c:n:w:t:s:pP:W:", opts, &idx)) != -1) {
         switch (opt) {
             case 'c': cpu       = atoi(optarg); break;
             case 'n': node      = atoi(optarg); break;
@@ -162,22 +166,24 @@ int main(int argc, char **argv)
             case 't': trials    = atoi(optarg); break;
             case 's': run_sec   = atof(optarg); break;
             case 'p': pf_disable = 1; break;
+            case 'P': page_kb   = (size_t)atol(optarg); break;
+            case 'W': warmup_trials = atoi(optarg); break;
             default: fprintf(stderr, "usage: pointer_chase [options]\n"); exit(1);
         }
     }
 
-    /* Align WSS to 2MB hugepage boundary */
-    const size_t HP = 2 * 1024 * 1024;
+    /* Align WSS up to the backing page boundary */
+    const size_t HP = page_kb * 1024;
     wss = (wss + HP - 1) & ~(HP - 1);
 
     pin_to_cpu(cpu);
     srand(42);
 
     fprintf(stderr, "victim: cpu=%d node=%d wss=%zu MB trials=%d "
-                    "run_sec=%.1f pf_disable=%d\n",
-            cpu, node, wss >> 20, trials, run_sec, pf_disable);
+                    "run_sec=%.1f pf_disable=%d page_kb=%zu\n",
+            cpu, node, wss >> 20, trials, run_sec, pf_disable, page_kb);
 
-    void *buf = hugepage_alloc(wss, node);
+    void *buf = hugepage_alloc_sz(wss, node, page_kb);
     if (buf == MAP_FAILED) exit(1);
 
     uint64_t saved_msr = (uint64_t)-1;
@@ -193,6 +199,20 @@ int main(int argc, char **argv)
     uint64_t tsc_hz = estimate_tsc_hz();
     fprintf(stderr, "victim: TSC frequency estimate: %lu Hz (%.2f GHz)\n",
             tsc_hz, tsc_hz * 1e-9);
+
+    /* Warm-up trials (discarded): under aggressor pressure the victim's WSS
+     * starts fully evicted, so the first ~10 measured trials would otherwise
+     * decay from a cold transient (tax ~200% → steady state). Run and discard
+     * `warmup_trials` passes first so measurement starts at steady state. */
+    for (int w = 0; w < warmup_trials; w++) {
+        srand(42 + w);
+        build_random_list(buf, wss);
+        uint64_t wt = 0, wl = 0;
+        run_trial(buf, run_sec, &wt, &wl, tsc_hz);
+        usleep(50000);
+    }
+    if (warmup_trials > 0)
+        fprintf(stderr, "victim: discarded %d warm-up trial(s)\n", warmup_trials);
 
     /* Print JSON array header */
     printf("[\n");

@@ -1,0 +1,60 @@
+[15:05:13.543] env check: PASS
+[15:05:13.543] === Phase 1(a)+(b): prefetch & software-streaming baselines (8 aggressor cores) ===
+[15:05:13.543]   victim: numactl --physcpubind=32 --membind=1 /home/jb/tmp_dutyfree_exp/intel_experiments/bench/victim/pointer_chase --cpu 32 --node 1 --wss 33554432 --trials 10 --run-sec 2.00 --warmup-trials 3
+[15:05:40.475] quiescent baseline: 80.5 cycles/load
+[15:05:40.475] 
+-- condition A (wb_pf_on), readonly=True --
+[15:05:40.475]   aggressor [A] cpu=33: numactl --physcpubind=33 --membind=2 /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wb --cpu 33 --node 2 --region-gb 1 --duration-sec 106 --readonly
+[15:05:40.476]   aggressor [A] cpu=34: numactl --physcpubind=34 --membind=2 /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wb --cpu 34 --node 2 --region-gb 1 --duration-sec 106 --readonly
+[15:05:40.476]   aggressor [A] cpu=35: numactl --physcpubind=35 --membind=2 /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wb --cpu 35 --node 2 --region-gb 1 --duration-sec 106 --readonly
+[15:05:40.477]   aggressor [A] cpu=36: numactl --physcpubind=36 --membind=2 /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wb --cpu 36 --node 2 --region-gb 1 --duration-sec 106 --readonly
+[15:05:40.478]   aggressor [A] cpu=37: numactl --physcpubind=37 --membind=2 /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wb --cpu 37 --node 2 --region-gb 1 --duration-sec 106 --readonly
+[15:05:40.478]   aggressor [A] cpu=38: numactl --physcpubind=38 --membind=2 /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wb --cpu 38 --node 2 --region-gb 1 --duration-sec 106 --readonly
+[15:05:40.478]   aggressor [A] cpu=39: numactl --physcpubind=39 --membind=2 /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wb --cpu 39 --node 2 --region-gb 1 --duration-sec 106 --readonly
+[15:05:40.479]   aggressor [A] cpu=40: numactl --physcpubind=40 --membind=2 /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wb --cpu 40 --node 2 --region-gb 1 --duration-sec 106 --readonly
+[15:05:40.479]   warmup: sleeping 8 s for aggressors to stabilize
+[15:05:48.487]   victim: numactl --physcpubind=32 --membind=1 /home/jb/tmp_dutyfree_exp/intel_experiments/bench/victim/pointer_chase --cpu 32 --node 1 --wss 33554432 --trials 30 --run-sec 2.00 --warmup-trials 12
+[15:07:17.438]   agg_bw=23.5 GB/s, victim tax mean=12.8%
+[15:07:17.438] 
+-- condition B (wb_pf_off), readonly=False --
+[15:07:17.438]   aggressor [B] cpu=33: numactl --physcpubind=33 --membind=2 /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wb_nopf --cpu 33 --node 2 --region-gb 1 --duration-sec 106
+[15:07:17.439]   aggressor [B] cpu=34: numactl --physcpubind=34 --membind=2 /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wb_nopf --cpu 34 --node 2 --region-gb 1 --duration-sec 106
+[15:07:17.439]   aggressor [B] cpu=35: numactl --physcpubind=35 --membind=2 /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wb_nopf --cpu 35 --node 2 --region-gb 1 --duration-sec 106
+[15:07:17.440]   aggressor [B] cpu=36: numactl --physcpubind=36 --membind=2 /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wb_nopf --cpu 36 --node 2 --region-gb 1 --duration-sec 106
+[15:07:17.440]   aggressor [B] cpu=37: numactl --physcpubind=37 --membind=2 /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wb_nopf --cpu 37 --node 2 --region-gb 1 --duration-sec 106
+[15:07:17.441]   aggressor [B] cpu=38: numactl --physcpubind=38 --membind=2 /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wb_nopf --cpu 38 --node 2 --region-gb 1 --duration-sec 106
+[15:07:17.441]   aggressor [B] cpu=39: numactl --physcpubind=39 --membind=2 /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wb_nopf --cpu 39 --node 2 --region-gb 1 --duration-sec 106
+[15:07:17.442]   aggressor [B] cpu=40: numactl --physcpubind=40 --membind=2 /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wb_nopf --cpu 40 --node 2 --region-gb 1 --duration-sec 106
+[15:07:17.442]   warmup: sleeping 8 s for aggressors to stabilize
+[15:07:25.450]   victim: numactl --physcpubind=32 --membind=1 /home/jb/tmp_dutyfree_exp/intel_experiments/bench/victim/pointer_chase --cpu 32 --node 1 --wss 33554432 --trials 30 --run-sec 2.00 --warmup-trials 12
+[15:08:54.449]   agg_bw=23.5 GB/s, victim tax mean=11.2%
+[15:08:54.449] 
+-- condition C (wc_movntdqa), readonly=False --
+[15:08:54.449]   aggressor [C] cpu=33: numactl --physcpubind=33 --membind=2 /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wc --cpu 33 --node 2 --region-gb 1 --duration-sec 106
+[15:08:54.449]   aggressor [C] cpu=34: numactl --physcpubind=34 --membind=2 /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wc --cpu 34 --node 2 --region-gb 1 --duration-sec 106
+[15:08:54.450]   aggressor [C] cpu=35: numactl --physcpubind=35 --membind=2 /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wc --cpu 35 --node 2 --region-gb 1 --duration-sec 106
+[15:08:54.450]   aggressor [C] cpu=36: numactl --physcpubind=36 --membind=2 /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wc --cpu 36 --node 2 --region-gb 1 --duration-sec 106
+[15:08:54.451]   aggressor [C] cpu=37: numactl --physcpubind=37 --membind=2 /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wc --cpu 37 --node 2 --region-gb 1 --duration-sec 106
+[15:08:54.451]   aggressor [C] cpu=38: numactl --physcpubind=38 --membind=2 /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wc --cpu 38 --node 2 --region-gb 1 --duration-sec 106
+[15:08:54.452]   aggressor [C] cpu=39: numactl --physcpubind=39 --membind=2 /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wc --cpu 39 --node 2 --region-gb 1 --duration-sec 106
+[15:08:54.452]   aggressor [C] cpu=40: numactl --physcpubind=40 --membind=2 /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wc --cpu 40 --node 2 --region-gb 1 --duration-sec 106
+[15:08:54.452]   warmup: sleeping 8 s for aggressors to stabilize
+[15:09:02.460]   victim: numactl --physcpubind=32 --membind=1 /home/jb/tmp_dutyfree_exp/intel_experiments/bench/victim/pointer_chase --cpu 32 --node 1 --wss 33554432 --trials 30 --run-sec 2.00 --warmup-trials 12
+[15:10:31.357]   agg_bw=23.5 GB/s, victim tax mean=12.1%
+[15:10:31.357] 
+-- condition E (wc_nopf), readonly=False --
+[15:10:31.357]   aggressor [E] cpu=33: numactl --physcpubind=33 --membind=2 /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wc_nopf --cpu 33 --node 2 --region-gb 1 --duration-sec 106
+[15:10:31.358]   aggressor [E] cpu=34: numactl --physcpubind=34 --membind=2 /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wc_nopf --cpu 34 --node 2 --region-gb 1 --duration-sec 106
+[15:10:31.359]   aggressor [E] cpu=35: numactl --physcpubind=35 --membind=2 /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wc_nopf --cpu 35 --node 2 --region-gb 1 --duration-sec 106
+[15:10:31.359]   aggressor [E] cpu=36: numactl --physcpubind=36 --membind=2 /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wc_nopf --cpu 36 --node 2 --region-gb 1 --duration-sec 106
+[15:10:31.359]   aggressor [E] cpu=37: numactl --physcpubind=37 --membind=2 /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wc_nopf --cpu 37 --node 2 --region-gb 1 --duration-sec 106
+[15:10:31.360]   aggressor [E] cpu=38: numactl --physcpubind=38 --membind=2 /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wc_nopf --cpu 38 --node 2 --region-gb 1 --duration-sec 106
+[15:10:31.360]   aggressor [E] cpu=39: numactl --physcpubind=39 --membind=2 /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wc_nopf --cpu 39 --node 2 --region-gb 1 --duration-sec 106
+[15:10:31.361]   aggressor [E] cpu=40: numactl --physcpubind=40 --membind=2 /home/jb/tmp_dutyfree_exp/intel_experiments/bench/aggressor/stream_wc_nopf --cpu 40 --node 2 --region-gb 1 --duration-sec 106
+[15:10:31.361]   warmup: sleeping 8 s for aggressors to stabilize
+[15:10:39.369]   victim: numactl --physcpubind=32 --membind=1 /home/jb/tmp_dutyfree_exp/intel_experiments/bench/victim/pointer_chase --cpu 32 --node 1 --wss 33554432 --trials 30 --run-sec 2.00 --warmup-trials 12
+[15:12:08.508]   agg_bw=22.2 GB/s, victim tax mean=8.9%
+[15:12:08.508] Wrote: /home/jb/tmp_dutyfree_exp/intel_experiments/results/processed/20_phase1_prefetch.csv
+[15:12:08.509] Wrote: /home/jb/tmp_dutyfree_exp/intel_experiments/results/processed/20_phase1_prefetch_report.md
+
+Phase 1(a)+(b) complete. Results: /home/jb/tmp_dutyfree_exp/intel_experiments/results/processed/20_phase1_prefetch.csv
